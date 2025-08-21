@@ -1,31 +1,50 @@
 import React from 'react'
+import { BiTrophy } from "react-icons/bi";
+import { IoIosStats } from "react-icons/io";
+import { GrCatalog } from "react-icons/gr";
+
 
 export const Footer = () => {
     return (
-        <div className='h-44 bg-azul'>
-            <div className='max-w-7xl h-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center'>
-                <ul className='list-none w-[60%] text-cinza flex-col space-y-5'>
+        <footer className='bg-azul'>
+            <div className='max-w-7xl mx-auto h-[400px] px-4 sm:px-6 lg:px-8 flex items-center'>
+                <ul className='list-none w-full h-full text-white flex flex-col justify-evenly'>
                     <li>
-                        <div className='flex items-center justify-between'>
-                            <span className='font-bold text-3xl text-white'>10K+</span>
-                            <p>Alunos aprovados</p>
-                        </div> 
+                        <div className='flex gap-5 items-center'>
+                            <BiTrophy size={70} />
+                            <p>
+                                <span className='font-bold !text-3xl'>
+                                    10K+
+                                </span> <br />
+                                Alunos aprovados
+                            </p>
+                        </div>
                     </li>
                     <li>
-                        <div className='flex items-center justify-between'>
-                            <span className='font-bold text-3xl text-white'>95%</span>
-                            <p>Alunos aprovados</p>
-                        </div> 
+                        <div className='flex gap-5 items-center'>
+                            <IoIosStats size={70} />
+                            <p>
+                                <span className='font-bold !text-3xl'>
+                                    95%
+                                </span> <br />
+                                Taxa de sucesso
+                            </p>
+                        </div>
                     </li>
                     <li>
-                        <div className='flex items-center justify-between'>
-                            <span className='font-bold text-3xl text-white'>15+</span>
-                            <p className='text-xl'>Alunos aprovados</p>
-                        </div> 
+                        <div className='flex gap-5 items-center'>
+                            <GrCatalog size={70} />
+                            <p>
+                                <span className='font-bold !text-3xl'>
+                                    15+
+                                </span> <br />
+                                Cursos disponìveis
+                            </p>
+                        </div>
                     </li>
 
                 </ul>
             </div>
-        </div>
+        </footer>
     )
 }

@@ -1,0 +1,12 @@
+body{
+    background-color: white;
+}
+
+.arrow{
+    
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: #f97316;
+
+}

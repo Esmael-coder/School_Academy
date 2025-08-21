@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme{
+
+  --color-azul: #030213;
+  --color-test1 : #1D6373;
+  --color-cinza: #717182;
+  --color-cinza-2: #CCD0D9;
+  --color-ice: #f2f3f7;
+  --color-orange: #ff6b36;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/* background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);  azul gradiente*/ 
+
+/* background: linear-gradient(135deg, #f2f3f7 0%, #e6f7f5 50%, #ffffff 100%); laranja gradiente */

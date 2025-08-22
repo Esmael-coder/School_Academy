@@ -48,6 +48,33 @@ export const method = [
   }
 ]
 
+export const testimoniolsData = [
+  {
+    id:1, 
+    name: "Miguel Andrade", 
+    course: "Frontend developer",
+    testimony: "O que mais gostei foi a abordagem prática: em cada módulo desenvolvíamos projetos reais que me ajudaram a consolidar o que estava a aprender. Hoje consigo criar sites responsivos, com design moderno e boa performance, e já estou a montar o meu portfólio para procurar oportunidades na área."
+   },
+  {
+    id:2, 
+    name: "Ana Pereira", 
+    course: "Redes informáticas",
+    testimony: "Hoje sinto-me confiante para atuar no mercado de trabalho, consigo diagnosticar e resolver falhas de rede e já penso em tirar certificações como a CCNA para avançar ainda mais na carreira."
+   },
+  {
+    id:3, 
+    name: "Maria Fernandes", 
+    course: "Auxiliar de Saúde",
+    testimony: "Já trabalho numa clínica, sinto-me preparada e realizada por poder cuidar das pessoas com profissionalismo e dedicação. Este curso mudou a minha vida e abriu-me portas para o futuro."
+   },
+  {
+    id:3, 
+    name: "Carlos Almeida", 
+    course: "GNR",
+    testimony: "Quando vi o meu nome na lista de aprovados, a sensação foi indescritível — uma mistura de alegria, alívio e gratidão. Hoje posso dizer que todo o esforço valeu a pena e que a conquista de um concurso público é totalmente possível para quem se dedica de verdade."
+   }
+]
+
 export const courses = [
   {
     id: 1,

@@ -1,17 +1,21 @@
 
 import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Navigation, Pagination } from 'swiper/modules'
 import { HeroDiv } from '../../components/HeroDiv'
 import { homeComponents } from './index';
 import Imagem1 from '../../assets/imagem1.jpg'
 import { BiCalendarCheck, BiRightArrowAlt, BiConversation, BiPhoneCall } from "react-icons/bi";
 import { MdAutoGraph } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import { CourseCard } from '../../components/CourseCard';
-import { courses, category } from '../../const/Constants';
+import { category, testimoniolsData } from '../../const/Constants';
 
 export const Home = () => {
-  
-  const [Container, MethodCard, Footer ] = homeComponents
+
+  const [Container, MethodCard, Footer, Testimoniols] = homeComponents
 
   return (
 
@@ -72,13 +76,14 @@ export const Home = () => {
                 <h1 className='font-semibold text-2xl md:font-bold md:text-4xl'>Já sabes qual a tua vocação?</h1>
                 <p className='mt-4 mb-5 text-cinza'>Escolhe a área de estudos que mais se adequa aos teus objetivos profissionais.</p>
               </div>
+
               {
                 category.map(item => (
-
                   <Container key={item.id} icon={item.icon} content={item.name} />
                 )
                 )
               }
+
               <div className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange text-white rounded-xl coursor-pointer hover:shadow-lg'>
                 <Link to={"/"}>Receber orientação</Link>
                 <BiPhoneCall size={20} />
@@ -92,14 +97,14 @@ export const Home = () => {
         </div>
       </section>
 
-       {/* section Metodologia */}       
+      {/* section Metodologia */}
       <section>
         <div className='px-4 pt-10 md:pt-20 md:px-6 mb-16 lg:px-8 max-w-7xl mx-auto flex flex-col gap-9'>
           <div className='text-center'>
             <h1 className='font-semibold text-2xl md:font-bold md:text-4xl'>A Nossa metodologia</h1>
             <p className='mt-4 text-cinza'>Aprendizado flexível que une teoria, prática e inovação</p>
           </div>
-          
+
           < MethodCard />
 
           <div className='flex items-center justify-center md:w-fit md:mx-auto gap-2 p-3 bg-orange text-white rounded-xl cursor-pointer hover:shadow-lg'>
@@ -107,7 +112,40 @@ export const Home = () => {
             <MdAutoGraph size={20} />
           </div>
         </div>
-        <Footer/>
+        <Footer />
+      </section>
+
+      {/* section de testemunhas */}
+      <section className='bg-ice'>
+        <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
+          <h1 className='text-center font-bold text-2xl text-azul'>Opiniões dos Ex-alunos</h1>
+          <p className='text-center text-orange mb-10'>O que dizem sobre a MindUp</p>
+
+          <div className='w-full flex justify-center'>
+            <Swiper
+              modules={[Pagination]}
+              slidesPerView={1}
+              spaceBetween={0}
+              pagination
+              className='pagination'
+            >
+              {
+                testimoniolsData.map(data => (
+                  <SwiperSlide>
+                    <div className='flex justify-center pb-9'>
+                      <Testimoniols
+                        key={data.id}
+                        name={data.name}
+                        course={data.course}
+                        testimony={data.testimony}
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </Swiper>
+          </div>
+        </div>
       </section>
     </>
 

@@ -7,11 +7,11 @@ import { GrCatalog } from "react-icons/gr";
 export const Footer = () => {
     return (
         <footer className='bg-azul'>
-            <div className='max-w-7xl mx-auto h-[400px] px-4 sm:px-6 lg:px-8 flex items-center'>
-                <ul className='list-none w-full h-full text-white flex flex-col justify-evenly'>
+            <div className='max-w-7xl mx-auto h-[500px] md:h-[250px] px-8 sm:px-6 lg:px-8 flex items-center'>
+                <ul className='list-none w-full h-full text-white flex flex-col md:flex-row justify-evenly md:justify-between md:items-center lg:justify-around'>
                     <li>
                         <div className='flex gap-5 items-center'>
-                            <BiTrophy size={70} />
+                            <BiTrophy size={55} />
                             <p>
                                 <span className='font-bold !text-3xl'>
                                     10K+
@@ -22,7 +22,7 @@ export const Footer = () => {
                     </li>
                     <li>
                         <div className='flex gap-5 items-center'>
-                            <IoIosStats size={70} />
+                            <IoIosStats size={55} />
                             <p>
                                 <span className='font-bold !text-3xl'>
                                     95%
@@ -33,7 +33,7 @@ export const Footer = () => {
                     </li>
                     <li>
                         <div className='flex gap-5 items-center'>
-                            <GrCatalog size={70} />
+                            <GrCatalog size={55} />
                             <p>
                                 <span className='font-bold !text-3xl'>
                                     15+

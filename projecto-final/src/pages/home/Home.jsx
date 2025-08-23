@@ -127,7 +127,7 @@ export const Home = () => {
               slidesPerView={1}
               spaceBetween={0}
               pagination
-              className='pagination'
+              className='pagination w-full mx-0'
             >
               {
                 testimoniolsData.map(data => (

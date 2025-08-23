@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Pagination } from 'swiper/modules'
 import { HeroDiv } from '../../components/HeroDiv'
 import { homeComponents } from './index';
 import Imagem1 from '../../assets/imagem1.jpg'

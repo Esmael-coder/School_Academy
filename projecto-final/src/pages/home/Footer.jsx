@@ -8,7 +8,7 @@ export const Footer = () => {
     return (
         <footer className='bg-azul'>
             <div className='max-w-7xl mx-auto h-[500px] md:h-[250px] px-8 sm:px-6 lg:px-8 flex items-center'>
-                <ul className='list-none w-full h-full text-white flex flex-col md:flex-row justify-evenly md:justify-between md:items-center lg:justify-around'>
+                <ul className='list-none w-full h-full text-white flex flex-col md:flex-row justify-evenly md:justify-between md:items-center'>
                     <li>
                         <div className='flex gap-5 items-center'>
                             <BiTrophy size={55} />

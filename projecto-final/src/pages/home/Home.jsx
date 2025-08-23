@@ -12,6 +12,7 @@ import { BiCalendarCheck, BiRightArrowAlt, BiConversation, BiPhoneCall } from "r
 import { MdAutoGraph } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { category, testimoniolsData } from '../../const/Constants';
+import { BoxModal } from '../../components/BoxModal'
 
 export const Home = () => {
 
@@ -146,6 +147,19 @@ export const Home = () => {
             </Swiper>
           </div>
         </div>
+      </section>
+
+      {/* cursos mais procurados */}
+      <section>
+              <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
+
+                <BoxModal title="Pronto para começar?"
+                 text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
+                 link1Content="Ver cursos"
+                 link2Content="Falar connosco"
+                 />
+                 
+              </div>
       </section>
     </>
 

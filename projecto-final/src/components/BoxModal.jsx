@@ -8,8 +8,8 @@ export const BoxModal = ({title, text, link1, link2, link1Content, link2Content 
         <h1 className='font-semibold text-2xl'>{title}</h1>
         <p className='text-cinza-2'>{text}</p>
         <div className='w-full text-center flex flex-col md:flex-row md:justify-center gap-4'>
-            <Link className='bg-orange rounded-md px-3 py-1'to={link1}>{link1Content}</Link>
-            <Link className='bg-white text-azul rounded-md px-3 py-1'to={link2}>{link2Content}</Link>
+            <Link className='bg-orange rounded-xl p-3'to={link1}>{link1Content}</Link>
+            <Link className='bg-white text-azul rounded-xl p-3'to={link2}>{link2Content}</Link>
         </div>
     </div>
   )

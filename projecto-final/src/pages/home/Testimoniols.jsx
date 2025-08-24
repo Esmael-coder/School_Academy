@@ -3,8 +3,8 @@ import { BiSolidQuoteLeft } from "react-icons/bi";
 
 export const Testimoniols = ({ name, course, testimony }) => {
     return (
-        <article className='w-[300px] h-[300px] p-4 bg-white rounded-xl shadow-md relative overflow-y-auto'>
-            <div className='absolute right-6 top-4 text-orange bg-ice p-2 rounded-full'>
+        <article className='relative bg-white rounded-2xl p-6 mt-6 shadow-xl max-w-xs text-center'>
+            <div className='absolute right-6 top-4 text-orange bg-ice p-2 rounded-full shadow-md'>
                 <BiSolidQuoteLeft size={24} />
             </div>
             <div className='mb-4'>

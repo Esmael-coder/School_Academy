@@ -29,3 +29,16 @@ body{
   --swiper-pagination-bullet-horizontal-gap: 4px;
   --swiper-pagination-bullet-vertical-gap: 6px;
 }
+
+.swiper-slide-active .swiper-slide-content {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.05); 
+}
+
+
+.swiper-slide-prev .swiper-slide-content,
+.swiper-slide-next .swiper-slide-content {
+  filter: blur(2px);
+  opacity: 0.5;
+}

@@ -3,8 +3,8 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import { Pagination } from 'swiper/modules'
+import "swiper/css/effect-coverflow";
+import { Navigation, EffectCoverflow } from 'swiper/modules'
 import { HeroDiv } from '../../components/HeroDiv'
 import { homeComponents } from './index';
 import Imagem1 from '../../assets/imagem1.jpg'
@@ -122,20 +122,28 @@ export const Home = () => {
           <h1 className='text-center font-bold text-2xl text-azul'>Opiniões dos Ex-alunos</h1>
           <p className='text-center text-orange mb-10'>O que dizem sobre a MindUp</p>
 
-          <div className='w-full flex justify-center'>
+          <div className='h-[400px] flex items-center justify-center py-10'>
             <Swiper
-              modules={[Pagination]}
-              slidesPerView={1}
-              spaceBetween={0}
-              pagination
-              className='pagination w-full mx-0'
+              modules={[EffectCoverflow, Navigation]}
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"}
+              navigation={true}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 2,
+                slideShadows: false,
+              }}
+              className='w-full max-w-5xl h-full arrow sefl-center'
             >
               {
                 testimoniolsData.map(data => (
-                  <SwiperSlide>
-                    <div className='flex justify-center pb-9'>
+                  <SwiperSlide className='max-w-xs' key={data.id}>
+                    <div className='swiper-slide-content transition-all duration-300'>
                       <Testimoniols
-                        key={data.id}
                         name={data.name}
                         course={data.course}
                         testimony={data.testimony}
@@ -151,15 +159,19 @@ export const Home = () => {
 
       {/* cursos mais procurados */}
       <section>
-              <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
+        <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
 
-                <BoxModal title="Pronto para começar?"
-                 text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
-                 link1Content="Ver cursos"
-                 link2Content="Falar connosco"
-                 />
-                 
-              </div>
+          <BoxModal title="Pronto para começar?"
+            text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
+            link1Content="Ver cursos"
+            link2Content="Falar connosco"
+          />
+
+        </div>
+      </section>
+
+      <section>
+
       </section>
     </>
 

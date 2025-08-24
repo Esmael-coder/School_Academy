@@ -117,12 +117,12 @@ export const Home = () => {
       </section>
 
       {/* section de testemunhas */}
-      <section className='bg-ice'>
+      <section className='bg-[linear-gradient(135deg,#f8fafc_0%,#d6edf5_100%)]'>
         <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
           <h1 className='text-center font-bold text-2xl text-azul'>Opiniões dos Ex-alunos</h1>
           <p className='text-center text-orange mb-10'>O que dizem sobre a MindUp</p>
 
-          <div className='h-[400px] flex items-center justify-center py-10'>
+          <div className='h-[400px] flex items-center justify-center '>
             <Swiper
               modules={[EffectCoverflow, Navigation]}
               effect={"coverflow"}
@@ -154,29 +154,19 @@ export const Home = () => {
               }
             </Swiper>
           </div>
+
+          <footer>
+            <BoxModal title="Pronto para começar?"
+              text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
+              link1Content="Ver cursos"
+              link2Content="Falar connosco"
+            />
+          </footer>
+          
         </div>
       </section>
 
       {/* cursos mais procurados */}
-      <section>
-        <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
-
-          <BoxModal title="Pronto para começar?"
-            text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
-            link1Content="Ver cursos"
-            link2Content="Falar connosco"
-          />
-
-        </div>
-      </section>
-
-      <section>
-
-      </section>
     </>
-
-
-
-
   )
 }

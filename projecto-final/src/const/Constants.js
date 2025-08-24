@@ -68,8 +68,14 @@ export const testimoniolsData = [
     testimony: "Já trabalho numa clínica, sinto-me preparada e realizada por poder cuidar das pessoas com profissionalismo e dedicação. Este curso mudou a minha vida e abriu-me portas para o futuro."
    },
   {
-    id:3, 
+    id:4, 
     name: "Carlos Almeida", 
+    course: "GNR",
+    testimony: "Quando vi o meu nome na lista de aprovados, a sensação foi indescritível — uma mistura de alegria, alívio e gratidão."
+   },
+  {
+    id:5, 
+    name: "Joana Mato", 
     course: "GNR",
     testimony: "Quando vi o meu nome na lista de aprovados, a sensação foi indescritível — uma mistura de alegria, alívio e gratidão."
    }

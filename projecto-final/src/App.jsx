@@ -7,6 +7,7 @@ import { Metodologia } from './pages/metodologia/Metodologia'
 import { Sobre } from './pages/Sobre/Sobre'
 import { Contacto } from './pages/contacto/Contacto'
 import { Routes, Route } from 'react-router-dom'
+import { Footer } from './components/Footer'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           </Routes>
         </div>
       </main>
+      <Footer/>
 
     </>
   )

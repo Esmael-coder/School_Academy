@@ -27,7 +27,7 @@ export const Header = () => {
             <div className='h-16 max-w-7xl mx-auto px-4 sm:p-6 lg:p-8 flex items-center'>
                 <div className='flex justify-between items-center w-full'>
 
-                    <div className='flex items-center gap-1 text-azul'>
+                    <div className='flex items-center gap-1 text-primary'>
                         <BiBrain size={35} />
                         <h1 className='font-bold text-2xl'>MindUp</h1>
                     </div>
@@ -37,7 +37,7 @@ export const Header = () => {
 
                     {/* navbar mobile */}
                     <div className={`flex flex-col absolute z-50 bg-white top-16 w-[80%] h-screen gap-20 p-8 shadow-sm md:hidden ${isOpen ? "right-0" : "right-[-82%]"} transition-all duration-300 ease-in-out`}>
-                        <nav className='flex flex-col gap-2 text-azul'>
+                        <nav className='flex flex-col gap-2 text-primary'>
 
                             {
                                 links.map((link) => {
@@ -56,7 +56,7 @@ export const Header = () => {
                             }
 
                         </nav>
-                        <div className='self-center flex gap-2 items-center justify-center p-2 w-24 rounded-md bg-azul text-white'>
+                        <div className='self-center flex gap-2 items-center justify-center p-2 w-24 rounded-md bg-primary text-white'>
                             <BiLogIn />
                             <a href="Login">Portal</a>
                         </div>
@@ -72,14 +72,14 @@ export const Header = () => {
                                     <Link
                                         key={link.name}
                                         to={link.path}
-                                        className={isActive === link.name ? "p-2 rounded-sm bg-ice text-azul" : "p-2 rounded-sm hover:bg-ice hover:text-azul"}
+                                        className={isActive === link.name ? "p-2 rounded-sm bg-ice text-primary" : "p-2 rounded-sm hover:bg-ice hover:text-primary"}
                                         onClick={() => changeActive(link.name)}>{link.name}
                                     </Link>
                                 ))
                             }
                         </nav>
                     </div>
-                    <div className='self-center items-center gap-2 rounded-md w-20 p-1 bg-azul text-white hidden md:flex'>
+                    <div className='self-center items-center gap-2 rounded-md w-20 p-1 bg-primary text-white hidden md:flex'>
                         <BiLogIn />
                         <a href="Login">Portal</a>
                     </div>

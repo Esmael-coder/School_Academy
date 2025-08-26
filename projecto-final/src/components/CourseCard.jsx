@@ -15,7 +15,7 @@ export const CourseCard = (props) => {
 
       <div className='p-5'>
         <div className='mb-3'>
-          <h3 className='font-semibold text-xl text-azul'>{name}</h3>
+          <h3 className='font-semibold text-xl text-primary'>{name}</h3>
           <p className='text-cinza'>{example}</p>
         </div>
 
@@ -25,7 +25,7 @@ export const CourseCard = (props) => {
           <p>{duration}</p>
         </div>
 
-        <div className='bg-azul p-1 rounded-md text-center text-white'>
+        <div className='bg-primary p-1 rounded-md text-center text-white'>
           <Link to="/">Mais informaçoes</Link>
         </div>
       </div>

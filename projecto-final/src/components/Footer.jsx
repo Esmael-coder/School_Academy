@@ -15,7 +15,7 @@ export const Footer = () => {
     }, [])
 
     return (
-        <footer className=' bg-azul'>
+        <footer className=' bg-primary'>
 
             <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8 '>
 
@@ -30,15 +30,15 @@ export const Footer = () => {
                         <h3 className='font-semibold mb-3'>Contacto</h3>
                         <ul className='flex flex-col gap-1 text-cinza-2'>
                             <li className='flex items-center gap-2'>
-                                <IoLocationOutline size={18} />
+                                <IoLocationOutline className='text-orange' size={18} />
                                 Rua do alecrim, 75, Lisboa
                             </li>
                             <li className='flex items-center gap-2'>
-                                <BiPhone size={18} />
+                                <BiPhone className='text-orange' size={18} />
                                 +351 21 573 496
                             </li>
                             <li className='flex items-center gap-2'>
-                                <GoMail size={18} />
+                                <GoMail className='text-orange' size={18} />
                                 info@mindup.pt
                             </li>
                         </ul>
@@ -47,7 +47,7 @@ export const Footer = () => {
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Horário de funcionamento</h3>
                         <ul className='text-cinza-2 flex items-center gap-2'>
-                            <IoMdTime size={18} />
+                            <IoMdTime className='text-orange' size={18} />
                             <div>
                                 <li>Segunda a sexta: 9h - 20h</li>
                                 <li>Sábado: 9h - 17h</li>
@@ -60,7 +60,7 @@ export const Footer = () => {
                         <h3 className='font-semibold mb-3'>Links Úteis</h3>
                         <ul className='text-cinza-2'>
                             <li><Link>Políticas de privacidade</Link></li>
-                            <li><Link>Imformações de cookies</Link></li>
+                            <li><Link>Informações de cookies</Link></li>
                             <li><Link>Livro de reclamação</Link></li>
                         </ul>
                     </div>

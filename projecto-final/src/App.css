@@ -5,7 +5,7 @@ body{
 .arrow{
     
   --swiper-navigation-size: 30px;
-  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-top-offset: 40%;
   --swiper-navigation-sides-offset: 10px;
   --swiper-navigation-color: #f97316;
 
@@ -15,7 +15,7 @@ body{
   --swiper-pagination-color: #f97316;
   --swiper-pagination-left: auto;
   --swiper-pagination-right: 8px;
-  --swiper-pagination-bottom: 8px;
+  --swiper-pagination-bottom: 70px;
   --swiper-pagination-top: auto;
   --swiper-pagination-fraction-color: inherit;
   --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);

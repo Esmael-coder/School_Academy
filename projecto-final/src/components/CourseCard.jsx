@@ -8,14 +8,14 @@ export const CourseCard = (props) => {
   const { image, name, example, description, duration } = props
   return (
 
-    <div className='border-1 border-cinza rounded-lg text-cinza'>
-      <div>
+    <div className='rounded-lg shadow-[var(--boxShadow)] text-cinza max-w-[450px] md:w-full'>
+      <div className='p-5'>
         <img className='rounded-tl-lg rounded-tr-lg object-cover w-full' src={image} alt="imagem do curso" />
       </div>
 
-      <div className='p-5'>
+      <div className='px-5 pb-5'>
         <div className='mb-3'>
-          <h3 className='font-semibold text-xl text-primary'>{name}</h3>
+          <h3 className='font-semibold text-xl text-primary whitespace-nowrap'>{name}</h3>
           <p className='text-cinza'>{example}</p>
         </div>
 

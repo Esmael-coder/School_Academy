@@ -22,8 +22,8 @@ export const Home = () => {
   return (
 
     <>
-      <section className='pt-10 pb-12'>
-        <div className='flex flex-col md:flex-row max-w-7xl mx-auto px-4 lg:px-8 gap-8'>
+      <section>
+        <div className='flex flex-col md:flex-row max-w-7xl mx-auto px-4 lg:px-8 gap-8 md:min-h-[75vh] pt-10 md:pt-0'>
 
           {/* todo o conteúdo da hero section (já mexi tanto que ficou com muitas classes redundantes. refatorar depois)*/}
           <div className='flex flex-col md:flex-row gap-8 items-center'>

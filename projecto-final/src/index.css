@@ -10,6 +10,10 @@
   --color-orange: #ff6b36;
 }
 
+:root{
+  --boxShadow: 0px 0px 33px 6px rgba(0,0,0,0.1);
+}
+
 *{
   box-sizing: border-box;
 }

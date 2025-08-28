@@ -14,8 +14,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
-        <div className='mt-16'>
+      <main className='mt-16 min-h-[100vh]'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/cursos' element={<Cursos />} />
@@ -23,7 +22,6 @@ function App() {
             <Route path='/sobre' element={<Sobre />} />
             <Route path='/contacto' element={<Contacto />} />
           </Routes>
-        </div>
       </main>
       <Footer/>
 

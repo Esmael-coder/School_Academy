@@ -12,7 +12,7 @@ const [army, auxiliarSaude, backend, bombeiro, energiaRenovavel, frontend, fulls
 export const links = [
 
   { icon: BiHome , name: "Home", path: "/" },
-  { icon: MdOutlineSchool , name: "Curso", path: "/cursos" },
+  { icon: MdOutlineSchool , name: "Cursos", path: "/cursos" },
   { icon: MdAutoGraph , name: "Metodologia", path: "/metodologia" },
   { icon: BiInfoCircle , name: "Sobre", path: "/sobre" },
   { icon: BiPhone , name: "Contacto", path: "/contacto" }

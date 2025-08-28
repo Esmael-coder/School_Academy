@@ -2,17 +2,10 @@
 import React, { useState } from 'react'
 import { BiBrain, BiLogIn, BiMenu, } from "react-icons/bi";
 import { MdOutlineSchool, MdClose } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { links } from '../const/Constants'; //lembrar de fechar os icones como tag quando usar
 
 export const Header = () => {
-
-
-    const [isActive, setIsActive] = useState("Home")
-
-    const changeActive = (link) => {
-        setIsActive(link)
-    }
 
     const [isOpen, setIsOpen] = useState(false)
     const [burger, setBurger] = useState(true)
@@ -42,14 +35,17 @@ export const Header = () => {
                             {
                                 links.map((link) => {
                                     //coloquei icon numa constante Icon com inicial maiúscula porque jsx não aceita tag que não são html, iniciem com letra minuscula
-                                    // criar const Icon antes do return. dentro do return não é possivel criar
-                                    const Icon = link.icon;  
+                                    // criando const Icon antes do return. dentro do return não é possivel criar
+                                    const Icon = link.icon;
 
                                     return (
 
                                         <div key={link.name} className='flex items-center gap-2 border-b py-5'>
-                                            <Icon/>
-                                            <Link to={link.path}>{link.name}</Link>
+                                            <Icon />
+                                            <NavLink
+                                                onClick={() => { setIsOpen(!isOpen), setBurger(!burger) }}
+                                                to={link.path}>{link.name}
+                                            </NavLink>
                                         </div>
                                     )
                                 })
@@ -69,12 +65,12 @@ export const Header = () => {
                             {
                                 links.map(link => (
 
-                                    <Link
+                                    <NavLink
                                         key={link.name}
                                         to={link.path}
-                                        className={isActive === link.name ? "p-2 rounded-sm bg-ice text-primary" : "p-2 rounded-sm hover:bg-ice hover:text-primary"}
+                                        className={({isActive})=> (isActive ? "p-2 rounded-sm bg-ice text-primary": "p-2 rounded-sm hover:bg-ice hover:text-primary")} 
                                         onClick={() => changeActive(link.name)}>{link.name}
-                                    </Link>
+                                    </NavLink>
                                 ))
                             }
                         </nav>

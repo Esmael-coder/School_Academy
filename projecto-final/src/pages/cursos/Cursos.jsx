@@ -14,7 +14,6 @@ export const Cursos = () => {
 
   const handleFilter = (categoryValue) => {
 
-    console.log(categoryValue)
 
     if (categoryValue !== "todos") {
 
@@ -24,6 +23,12 @@ export const Cursos = () => {
 
       setAllCourses(coursesCopy)
     }
+  }
+
+  const [isActive, setIsActive] = useState("todos")
+
+  const changeActive = (id) => {
+    setIsActive(id)
   }
 
   return (
@@ -38,7 +43,7 @@ export const Cursos = () => {
       {/* Cursos */}
       <section>
         <header className='w-full py-5 shadow-lg'>
-          <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
+          <div className='max-w-7xl w-full mx-auto px-4 md:px-6 lg:px-8'>
 
             <div className='flex gap-4 items-center md:hidden'>
               <label className='text-[19px] font-semibold' htmlFor="filter">Filtrar</label>
@@ -54,60 +59,83 @@ export const Cursos = () => {
               </select>
             </div>
 
-            <nav className='flex list-none justify-between text-primary'>
+            <nav className='hidden md:flex w-full list-none justify-between gap-8 text-primary overflow-x-auto'>
               <li
-                className='cursor-pointer'
                 id="todos"
-                onClick={(event) => handleFilter(event.target.id)}>
+                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                onClick={(event) => {
+                  handleFilter(event.target.id),
+                    setIsActive(event.target.id)
+                }}>
                 Todos os cursos
               </li>
 
               <li
-                className='cursor-pointer'
-                id="concurso público"
-                onClick={(event) => handleFilter(event.target.id)}>
+                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                onClick={(event) => {
+                  handleFilter(event.target.id),
+                    setIsActive(event.target.id)
+                }}>
                 Concursos
               </li>
 
               <li
-                className='cursor-pointer'
                 id="segurança pública"
-                onClick={(event) => handleFilter(event.target.id)}>
+                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                onClick={(event) => {
+                  handleFilter(event.target.id),
+                    setIsActive(event.target.id)
+                }}>
                 Segurança Pública
               </li>
 
               <li
-                className='cursor-pointer'
                 id="saúde"
-                onClick={(event) => handleFilter(event.target.id)}>
+                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                onClick={(event) => {
+                  handleFilter(event.target.id),
+                    setIsActive(event.target.id)
+                }}>
                 Saúde
               </li>
 
               <li
-                className='cursor-pointer'
                 id="gestão"
-                onClick={(event) => handleFilter(event.target.id)}>
+                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                onClick={(event) => {
+                  handleFilter(event.target.id),
+                    setIsActive(event.target.id)
+                }}>
                 Gestão
               </li>
 
               <li
-                className='cursor-pointer'
                 id="informática"
-                onClick={(event) => handleFilter(event.target.id)}>
+                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                onClick={(event) => {
+                  handleFilter(event.target.id),
+                    setIsActive(event.target.id)
+                }}>
                 Informática
               </li>
 
               <li
-                className='cursor-pointer'
                 id="energia renovável"
-                onClick={(event) => handleFilter(event.target.id)}>
+                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                onClick={(event) => {
+                  handleFilter(event.target.id),
+                    setIsActive(event.target.id)
+                }}>
                 Energia Renovável
               </li>
 
               <li
-                className='cursor-pointer'
                 id="mecânica"
-                onClick={(event) => handleFilter(event.target.id)}>
+                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                onClick={(event) => {
+                  handleFilter(event.target.id),
+                    setIsActive(event.target.id)
+                }}>
                 Mecânica
               </li>
             </nav>

@@ -14,6 +14,7 @@ import { MdAutoGraph } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { category, testimoniolsData } from '../../const/Constants';
 import { BoxModal } from '../../components/BoxModal'
+import { Cursos } from '../cursos/Cursos'
 
 export const Home = () => {
 
@@ -49,8 +50,9 @@ export const Home = () => {
 
               <div className='flex flex-col md:flex-row text-center gap-4'>
 
-                <Link
-                  className='py-2.5 px-2 bg-orange text-white shadow-md rounded-md w-full md:w-auto' to="/" > Ver cursos disponíveis
+                <Link 
+                  className='py-2.5 px-2 bg-orange text-white shadow-md rounded-md w-full md:w-auto' 
+                  to="/cursos"> Ver cursos disponíveis
                   <BiRightArrowAlt size={24} className='inline-block' />
                 </Link>
 
@@ -164,7 +166,7 @@ export const Home = () => {
               link2Content="Falar connosco"
             />
           </footer>
-          
+
         </div>
       </section>
 

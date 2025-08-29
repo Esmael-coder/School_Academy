@@ -24,7 +24,7 @@ export const Footer = () => {
                     <h1 className='font-bold text-2xl'>MindUp</h1>
                 </div>
 
-                <div className='w-full text-white flex flex-col md:flex-row gap-56 md:items-start text-[15px] mb-10'>
+                <div className='w-full text-white flex flex-col gap-12 md:flex-row md:gap-56 md:items-start text-[15px] mb-10'>
 
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Contacto</h3>

@@ -70,7 +70,7 @@ export const Home = () => {
 
       {/* category section, apresentaçao simples  */}
 
-      <section className='bg-[#e6f0f9]'>
+      <section className='bg-secondary min-h-[75vh]'>
         <div className='max-w-7xl mx-auto px-4 pt-20 sm:px-6 lg:px-8 '>
 
 
@@ -162,6 +162,7 @@ export const Home = () => {
           <footer>
             <BoxModal title="Pronto para começar?"
               text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
+              link1={"/cursos"}
               link1Content="Ver cursos"
               link2Content="Falar connosco"
             />

@@ -25,7 +25,7 @@ export const CourseCard = (props) => {
           <p>{duration}</p>
         </div>
 
-        <div className='bg-primary p-1 rounded-md text-center text-white'>
+        <div className='bg-primary p-2 rounded-lg text-center text-white'>
           <Link to="/">Mais informaçoes</Link>
         </div>
       </div>

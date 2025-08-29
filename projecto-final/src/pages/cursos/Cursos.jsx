@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CiFilter } from "react-icons/ci";
 import { HeroDiv } from '../../components/HeroDiv'
 import imagem1 from '../../assets/imagem1.jpg'
 import { courses } from '../../const/Constants'
 import { CourseCard } from '../../components/CourseCard'
+import { BoxModal } from '../../components/BoxModal';
 
+const coursesCopy = [...courses]
 
 export const Cursos = () => {
 
-  const coursesCopy = [...courses]
   const [allCourses, setAllCourses] = useState(coursesCopy)
 
-
+  // função para filtrar cursos por categoria
   const handleFilter = (categoryValue) => {
-
 
     if (categoryValue !== "todos") {
 
@@ -27,6 +27,7 @@ export const Cursos = () => {
 
   const [isActive, setIsActive] = useState("todos")
 
+  // função para alterar estado das categorias ativas
   const changeActive = (id) => {
     setIsActive(id)
   }
@@ -62,26 +63,27 @@ export const Cursos = () => {
             <nav className='hidden md:flex w-full list-none justify-between gap-8 text-primary overflow-x-auto'>
               <li
                 id="todos"
-                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                className={`${isActive == "todos" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2 bg-white"} cursor-pointer whitespace-nowrap`}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    setIsActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Todos os cursos
               </li>
 
               <li
-                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                id="concurso público"
+                className={`${isActive == "concurso público" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    setIsActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Concursos
               </li>
 
               <li
                 id="segurança pública"
-                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                className={`${isActive == "segurança pública" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     setIsActive(event.target.id)
@@ -91,50 +93,50 @@ export const Cursos = () => {
 
               <li
                 id="saúde"
-                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                className={`${isActive == "saúde" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    setIsActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Saúde
               </li>
 
               <li
                 id="gestão"
-                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                className={`${isActive == "gestão" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    setIsActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Gestão
               </li>
 
               <li
                 id="informática"
-                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                className={`${isActive == "informática" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    setIsActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Informática
               </li>
 
               <li
                 id="energia renovável"
-                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                className={`${isActive == "energia renovável" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    setIsActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Energia Renovável
               </li>
 
               <li
                 id="mecânica"
-                className={`${isActive ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                className={`${isActive == "mecânica" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    setIsActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Mecânica
               </li>
@@ -162,9 +164,17 @@ export const Cursos = () => {
               ))
             }
           </div>
-
-
         </div>
+        <footer className='my-30'>
+          <div className='max-w-7xl w-full mx-auto px-4 md:px-6 lg:px-8'>
+            <BoxModal
+              title={"Precisas de uma uma orientação profissional?"}
+              text={"Fale com os profissionais disponíveis e descubra qual a tua vocação"}
+              link1Content={"Ligar"}
+              link2Content={"Enviar mensagem"}
+            />
+          </div>
+        </footer>
       </section>
     </>
   )

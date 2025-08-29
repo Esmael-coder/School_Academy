@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
 import { TbMessageCircle } from "react-icons/tb";
 import { courses } from '../const/Constants';
+import { FiSend } from "react-icons/fi";
 
 const courseCopy = [...courses]
 export const Form = () => {
 
     return (
         <div>
-            <div className='p-4 border-1 border-cinza rounded-2xl'>
+            <div className='p-6 rounded-2xl'>
                 <div className='flex items-center text-primary gap-1 mb-2'>
                     <TbMessageCircle size={24} />
                     <h3>Envie-nos uma mensagem</h3>
@@ -37,7 +38,7 @@ export const Form = () => {
                         <div className='flex flex-col gap-4 md:grid md:grid-cols-2'>
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="telefone">Telefone</label>
-                                <input className='bg-ice pl-2 p-1.5 rounded-lg' type="text" name='telefone' id='telefone'/>
+                                <input className='bg-ice pl-2 p-1.5 rounded-lg' type="text" name='telefone' id='telefone' placeholder='+351 9xx xxx xxx'/>
                             </div>
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="assunto">Assunto</label>
@@ -65,10 +66,15 @@ export const Form = () => {
 
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="mensagem">Mensagem</label>
-                        <textarea className='bg-ice pl-2 p-1.5 rounded-lg' name="mensagem" id="mensagem" placeholder='Escreva aqui a sua mensagem, dúvidas ou pedido de informações...'></textarea>
+                        <textarea className='bg-ice pl-2 p-1.5 rounded-lg' name="mensagem" id="mensagem" rows={6} cols={30} placeholder='Escreva aqui a sua mensagem, dúvidas ou pedido de informações...'></textarea>
                     </div>
 
-                    <input className='bg-primary text-white p-2 rounded-lg' type="submit" value="Enviar mensagem" />
+                    <button 
+                    className='bg-primary text-white p-2 flex items-center justify-center gap-3 rounded-lg' 
+                    type="submit">
+                    <FiSend/> 
+                    Enviar mensagem
+                    </button>
                 </form>
 
             </div>

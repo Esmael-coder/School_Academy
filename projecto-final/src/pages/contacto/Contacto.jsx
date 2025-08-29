@@ -2,6 +2,7 @@ import React from 'react'
 import { HeroDiv } from '../../components/HeroDiv'
 import Imagem1 from '../../assets/imagem1.jpg'
 import { Form } from '../../components/Form'
+import { Map } from '../../components/Map'
 
 export const Contacto = () => {
   return (
@@ -20,16 +21,25 @@ export const Contacto = () => {
             <h1>Teremos todo o prazer e falar consigo</h1>
             <p>Estamos ansiosos para tirar todas as suas dúvidas</p>
           </div>
+
+          {/* grid container */}
           <div>
+
             {/* div do form e mapa */}
             <div>
-              <Form />
+              <div className='shadow-[var(--boxShadow)] rounded-2xl'>
+                <Form />
+              </div>
+              <div className='shadow-[var(--boxShadow)] rounded-2xl'>
+                <Map />
+              </div>
             </div>
 
             {/* div das informações */}
             <div>
 
             </div>
+
           </div>
         </div>
       </section>

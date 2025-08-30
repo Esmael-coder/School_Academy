@@ -8,7 +8,7 @@ export const Map = () => {
                 <div className='bg-secondary p-2 rounded-lg'>
                     <GrLocation size={20} />
                 </div>
-                <h1>Nossa localização</h1>
+                <h2>Nossa localização</h2>
             </div>
 
             <div

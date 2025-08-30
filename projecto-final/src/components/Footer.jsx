@@ -28,7 +28,7 @@ export const Footer = () => {
 
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Contacto</h3>
-                        <ul className='flex flex-col gap-1 text-cinza-2'>
+                        <ul className='flex flex-col gap-1 text-cinza'>
                             <li className='flex items-center gap-2'>
                                 <IoLocationOutline className='text-orange' size={18} />
                                 Rua do alecrim, 75, Lisboa
@@ -46,7 +46,7 @@ export const Footer = () => {
 
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Horário de funcionamento</h3>
-                        <ul className='text-cinza-2 flex items-center gap-2'>
+                        <ul className='text-cinza flex items-center gap-2'>
                             <IoMdTime className='text-orange' size={18} />
                             <div>
                                 <li>Segunda a sexta: 9h - 20h</li>
@@ -58,7 +58,7 @@ export const Footer = () => {
 
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Links Úteis</h3>
-                        <ul className='text-cinza-2'>
+                        <ul className='text-cinza'>
                             <li><Link>Políticas de privacidade</Link></li>
                             <li><Link>Informações de cookies</Link></li>
                             <li><Link>Livro de reclamação</Link></li>

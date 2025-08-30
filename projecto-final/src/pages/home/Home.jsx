@@ -123,7 +123,7 @@ export const Home = () => {
       <section className='bg-ice'>
         <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
           <h1 className='text-center font-bold text-2xl text-primary'>Opiniões dos Ex-alunos</h1>
-          <p className='text-center text-orange mb-10'>O que dizem sobre a MindUp</p>
+          <p className='text-center text-hightlight mb-10'>O que dizem sobre a MindUp</p>
 
           <div className='h-[400px] flex items-center justify-center '>
             <Swiper

@@ -56,9 +56,9 @@ export const Cursos = () => {
   return (
     <>
       {/* hero section */}
-      <section className='bg-ice'>
+      <section className='bg-secondary'>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-          <HeroDiv imagem={imagem1} percentage={"50%"} text={"Taxa de sucesso"} className='bg-ice' />
+          <HeroDiv imagem={imagem1} percentage={"50%"} text={"Taxa de sucesso"} className='bg-secondary' />
         </div>
       </section>
 
@@ -69,7 +69,7 @@ export const Cursos = () => {
 
             <div className='flex gap-4 items-center md:hidden'>
               <label className='text-[19px] font-semibold' htmlFor="filter">Filtrar</label>
-              <select className='border border-cinza-2 rounded-sm' name="filter" id="filter" onChange={(event) => handleFilter(event.target.value)}>
+              <select className='border border-cinza rounded-sm' name="filter" id="filter" onChange={(event) => handleFilter(event.target.value)}>
                 <option defaultValue={true} value="todos">Todos os cursos</option>
                 <option value="concurso público">Concursos</option>
                 <option value="segurança pública">Segurança Pública</option>
@@ -189,8 +189,8 @@ export const Cursos = () => {
         <footer className='my-30'>
           <div className='max-w-7xl w-full mx-auto px-4 md:px-6 lg:px-8'>
             <BoxModal
-              title={"Precisas de uma uma orientação profissional?"}
-              text={"Fale com os profissionais disponíveis e descubra qual a tua vocação"}
+              title={"Comece hoje a construir o seu futuro"}
+              text={"Não deixe para amanhã o que pode começar hoje."}
               link1Content={"Ligar"}
               link2Content={"Enviar mensagem"}
             />

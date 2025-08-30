@@ -68,7 +68,7 @@ export const Header = () => {
                                     <NavLink
                                         key={link.name}
                                         to={link.path}
-                                        className={({isActive})=> (isActive ? "p-2 rounded-sm bg-ice text-primary": "p-2 rounded-sm hover:bg-ice hover:text-primary")} 
+                                        className={({isActive})=> (isActive ? "p-2 rounded-sm bg-secondary text-primary": "p-2 rounded-sm hover:bg-secondary hover:text-primary")} 
                                         onClick={() => changeActive(link.name)}>{link.name}
                                     </NavLink>
                                 ))

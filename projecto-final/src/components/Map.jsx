@@ -5,17 +5,17 @@ export const Map = () => {
     return (
         <div className='p-6'>
             <div className='flex items-center gap-2 mb-7'>
-                <div className='bg-ice text-orange p-2 rounded-lg'>
+                <div className='bg-secondary text-orange p-2 rounded-lg'>
                     <GrLocation size={20} />
                 </div>
                 <h2>Nossa localização</h2>
             </div>
 
             <div
-                className='bg-ice rounded-lg h-[250px] mb-5'>
+                className='bg-sombra rounded-lg h-[250px] mb-5'>
             </div>
 
-            <div className='bg-ice p-4 rounded-lg'>
+            <div className='bg-sombra p-4 rounded-lg'>
                 <p className='text-cinza'>
                     <span className='font-semibold'>Como chegar: </span>
                     Próximo ao Metro Marquês de Pombal. Várias linhas de autocarro param na proximidade. Estacionamento público disponível na zona.

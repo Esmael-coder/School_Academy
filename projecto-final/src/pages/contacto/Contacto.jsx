@@ -13,9 +13,9 @@ export const Contacto = () => {
   return (
     <>
       {/* hero section */}
-      <section className='bg-ice'>
+      <section className='bg-secondary'>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-          <HeroDiv imagem={Imagem1} percentage={"50%"} text={"Taxa de sucesso"} className='bg-ice' />
+          <HeroDiv imagem={Imagem1} percentage={"50%"} text={"Taxa de sucesso"} className='bg-secondary' />
         </div>
       </section>
 

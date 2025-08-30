@@ -32,6 +32,27 @@ export const Cursos = () => {
     setIsActive(id)
   }
 
+  // css inline para os links ativos e não ativos
+  const activeLink = {
+    borderRadius: "10px",
+    color: "#0047fc",
+    backgroundColor: "#e6f0f9",
+    padding: "8px 12px 8px 12px",
+    border: "1px solid #0047fc",
+    cursor: "pointer",
+    whiteSpace: "nowrap"
+  }
+
+  const link = {
+    borderRadius: "10px",
+    padding: "8px 12px 8px 12px",
+    border: "1px solid #e6f0f9",
+    backgroundColor: "#e6f0f9",
+    cursor: "pointer",
+    whiteSpace: "nowrap"
+  }
+
+
   return (
     <>
       {/* hero section */}
@@ -63,7 +84,7 @@ export const Cursos = () => {
             <nav className='hidden md:flex w-full list-none justify-between gap-8 text-primary overflow-x-auto'>
               <li
                 id="todos"
-                className={`${isActive == "todos" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2 bg-white"} cursor-pointer whitespace-nowrap`}
+                style={isActive == "todos" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     changeActive(event.target.id)
@@ -73,7 +94,7 @@ export const Cursos = () => {
 
               <li
                 id="concurso público"
-                className={`${isActive == "concurso público" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                style={isActive == "concurso público" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     changeActive(event.target.id)
@@ -83,7 +104,7 @@ export const Cursos = () => {
 
               <li
                 id="segurança pública"
-                className={`${isActive == "segurança pública" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                style={isActive == "segurança pública" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     setIsActive(event.target.id)
@@ -93,7 +114,7 @@ export const Cursos = () => {
 
               <li
                 id="saúde"
-                className={`${isActive == "saúde" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                style={isActive == "saúde" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     changeActive(event.target.id)
@@ -103,7 +124,7 @@ export const Cursos = () => {
 
               <li
                 id="gestão"
-                className={`${isActive == "gestão" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                style={isActive == "gestão" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     changeActive(event.target.id)
@@ -113,7 +134,7 @@ export const Cursos = () => {
 
               <li
                 id="informática"
-                className={`${isActive == "informática" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                style={isActive == "informática" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     changeActive(event.target.id)
@@ -123,7 +144,7 @@ export const Cursos = () => {
 
               <li
                 id="energia renovável"
-                className={`${isActive == "energia renovável" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                style={isActive == "energia renovável" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     changeActive(event.target.id)
@@ -133,7 +154,7 @@ export const Cursos = () => {
 
               <li
                 id="mecânica"
-                className={`${isActive == "mecânica" ? "rounded-full bg-secondary px-3 py-2" : "px-3 py-2"} cursor-pointer whitespace-nowrap`}
+                style={isActive == "mecânica" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
                     changeActive(event.target.id)

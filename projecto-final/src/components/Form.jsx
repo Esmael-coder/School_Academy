@@ -10,8 +10,8 @@ export const Form = () => {
         <div>
             <div className='p-6 rounded-2xl'>
                 <div className='flex items-center text-primary gap-1 mb-2'>
-                    <TbMessageCircle size={24} />
-                    <h3>Envie-nos uma mensagem</h3>
+                    <TbMessageCircle className='text-orange' size={24} />
+                    <h3 className='text-lg'>Envie-nos uma mensagem</h3>
                 </div>
                 <p className='text-cinza mb-3'>
                     Preencha o formulário abaixo e responderemos o mais rapidamente possível.
@@ -70,7 +70,7 @@ export const Form = () => {
                     </div>
 
                     <button 
-                    className='bg-primary text-white p-2 flex items-center justify-center gap-3 rounded-lg' 
+                    className='bg-orange hover:bg-Sombra text-white p-2 flex items-center justify-center gap-3 rounded-lg' 
                     type="submit">
                     <FiSend/> 
                     Enviar mensagem

@@ -25,9 +25,13 @@ export const CourseCard = (props) => {
           <p>{duration}</p>
         </div>
 
-        <div className='bg-primary p-2 rounded-lg text-center text-white'>
-          <Link to="/">Mais informaçoes</Link>
-        </div>
+
+        <Link
+          className='bg-orange hover:bg-Sombra p-2 rounded-lg text-white flex justify-center'
+          to="/">Mais informaçoes
+        </Link>
+
+
       </div>
 
     </div>

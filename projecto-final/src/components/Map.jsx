@@ -5,7 +5,7 @@ export const Map = () => {
     return (
         <div className='p-6'>
             <div className='flex items-center gap-2 mb-7'>
-                <div className='bg-secondary p-2 rounded-lg'>
+                <div className='bg-ice text-orange p-2 rounded-lg'>
                     <GrLocation size={20} />
                 </div>
                 <h2>Nossa localização</h2>

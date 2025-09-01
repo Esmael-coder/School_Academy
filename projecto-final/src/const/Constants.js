@@ -14,6 +14,7 @@ export const links = [
   { icon: BiHome , name: "Home", path: "/" },
   { icon: MdOutlineSchool , name: "Cursos", path: "/cursos" },
   { icon: MdAutoGraph , name: "Metodologia", path: "/metodologia" },
+  { icon: MdAutoGraph , name: "Exame", path: "/exame" },
   { icon: BiInfoCircle , name: "Sobre", path: "/sobre" },
   { icon: BiPhone , name: "Contacto", path: "/contacto" }
 ]
@@ -79,6 +80,57 @@ export const testimoniolsData = [
     course: "GNR",
     testimony: "Quando vi o meu nome na lista de aprovados, a sensação foi indescritível — uma mistura de alegria, alívio e gratidão."
    }
+]
+
+export const concurse = [
+  {
+    id: 1,
+    course: "GNR - Guarda Nacional Republicana",
+    category: "Forças de segurança",
+    start: "08/04/2026",
+    end: "08/07/2026",
+    exame: "08/12/2026",
+    avaliableSpace: "340",
+    isOpen: false,
+    etap: [
+      "Prova de conhecimento",
+      "Testes psicotécnicos",
+      "Exame médico"
+    ]
+
+  },
+  {
+    id: 2,
+    course: "FAP - Força Aérea Portuguesa",
+    category: "Forças armadas",
+    start: "05/04/2026",
+    end: "04/07/2026",
+    exame: "08/12/2026",
+    avaliableSpace: "50",
+    isOpen: false,
+    etap: [
+      "Prova de matemática",
+      "Testes psicotécnicos",
+      "Exame médico"
+    ]
+
+  },
+  {
+    id: 3,
+    course: "Marinha",
+    category: "Forças armadas",
+    start: "01/09/2024",
+    end: "01/11/2024",
+    exame: "08/12/2026",
+    avaliableSpace: "250",
+    isOpen: true,
+    etap: [
+      "Prova de natação",
+      "Testes psicotécnicos",
+      "Exame médico"
+    ]
+
+  }
 ]
 
 export const courses = [

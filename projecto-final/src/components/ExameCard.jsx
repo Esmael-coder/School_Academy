@@ -5,6 +5,7 @@ import { TbUsers } from "react-icons/tb";
 import { LuCalendarDays } from "react-icons/lu";
 import { GoChecklist } from "react-icons/go";
 import { BsListCheck } from "react-icons/bs";
+import { IoMdTime } from "react-icons/io";
 
 import { Link } from 'react-router-dom';
 
@@ -57,11 +58,11 @@ export const ExameCard = ({ course, categoria, inicio, fim, exame, vagas, etapas
         <div className='p-3 border border-cinza rounded-xl flex flex-col gap-4'>
             <div className='flex justify-between'>
                 <div>
-                    <h2>{course}</h2>
+                    <h2 className='font-bold'>{course}</h2>
                     <span className='text-cinza'>{categoria}</span>
                 </div>
                 <div className='flex flex-col gap-1'>
-                    <span>Candidaturas</span>
+                    <span className='font-semibold'>Candidaturas</span>
                     <span
                         style={style}>
                         {status}
@@ -74,13 +75,13 @@ export const ExameCard = ({ course, categoria, inicio, fim, exame, vagas, etapas
                 <div className='flex justify-between'>
                     <div>
                         <h3
-                            className='text-primary flex items-center gap-1 mb-2'>
-                            <LuCalendarDays />
+                            className='text-primary flex items-center gap-1 mb-2 font-semibold'>
+                            <IoMdTime />
                             Candidaturas
                         </h3>
                         <span>{inicio} - {fim}</span>
                     </div>
-                    <div className='flex flex-col gap-1 items-end'>
+                    <div className='flex flex-col gap-1 items-end font-semibold'>
                         <span className='text-primary flex items-center gap-1'>
                             <TbUsers />
                             Vagas
@@ -92,13 +93,16 @@ export const ExameCard = ({ course, categoria, inicio, fim, exame, vagas, etapas
                 </div>
 
                 <div>
-                    <h3 className='text-primary mb-2'>Data do Exame</h3>
+                    <h3 className='text-primary flex gap-1 items-center mb-2 font-semibold'>
+                        <LuCalendarDays />
+                        Data do Exame
+                    </h3>
                     <span>{exame}</span>
                 </div>
 
                 <div>
                     <h3
-                        className='text-primary flex gap-1 items-center mb-2'>
+                        className='text-primary flex gap-1 items-center mb-2 font-semibold'>
                         <GoChecklist />
                         Requisitos
                     </h3>
@@ -115,8 +119,8 @@ export const ExameCard = ({ course, categoria, inicio, fim, exame, vagas, etapas
 
             <div className='flex flex-col'>
                 <h3
-                    className='text-primary flex gap-1 items-center mb-2'>
-                    <BsListCheck />   
+                    className='text-primary flex gap-1 items-center mb-2 font-semibold'>
+                    <BsListCheck />
                     Fases do Concurso
                 </h3>
                 <ul className='flex flex-wrap text-[14px] gap-1'>

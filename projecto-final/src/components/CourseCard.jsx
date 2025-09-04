@@ -5,7 +5,7 @@ import { BiTimeFive } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 
 export const CourseCard = (props) => {
-  const { image, name, example, description, duration } = props
+  const { id, image, name, example, description, duration } = props
   return (
 
     <div className='rounded-lg shadow-[var(--boxShadow)] text-cinza max-w-[450px] md:w-full'>
@@ -28,7 +28,7 @@ export const CourseCard = (props) => {
 
         <Link
           className='bg-orange hover:bg-Sombra p-2 rounded-lg text-white flex justify-center'
-          to="/">Mais informaçoes
+          to={`/cursos/${id}`}>Mais informaçoes
         </Link>
 
 

@@ -177,6 +177,7 @@ export const Cursos = () => {
               allCourses.map(course => (
                 <CourseCard
                   key={course.id}
+                  id={course.id}
                   image={course.image}
                   name={course.name}
                   example={course.example}

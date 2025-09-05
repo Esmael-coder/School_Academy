@@ -4,26 +4,26 @@ import { MdOutlineSchool, MdAutoGraph } from 'react-icons/md'
 import { courseImg } from '../assets/img/course/index'
 import { svg } from '../assets/img/method/index'
 
-const [army, auxiliarSaude, backend, bombeiro, energiaRenovavel, frontend, fullstack, mecanicoLigeiro,mecanicoPesado, painelSolar, redes, security] = courseImg
+const [army, auxiliarSaude, backend, bombeiro, energiaRenovavel, frontend, fullstack, mecanicoLigeiro, mecanicoPesado, painelSolar, redes, security] = courseImg
 
 /* Não posso fechar os icones como tag porque js não aceita. tenho que fechar na hora de usar */
 
 // link do menu principal
 export const links = [
 
-  { icon: BiHome , name: "Home", path: "/" },
-  { icon: MdOutlineSchool , name: "Cursos", path: "/cursos" },
-  { icon: MdAutoGraph , name: "Metodologia", path: "/metodologia" },
-  { icon: MdAutoGraph , name: "Exame", path: "/exame" },
-  { icon: BiInfoCircle , name: "Sobre", path: "/sobre" },
-  { icon: BiPhone , name: "Contacto", path: "/contacto" }
+  { icon: BiHome, name: "Home", path: "/" },
+  { icon: MdOutlineSchool, name: "Cursos", path: "/cursos" },
+  { icon: MdAutoGraph, name: "Metodologia", path: "/metodologia" },
+  { icon: MdAutoGraph, name: "Exame", path: "/exame" },
+  { icon: BiInfoCircle, name: "Sobre", path: "/sobre" },
+  { icon: BiPhone, name: "Contacto", path: "/contacto" }
 ]
 
 export const category = [
-  {id: 1, icon: BiMedal, name:"Concursos Publicos"},
-  {id: 2, icon: BiBullseye, name: "Preparação para Exames"},
-  {id: 3, icon: BiWorld, name: "Línguas Estrangeiras"},
-  {id: 4, icon: BiCheckCircle, name: "Formação Profissional"},
+  { id: 1, icon: BiMedal, name: "Concursos Publicos" },
+  { id: 2, icon: BiBullseye, name: "Preparação para Exames" },
+  { id: 3, icon: BiWorld, name: "Línguas Estrangeiras" },
+  { id: 4, icon: BiCheckCircle, name: "Formação Profissional" },
 ]
 
 const [presencial, online, especialista] = svg
@@ -51,35 +51,35 @@ export const method = [
 
 export const testimoniolsData = [
   {
-    id:1, 
-    name: "Miguel Andrade", 
+    id: 1,
+    name: "Miguel Andrade",
     course: "Frontend developer",
     testimony: "O que mais gostei foi a abordagem prática: em cada módulo desenvolvíamos projetos reais que me ajudaram a consolidar o que estava a aprender."
-   },
+  },
   {
-    id:2, 
-    name: "Ana Pereira", 
+    id: 2,
+    name: "Ana Pereira",
     course: "Redes informáticas",
     testimony: "Hoje sinto-me confiante para atuar no mercado de trabalho, consigo diagnosticar e resolver falhas de rede e já penso em tirar certificações como a CCNA para avançar ainda mais na carreira."
-   },
+  },
   {
-    id:3, 
-    name: "Maria Fernandes", 
+    id: 3,
+    name: "Maria Fernandes",
     course: "Auxiliar de Saúde",
     testimony: "Já trabalho numa clínica, sinto-me preparada e realizada por poder cuidar das pessoas com profissionalismo e dedicação. Este curso mudou a minha vida e abriu-me portas para o futuro."
-   },
+  },
   {
-    id:4, 
-    name: "Carlos Almeida", 
+    id: 4,
+    name: "Carlos Almeida",
     course: "GNR",
     testimony: "Quando vi o meu nome na lista de aprovados, a sensação foi indescritível — uma mistura de alegria, alívio e gratidão."
-   },
+  },
   {
-    id:5, 
-    name: "Joana Mato", 
+    id: 5,
+    name: "Joana Mato",
     course: "GNR",
     testimony: "Quando vi o meu nome na lista de aprovados, a sensação foi indescritível — uma mistura de alegria, alívio e gratidão."
-   }
+  }
 ]
 
 export const concurse = [
@@ -139,111 +139,308 @@ export const courses = [
     name: "Forças de segurança",
     example: "GNR, PSP, PJ",
     category: "concurso público",
-    description: "preparação completa para concursos das principais forças de segurança.",
+    description: "Preparação completa para concursos das principais forças de segurança.",
+    descriptionLong: "Este curso foi desenvolvido para preparar candidatos a concursos das forças de segurança portuguesas, como GNR, PSP e PJ. Inclui matérias teóricas, práticas de provas físicas e simulações de exames escritos. O aluno terá acompanhamento contínuo para aumentar as hipóteses de sucesso.",
     duration: "8 meses",
     method: "Híbrido",
-    image: security
-    
+    image: security,
+    advantages: [
+      "Preparação específica para exames escritos e provas físicas",
+      "Material atualizado conforme concursos nacionais",
+      "Aulas híbridas (presenciais e online)"
+    ],
+    careers: [
+      "Guarda da GNR",
+      "Agente da PSP",
+      "Agente da Polícia Judiciária"
+    ],
+    program: [
+      "Legislação portuguesa aplicável",
+      "Direito Penal e Processual Penal",
+      "Simulação de exames",
+      "Treino físico orientado"
+    ],
+    certificate: "Certificado de conclusão reconhecido pelo setor"
   },
   {
     id: 2,
     name: "Forças armadas",
-    example: "fuzileiros, marinha, força aéria",
+    example: "Fuzileiros, Marinha, Força Aérea",
     category: "concurso público",
-    description: "formação específica para ingresso nas Forças Armadas Portuguesas.",
+    description: "Formação específica para ingresso nas Forças Armadas Portuguesas.",
+    descriptionLong: "Curso direcionado para candidatos que desejam ingressar em diferentes ramos das Forças Armadas. Trabalha tanto os conteúdos teóricos como a preparação física necessária para as provas. Inclui apoio personalizado para entrevistas e simulação de testes psicotécnicos.",
     duration: "6 meses",
     method: "Híbrido",
-    image: army
+    image: army,
+    advantages: [
+      "Preparação física personalizada",
+      "Simulação de provas de seleção",
+      "Acompanhamento individual"
+    ],
+    careers: [
+      "Fuzileiro",
+      "Soldado da Força Aérea",
+      "Marinheiro da Marinha"
+    ],
+    program: [
+      "História militar e valores institucionais",
+      "Treino físico",
+      "Técnicas de sobrevivência",
+      "Provas psicotécnicas"
+    ],
+    certificate: "Certificação interna de preparação para concurso"
   },
   {
     id: 3,
     name: "Proteção Civil",
     example: "Bombeiro, segurança",
     category: "segurança pública",
-    description: "formação técnica para profissões de emergência e proteção civil.",
+    description: "Formação técnica para profissões de emergência e proteção civil.",
+    descriptionLong: "Curso completo para quem pretende trabalhar em áreas de emergência, como bombeiros e proteção civil. Foca em técnicas de socorro, prevenção e gestão de crises, bem como legislação de segurança pública.",
     duration: "7 meses",
     method: "Híbrido",
-    image: bombeiro
+    image: bombeiro,
+    advantages: [
+      "Formação prática em simulações de emergência",
+      "Acesso a conteúdos atualizados",
+      "Certificação reconhecida"
+    ],
+    careers: [
+      "Bombeiro voluntário ou profissional",
+      "Agente de proteção civil",
+      "Técnico de segurança"
+    ],
+    program: [
+      "Primeiros socorros",
+      "Gestão de crises",
+      "Segurança contra incêndios",
+      "Procedimentos de evacuação"
+    ],
+    certificate: "Certificação válida para o setor de segurança pública"
   },
   {
     id: 4,
     name: "Saúde e Cuidados",
-    example: "auxiliar de saúde",
+    example: "Auxiliar de saúde",
     category: "saúde",
-    description: "formação para auxiliares de saúde e cuidadores",
+    description: "Formação para auxiliares de saúde e cuidadores.",
+    descriptionLong: "Este curso prepara profissionais para atuarem em hospitais, clínicas e lares, prestando apoio direto a pacientes e equipas de saúde. Inclui teoria e prática supervisionada.",
     duration: "8 meses",
-    method: "presencial + online",
-    image: auxiliarSaude
+    method: "Híbrido",
+    image: auxiliarSaude,
+    advantages: [
+      "Aulas práticas em ambiente simulado",
+      "Certificação reconhecida",
+      "Oportunidades de estágio"
+    ],
+    careers: [
+      "Auxiliar de saúde",
+      "Cuidador de idosos",
+      "Assistente em clínicas privadas"
+    ],
+    program: [
+      "Anatomia e fisiologia básica",
+      "Cuidados de higiene e conforto",
+      "Administração de medicamentos (apoio)",
+      "Atendimento ao paciente"
+    ],
+    certificate: "Certificado de auxiliar de saúde"
   },
   {
     id: 5,
     name: "Administração de Empresas",
-    example: "gestor empresarial",
+    example: "Gestor empresarial",
     category: "gestão",
-    description: "formação em gestão empresarial e administração de recursos humanos.",
+    description: "Formação em gestão empresarial e administração de recursos humanos.",
+    descriptionLong: "Curso voltado para futuros gestores e administradores, abordando técnicas de liderança, finanças, marketing e gestão de pessoas. O aluno terá uma visão global do funcionamento de uma empresa, aprendendo a tomar decisões estratégicas e eficazes.",
     duration: "5 meses",
-    method: "online",
-    image: frontend
+    method: "Online",
+    image: frontend,
+    advantages: [
+      "Conteúdo atualizado de acordo com o mercado",
+      "Formação prática em casos reais de gestão",
+      "Flexibilidade para estudo online"
+    ],
+    careers: [
+      "Gestor de empresas",
+      "Administrador de recursos humanos",
+      "Consultor empresarial"
+    ],
+    program: [
+      "Fundamentos de gestão empresarial",
+      "Gestão de recursos humanos",
+      "Marketing e estratégia",
+      "Finanças e contabilidade"
+    ],
+    certificate: "Certificado de Administração e Gestão Empresarial"
   },
   {
     id: 6,
     name: "Redes Informáticas",
-    example: "técnico de sistema e redes",
+    example: "Técnico de sistemas e redes",
     category: "informática",
     description: "Especialização em redes de computadores e sistemas informáticos.",
+    descriptionLong: "Curso técnico especializado em redes e sistemas informáticos. O aluno aprende a instalar, configurar e manter redes, além de dominar conceitos de segurança digital e administração de servidores.",
     duration: "5 meses",
-    method: "híbrido",
-    image: redes
+    method: "Híbrido",
+    image: redes,
+    advantages: [
+      "Formação prática em laboratórios de redes",
+      "Certificação em tecnologias de mercado",
+      "Preparação para certificações internacionais"
+    ],
+    careers: [
+      "Técnico de redes informáticas",
+      "Administrador de sistemas",
+      "Especialista em segurança de redes"
+    ],
+    program: [
+      "Fundamentos de redes",
+      "Configuração de servidores",
+      "Segurança informática",
+      "Virtualização e cloud computing"
+    ],
+    certificate: "Certificado de Técnico de Redes Informáticas"
   },
   {
     id: 7,
     name: "Energia Renovável",
-    example: "técnico de painéis solares",
+    example: "Técnico de painéis solares",
     category: "energia renovável",
-    description: "espacialização em energias renováveis",
+    description: "Especialização em energias renováveis.",
+    descriptionLong: "Curso focado em soluções sustentáveis para o setor energético, com destaque para a energia solar. O aluno aprende sobre instalação, manutenção e dimensionamento de sistemas de energias renováveis.",
     duration: "6 meses",
-    method: "híbrido",
-    image: energiaRenovavel
+    method: "Híbrido",
+    image: energiaRenovavel,
+    advantages: [
+      "Alta empregabilidade no setor energético",
+      "Aulas práticas de instalação de painéis solares",
+      "Conteúdo atualizado em tecnologias verdes"
+    ],
+    careers: [
+      "Técnico instalador de sistemas solares",
+      "Consultor em energias renováveis",
+      "Manutenção de sistemas sustentáveis"
+    ],
+    program: [
+      "Fundamentos das energias renováveis",
+      "Sistemas solares fotovoltaicos",
+      "Dimensionamento de projetos",
+      "Manutenção preventiva e corretiva"
+    ],
+    certificate: "Certificação em Energias Renováveis"
   },
   {
     id: 8,
     name: "Manutenção de Sistema Solar",
-    example: "técnico de painéis solares",
+    example: "Técnico de painéis solares",
     category: "energia renovável",
-    description: "espacialização em instalação e manutenção de paineis soláres.",
+    description: "Especialização em instalação e manutenção de painéis solares.",
+    descriptionLong: "Curso prático e técnico voltado para profissionais que desejam atuar na instalação e manutenção de sistemas solares fotovoltaicos. Inclui estudos de eficiência energética e otimização de sistemas.",
     duration: "5 meses",
-    method: "híbrido",
-    image: painelSolar
+    method: "Híbrido",
+    image: painelSolar,
+    advantages: [
+      "Formação prática em campo",
+      "Alta demanda de mercado",
+      "Aprendizagem de técnicas modernas"
+    ],
+    careers: [
+      "Instalador de sistemas solares",
+      "Técnico de manutenção de painéis solares",
+      "Consultor de eficiência energética"
+    ],
+    program: [
+      "Instalação de painéis solares",
+      "Manutenção de sistemas solares",
+      "Eficiência energética",
+      "Normas de segurança em instalações"
+    ],
+    certificate: "Certificação em Instalação e Manutenção de Sistemas Solares"
   },
   {
     id: 9,
     name: "Mecânica Automóvel",
-    example: "mecânico de automóveis pesados",
+    example: "Mecânico de automóveis ligeiros",
     category: "mecânica",
     description: "Formação técnica em mecânica automóvel e diagnóstico eletrónico.",
+    descriptionLong: "Curso prático em mecânica de automóveis, com foco em manutenção preventiva, reparos e diagnóstico eletrónico. O aluno terá acesso a oficinas simuladas e equipamentos modernos.",
     duration: "5 meses",
-    method: "híbrido",
-    image: mecanicoLigeiro
+    method: "Híbrido",
+    image: mecanicoLigeiro,
+    advantages: [
+      "Aulas práticas em oficina equipada",
+      "Aprendizagem de diagnóstico eletrónico",
+      "Certificação reconhecida no setor automóvel"
+    ],
+    careers: [
+      "Mecânico de automóveis ligeiros",
+      "Técnico de diagnóstico eletrónico",
+      "Manutenção automóvel em oficinas e concessionárias"
+    ],
+    program: [
+      "Fundamentos de mecânica automóvel",
+      "Sistemas de motor",
+      "Sistemas elétricos e eletrónicos",
+      "Diagnóstico e reparação"
+    ],
+    certificate: "Certificado de Técnico em Mecânica Automóvel"
   },
   {
     id: 10,
     name: "Mecânica de Pesados",
-    example: "mecânico",
+    example: "Mecânico de veículos pesados",
     category: "mecânica",
     description: "Formação técnica em mecânica de pesados e diagnóstico eletrónico.",
+    descriptionLong: "Curso especializado em manutenção e reparação de veículos pesados, incluindo sistemas de motor, travagem, suspensão e eletrónica avançada.",
     duration: "5 meses",
-    method: "híbrido",
-    image: mecanicoPesado
+    method: "Híbrido",
+    image: mecanicoPesado,
+    advantages: [
+      "Aulas práticas em oficinas de pesados",
+      "Aprendizagem de sistemas complexos",
+      "Alta empregabilidade no setor de transportes"
+    ],
+    careers: [
+      "Mecânico de veículos pesados",
+      "Técnico de manutenção de frotas",
+      "Especialista em diagnóstico eletrónico"
+    ],
+    program: [
+      "Sistemas de motores a diesel",
+      "Sistemas hidráulicos e pneumáticos",
+      "Sistemas eletrónicos avançados",
+      "Diagnóstico de avarias"
+    ],
+    certificate: "Certificado de Técnico em Mecânica de Pesados"
   },
   {
     id: 11,
     name: "Programador Frontend",
-    example: "frontend developer",
+    example: "Frontend Developer",
     category: "informática",
     description: "Desenvolvimento de páginas web modernas com as mais recentes tecnologias.",
+    descriptionLong: "Curso prático de desenvolvimento frontend, ensinando desde HTML, CSS e JavaScript até frameworks modernos como React. O aluno será capaz de criar interfaces web responsivas e interativas.",
     duration: "5 meses",
-    method: "online",
-    image: frontend
+    method: "Online",
+    image: frontend,
+    advantages: [
+      "Formação prática em projetos reais",
+      "Acesso a tecnologias modernas (React, Tailwind)",
+      "Alta procura no mercado de trabalho"
+    ],
+    careers: [
+      "Frontend Developer",
+      "Web Designer",
+      "UI/UX Developer"
+    ],
+    program: [
+      "HTML, CSS e JavaScript",
+      "Responsive Design",
+      "React e bibliotecas modernas",
+      "Boas práticas de UI/UX"
+    ],
+    certificate: "Certificação em Desenvolvimento Frontend"
   },
   {
     id: 12,
@@ -251,10 +448,29 @@ export const courses = [
     example: "Backend Developer",
     category: "informática",
     description: "Desenvolvimento web moderno com as mais recentes tecnologias.",
+    descriptionLong: "Curso completo para formação em desenvolvimento backend, abordando Node.js, bases de dados relacionais e não relacionais, APIs e autenticação. O aluno aprenderá a estruturar aplicações escaláveis e seguras.",
     duration: "5 meses",
-    method: "online",
-    image: backend
+    method: "Online",
+    image: backend,
+    advantages: [
+      "Formação prática em APIs reais",
+      "Domínio de bases de dados SQL e NoSQL",
+      "Preparação para o mercado de trabalho"
+    ],
+    careers: [
+      "Backend Developer",
+      "Fullstack Developer (complementar ao frontend)",
+      "Técnico de sistemas web"
+    ],
+    program: [
+      "Fundamentos de backend com Node.js",
+      "Bases de dados SQL e NoSQL",
+      "Criação de APIs REST",
+      "Autenticação e segurança"
+    ],
+    certificate: "Certificação em Desenvolvimento Backend"
   }
+
 ]
 
 

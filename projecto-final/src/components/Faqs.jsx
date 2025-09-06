@@ -6,20 +6,31 @@ import { useState } from "react";
 
 export const Faqs = () => {
 
-    const [isOpen , setIsOpen] = useState(false)
-    const handleClick = ()=>{
-        setIsOpen(!isOpen)
+    const [idArray, setIdArray] = useState([])
+
+    const handleClick = (newId) => {
+
+        if (idArray.includes(newId)) {
+
+            setIdArray(idArray.filter(id => id !== newId))
+
+        } else {
+
+            setIdArray([...idArray, newId])
+        }
     }
+
     return (
+
         <div>
             <ul>
                 {faqs.map(faq => (
-                    <li key={faq.id} className='mb-8 pb-4 border-b border-orange cursor-pointer transition duration-300 ease-in-out' onClick={handleClick}>
+                    <li key={faq.id} className='mb-8 pb-4 border-b border-cinza cursor-pointer transition duration-300 ease-in-out' onClick={() => handleClick(faq.id)}>
                         <h2 className='flex items-center justify-between text-primary text-lg mb-3'>
                             {faq.question}
-                            {isOpen ? <FaChevronUp className='text-orange'/> : <FaChevronDown className='text-orange'/> }
+                            {idArray.includes(faq.id) ? <FaChevronUp className='text-orange' /> : <FaChevronDown className='text-orange' />}
                         </h2>
-                        <div className={isOpen ? "block" : "hidden"}>
+                        <div className={idArray.includes(faq.id) ? "block" : "hidden"}>
                             <p>{faq.answer}</p>
                         </div>
                     </li>

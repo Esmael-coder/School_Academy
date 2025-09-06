@@ -174,7 +174,8 @@ export const Home = () => {
 
       {/* Faqs */}
       <section>
-        <div className='w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8'>
+        <div className='w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8 my-30'>
+          <h1 className='text-primary font-bold text-4xl text-center mb-20'>Perguntas frequentes</h1>
           <Faqs></Faqs>
         </div>
       </section>

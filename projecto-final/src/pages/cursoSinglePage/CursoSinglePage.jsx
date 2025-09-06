@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+
+import React from 'react'
 import { useParams } from 'react-router-dom'
-import { HeroDiv } from '../../components/HeroDiv'
 import { courses } from '../../const/Constants'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
@@ -14,6 +14,7 @@ import { VscSymbolMethod } from "react-icons/vsc";
 import { FiCalendar } from "react-icons/fi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
+import { Faqs } from '../../components/Faqs'
 
 
 export const CursoSinglePage = () => {
@@ -61,18 +62,18 @@ export const CursoSinglePage = () => {
         <div className='md:grid md:grid-cols-3 md:gap-x-10 relative'>
           <section className='col-span-2'>
             <div className='mb-10'>
-              <h1 className='font-bold text-primary text-2xl mb-5'>{selectedCourse.name}</h1>
+              <h1 className='text-primary font-bold text-4xl  mb-5'>{selectedCourse.name}</h1>
               <p className='text-cinza text-xl mb-5'>{selectedCourse.description}</p>
               <p className='mb-6'>{selectedCourse.descriptionLong}</p>
               <img className='w-full rounded-xl max-w-[650px]' src={selectedCourse.image} alt={selectedCourse.name} />
             </div>
 
             <div className='mb-10'>
-              <h1 className='font-bold text-primary text-2xl mb-5'>O que nos diferencia ?</h1>
+              <h1 className='text-primary font-bold text-4xl mb-5'>O que nos diferencia ?</h1>
               <ul className='mb-6'>
                 {selectedCourse.advantages.map((advantage, index) => (
                   <li key={index} className='flex items-center gap-2 mb-4'>
-                    <BsCheck2Circle  className='min-w-[18px] text-orange' />
+                    <BsCheck2Circle className='min-w-[18px] text-orange' />
                     {advantage}
                   </li>
                 ))}
@@ -80,7 +81,7 @@ export const CursoSinglePage = () => {
             </div>
 
             <div className='mb-10'>
-              <h1 className='font-bold text-primary text-2xl mb-5'>O que Vai Aprender</h1>
+              <h1 className='text-primary font-bold text-4xl mb-5'>O que Vai Aprender</h1>
               <p className='mb-5'>O nosso programa abrangente cobre todas as tecnologias essenciais para se tornar um profissional completo.</p>
               <div>
                 <ul className='flex flex-col gap-4'>
@@ -101,7 +102,7 @@ export const CursoSinglePage = () => {
             </div>
 
             <div className='mb-10'>
-              <h1 className='font-bold text-primary text-2xl mb-5'>Oportunidades de carreira</h1>
+              <h1 className='text-primary font-bold text-4xl mb-5'>Oportunidades de carreira</h1>
               <p className='mb-5'>Com as competências adquiridas neste curso, poderá candidatar-se a diversos cargos profissionais.</p>
 
               <ul className='flex flex-col gap-2'>
@@ -159,7 +160,7 @@ export const CursoSinglePage = () => {
                 <ul>
                   {contentIncluded.map((content, index) => (
                     <li key={index} className='flex items-center gap-2'>
-                      <BsCheck2Circle  />
+                      <BsCheck2Circle />
                       {content}
                     </li>
                   ))}
@@ -181,12 +182,19 @@ export const CursoSinglePage = () => {
         </div>
 
         <section>
-          <div className='w-full bg-secondary flex flex-col items-center p-3 rounded-lg'>
+          <div className='w-full bg-secondary flex flex-col items-center p-5 rounded-lg'>
             <GrCertificate size={60} className='text-orange' />
             <h1 className='font-bold text-primary text-2xl mb-5'>Certificação profissional</h1>
             {selectedCourse.category == "concurso público" ?
               <p className='text-center'>Ao concluir o curso com sucesso, receberá o <strong>{selectedCourse.certificate}</strong>, e que valida as suas competências.</p>
               : <p className='text-center'>Ao concluir o curso com sucesso, receberá o <strong>{selectedCourse.certificate}</strong>, reconhecido pela indústria e que valida as suas competências.</p>}
+          </div>
+        </section>
+
+        <section>
+          <div className='my-30 max-w-5xl mx-auto'>
+            <h1 className='text-primary font-bold text-4xl text-center mb-20'>Dúvidas frequentes</h1>
+            <Faqs />
           </div>
         </section>
 

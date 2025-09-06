@@ -26,6 +26,39 @@ export const category = [
   { id: 4, icon: BiCheckCircle, name: "Formação Profissional" },
 ]
 
+export const faqs = [
+  {
+    id:1,
+    question: "Qual é a duração dos cursos?",
+    answer: "A duração varia de acordo com o curso. Alguns cursos podem durar 5 meses, enquanto outros mais completos podem durar mais. Detalhes específicos de cada curso estão disponíveis na nossa página de cursos."
+  },
+  {
+    id:2,
+    question: "A escola fornece certificado ao final do curso?",
+    answer: "Sim! Todos os alunos que concluírem com sucesso os cursos recebem um certificado reconhecido, que pode ser utilizado para comprovar suas qualificações profissionais."
+  },
+  {
+    id:3,
+    question: "Há opções de ensino presencial e online?",
+    answer: "Sim. Oferecemos cursos presenciais, online e híbridos, para que os alunos possam escolher o formato que melhor se adapta à sua rotina e necessidade de aprendizado."
+  },
+  {
+    id:4,
+    question: "A escola ajuda na inserção no mercado de trabalho?",
+    answer: "Sim! Oferecemos orientação profissional, workshops de currículo e entrevistas, além de parcerias com empresas para facilitar estágios e oportunidades de emprego aos nossos alunos."
+  },
+  {
+    id:5,
+    question: "Existe suporte para dúvidas durante o curso?",
+    answer: "Sim! Nossos alunos têm acesso a tutores e equipe de suporte para esclarecer dúvidas, seja presencialmente, por e-mail ou por plataformas online, garantindo um aprendizado contínuo."
+  },
+  {
+    id:6,
+    question: "Quais são as formas de pagamento disponíveis?",
+    answer: "Aceitamos pagamentos por transferência bancária, cartão de crédito ou débito, e multibanco. Também oferecemos opções de parcelamento e descontos para inscrições antecipadas ou pagamento total à vista."
+  }
+]
+
 const [presencial, online, especialista] = svg
 
 export const method = [

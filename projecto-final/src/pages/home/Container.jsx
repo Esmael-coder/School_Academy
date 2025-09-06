@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { BiRightArrowAlt  } from "react-icons/bi";
+import { FaChevronDown } from "react-icons/fa6";
 
 // recebendo icon como props. tenho que armazenanar numa variável com letra maiúscula para poder usar 
 export const Container = ({ content, icon }) => {
@@ -11,7 +11,7 @@ export const Container = ({ content, icon }) => {
         <Icon className="text-orange" size={20} />
       </div>
       <p>{content}</p>
-      <BiRightArrowAlt  className='absolute text-orange right-4 top-4.5' size={24}/>
+      <FaChevronDown  className='absolute text-orange right-4 top-4.5' size={24}/>
     </div>
   )
 }

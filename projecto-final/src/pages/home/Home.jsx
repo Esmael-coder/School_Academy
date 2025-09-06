@@ -8,6 +8,7 @@ import "swiper/css/effect-coverflow";
 import { Navigation, EffectCoverflow, Pagination } from 'swiper/modules'
 import { HeroDiv } from '../../components/HeroDiv'
 import { homeComponents } from './index';
+import { Faqs } from '../../components/Faqs'
 import Imagem1 from '../../assets/imagem1.jpg'
 import { BiCalendarCheck, BiRightArrowAlt, BiConversation, BiPhoneCall } from "react-icons/bi";
 import { MdAutoGraph } from 'react-icons/md';
@@ -50,8 +51,8 @@ export const Home = () => {
 
               <div className='flex flex-col md:flex-row text-center gap-4'>
 
-                <Link 
-                  className='py-2.5 px-2 bg-orange text-white shadow-md rounded-md w-full md:w-auto' 
+                <Link
+                  className='py-2.5 px-2 bg-orange text-white shadow-md rounded-md w-full md:w-auto'
                   to="/cursos"> Ver cursos disponíveis
                   <BiRightArrowAlt size={24} className='inline-block' />
                 </Link>
@@ -171,7 +172,12 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* cursos mais procurados */}
+      {/* Faqs */}
+      <section>
+        <div className='w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8'>
+          <Faqs></Faqs>
+        </div>
+      </section>
     </>
   )
 }

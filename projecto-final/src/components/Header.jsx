@@ -22,7 +22,7 @@ export const Header = () => {
 
                     <div className='flex items-center gap-1 text-primary'>
                         <BiBrain size={35} />
-                        <h1 className='font-bold text-2xl'>MindUp</h1>
+                        <Link to={"/"} className='font-bold text-2xl cursor-pointer'>MindUp</Link>
                     </div>
 
                     {/* menu hamburguer */}

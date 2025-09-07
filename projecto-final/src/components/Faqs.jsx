@@ -31,7 +31,7 @@ export const Faqs = () => {
                             {idArray.includes(faq.id) ? <FaChevronUp className='text-orange' /> : <FaChevronDown className='text-orange' />}
                         </h2>
                         <div className={idArray.includes(faq.id) ? "block" : "hidden"}>
-                            <p>{faq.answer}</p>
+                            <p className='text-cinza'>{faq.answer}</p>
                         </div>
                     </li>
                 ))}

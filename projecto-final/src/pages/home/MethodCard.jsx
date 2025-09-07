@@ -24,13 +24,13 @@ export const MethodCard = () => {
                     className="arrow" //classe arrow foi definida no index.css
                 >
                     {
-                        method.map(element => (
+                        method.slice(0, 3).map(element => (
 
                             <SwiperSlide>
 
                                 <div key={element.id} className='px-10 text-center'>
                                     <h2 className='font-semibold text-xl mb-2'>{element.title}</h2>
-                                    <p className='text-cinza'>{element.description}</p>
+                                    <p className='text-cinza'>{element.text}</p>
                                 </div>
 
                             </SwiperSlide>
@@ -42,15 +42,15 @@ export const MethodCard = () => {
             {/* Versão desktop */}
             <div className='hidden w-full md:flex justify-between'>
                 {
-                    method.map(element => (
+                    method.slice(0, 3).map(element => (
 
 
                         <div key={element.id} className='w-[200px] lg:w-[300px] p-4 hover:shadow-xl rounded-xl transition-all duration-300 ease-in'>
-                            <img src={element.image} alt="ilustração" />
+                            <img src={element.img} alt="ilustração" />
 
                             <div className='text-center'>
                                 <h2 className='font-semibold text-xl mb-2'>{element.title}</h2>
-                                <p className='text-cinza'>{element.description}</p>
+                                <p className='text-cinza'>{element.text}</p>
                             </div>
                         </div>
 

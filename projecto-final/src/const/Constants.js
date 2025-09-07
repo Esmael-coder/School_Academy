@@ -4,6 +4,7 @@ import { MdOutlineSchool, MdAutoGraph } from 'react-icons/md'
 import { courseImg } from '../assets/img/course/index'
 import { svg } from '../assets/img/method/index'
 
+
 const [army, auxiliarSaude, backend, bombeiro, energiaRenovavel, frontend, fullstack, mecanicoLigeiro, mecanicoPesado, painelSolar, redes, security] = courseImg
 
 /* Não posso fechar os icones como tag porque js não aceita. tenho que fechar na hora de usar */
@@ -59,27 +60,39 @@ export const faqs = [
   }
 ]
 
-const [presencial, online, especialista] = svg
+const [presencial, online, diagnostico, simulacao] = svg
 
 export const method = [
-  {
-    id: 1,
-    title: "Aulas presenciais",
-    description: "Encontros presenciais com acompanhamento próximo dos professores.",
-    image: presencial
-  },
-  {
-    id: 2,
-    title: "Aulas online",
-    description: "Aulas virtuais interativas e acessíveis de qualquer lugar.",
-    image: online
-  },
-  {
-    id: 3,
-    title: "Tutoria personalizada",
-    description: "Acompanhamento individual com tutores especializados para maximizar seu aprendizado.",
-    image: especialista
-  }
+
+    {
+        id: 1,
+        title:"Aulas presenciais",
+        text: "Encontros presenciais com acompanhamento próximo dos prefessores.",
+        img: presencial
+
+    },
+    {
+        id: 2,
+        title:"Aulas online",
+        text: "Aulas interativas e acessíveis de qualquer lugar.",
+        img: online
+
+    },
+    {
+        id:4,
+        title:"Diagnóstico individual",
+        text: "Avaliação inicial para identificar pontos fortes e áreas de melhoria de cada aluno.",
+        img: diagnostico
+
+    },
+    {
+        id:5,
+        title:"Simulações reais",
+        text: "Simulações reais de exame e técnicas específicas para maximizar o desempenho.",
+        img: simulacao
+
+    }
+    
 ]
 
 export const testimoniolsData = [

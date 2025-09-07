@@ -22,8 +22,8 @@ export const Contacto = () => {
       {/* conteúdo da página */}
       <section>
         <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-12'>
-          <div className='text-center my-12'>
-            <h1>Teremos todo o prazer e falar consigo</h1>
+          <div className='text-center my-20'>
+            <h1 className='font-bold text-2xl lg:text-4xl text-primary mb-5'>Teremos todo o prazer e falar consigo</h1>
             <p>Estamos ansiosos para tirar todas as suas dúvidas</p>
           </div>
 
@@ -32,10 +32,10 @@ export const Contacto = () => {
 
             {/* div do form e mapa */}
             <div className='md:grid md:col-span-2 gap-5'>
-              <div className='shadow-[var(--boxShadow)] rounded-2xl'>
+              <div className='shadow-[var(--boxShadow2)] rounded-2xl'>
                 <Form />
               </div>
-              <div className='shadow-[var(--boxShadow)] rounded-2xl'>
+              <div className='shadow-[var(--boxShadow2)] rounded-2xl'>
                 <Map />
               </div>
             </div>
@@ -43,7 +43,7 @@ export const Contacto = () => {
             {/* div das informações */}
             <div className='flex flex-col gap-5'>
 
-              <div className='shadow-[var(--boxShadow)] rounded-2xl'>
+              <div className='shadow-[var(--boxShadow2)] rounded-2xl'>
                 <InfoCard icon={GrLocation} title={"Morada"}>
                   <p>
                     Rua do Alecrim, 75 <br />
@@ -53,21 +53,21 @@ export const Contacto = () => {
                 </InfoCard>
               </div>
 
-              <div className='shadow-[var(--boxShadow)] rounded-2xl'>
+              <div className='shadow-[var(--boxShadow2)] rounded-2xl'>
                 <InfoCard icon={BiPhone} title={"Telefone"}>
                   <p>+351 21 123 456</p>
                   <p>+351 994 955 676</p>
                 </InfoCard>
               </div>
 
-              <div className='shadow-[var(--boxShadow)] rounded-2xl'>
+              <div className='shadow-[var(--boxShadow2)] rounded-2xl'>
                 <InfoCard icon={HiOutlineMail} title={"Telefone"}>
                   <p>info@mindup.pt</p>
                   <p>admissoes@mindup.pt</p>
                 </InfoCard>
               </div>
 
-              <div className='shadow-[var(--boxShadow)] rounded-2xl'>
+              <div className='shadow-[var(--boxShadow2)] rounded-2xl'>
                 <InfoCard icon={MdAccessTime} title={"Horário"}>
                   <p>Segunda a Sexta: 9h - 20h</p>
                   <p>Sábado: 9h - 17h</p>

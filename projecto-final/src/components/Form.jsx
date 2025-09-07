@@ -70,7 +70,7 @@ export const Form = () => {
                     </div>
 
                     <button 
-                    className='bg-orange cursor-pointer hover:bg-hover text-white p-2 flex items-center justify-center gap-3 rounded-lg' 
+                    className='bg-orange cursor-pointer hover:bg-hover text-white p-2 flex items-center justify-center gap-3 rounded-lg transition-color duration-300 ease-in-out' 
                     type="submit">
                     <FiSend/> 
                     Enviar mensagem

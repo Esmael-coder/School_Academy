@@ -2,7 +2,7 @@ import React from 'react'
 
 export const VantageCard = () => {
     return (
-        <div className='flex flex-col gap-10'>
+        <div className='flex flex-col lg:flex-row gap-10'>
             <ul className='flex flex-col gap-4'>
                 <li>
                     <h3 className='text-primary font-semibold bg-secondary px-2 py-1 rounded-md mb-2'>
@@ -29,7 +29,7 @@ export const VantageCard = () => {
                     <p className='pl-3 text-cinza'>Plataforma digital avançada com recursos interativos e acompanhamento em tempo real.</p>
                 </li>
             </ul>
-            <img className='rounded-lg' src="images/vantagem.jpg" alt="" />
+            <img className='rounded-lg w-full max-w-[500px] self-center' src="images/vantagem.jpg" alt="" />
         </div>
     )
 }

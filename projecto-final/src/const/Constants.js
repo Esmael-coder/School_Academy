@@ -74,7 +74,7 @@ export const method = [
     {
         id: 2,
         title:"Aulas online",
-        text: "Aulas interativas e acessíveis de qualquer lugar.",
+        text: "Aulas interativas e acessíveis de qualquer lugar. Estude onde e quando quiser",
         img: online
 
     },

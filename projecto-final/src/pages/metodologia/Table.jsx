@@ -2,9 +2,9 @@ import React from 'react'
 
 export const Table = () => {
     return (
-        <table className='table-fixed w-[800px] border-collapse bg-white text-sm'>
+        <table className='table-fixed min-w-4xl max-w-6xl border-collapse bg-white text-sm'>
             <thead>
-                <tr className='bg-secondary text-gray-700 text-sm uppercase tracking-wider'>
+                <tr className='bg-secondary text-gray-700 text-sm tracking-wider'>
                     <th className='px-2 py-3'>Dia da semana</th>
                     <th className='px-2 py-3'>Horário</th>
                     <th className='px-2 py-3'>Actividade</th>

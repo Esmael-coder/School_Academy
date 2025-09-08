@@ -15,7 +15,6 @@ import { MdAutoGraph } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { category, testimoniolsData } from '../../const/Constants';
 import { BoxModal } from '../../components/BoxModal'
-import { Cursos } from '../cursos/Cursos'
 
 export const Home = () => {
 
@@ -30,7 +29,7 @@ export const Home = () => {
           {/* todo o conteúdo da hero section (já mexi tanto que ficou com muitas classes redundantes. refatorar depois)*/}
           <div className='flex flex-col md:flex-row gap-8 items-center'>
             <div className='flex flex-col md:order-1 lg:gap-7 gap-5'>
-              <h1 className='text-primary font-bold text-2xl lg:text-3xl text-center'>Aqui começa uma nova fase.</h1>
+              <h1 className='text-primary font-bold text-3xl lg:text-4xl '>Aqui começa uma nova fase.</h1>
               <p className='text-cinza'>
                 Na MindUp ajudamos-te a ganhar confiança, melhorar as tuas competências e enfrentar qualquer desafio com segurança.
               </p>
@@ -78,7 +77,7 @@ export const Home = () => {
           <div className='flex flex-col gap-9 md:flex-row md:items-center md:gap-24'>
             <div className='flex flex-col gap-4 md:order-1 w-full'>
               <div className='text-center md:text-left'>
-                <h1 className='font-semibold text-2xl md:font-bold md:text-4xl'>Já sabes qual a tua vocação?</h1>
+                <h1 className='font-semibold text-3xl md:font-bold md:text-4xl'>Já sabes qual a tua vocação?</h1>
                 <p className='mt-4 mb-5 text-cinza'>Escolhe a área de estudos que mais se adequa aos teus objetivos profissionais.</p>
               </div>
 
@@ -106,14 +105,14 @@ export const Home = () => {
       <section>
         <div className='px-4 pt-10 md:pt-20 md:px-6 mb-16 lg:px-8 max-w-7xl mx-auto flex flex-col gap-9'>
           <div className='text-center'>
-            <h1 className='font-semibold text-2xl md:font-bold md:text-4xl'>A Nossa metodologia</h1>
+            <h1 className='font-semibold text-3xl md:font-bold md:text-4xl'>A Nossa metodologia</h1>
             <p className='mt-4 text-cinza'>Aprendizado flexível que une teoria, prática e inovação</p>
           </div>
 
           < MethodCard />
 
           <div className='flex items-center justify-center md:w-fit md:mx-auto gap-2 p-3 bg-orange text-white rounded-xl cursor-pointer hover:shadow-lg'>
-            <Link to={"/"}>Veja como funciona</Link>
+            <Link to={"/metodologia"}>Veja como funciona</Link>
             <MdAutoGraph size={20} />
           </div>
         </div>
@@ -123,7 +122,7 @@ export const Home = () => {
       {/* section de testemunhas */}
       <section className='bg-ice'>
         <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
-          <h1 className='text-center font-bold text-2xl text-primary'>Opiniões dos Ex-alunos</h1>
+          <h1 className='text-center font-bold text-3xl lg:text-4xl text-primary'>Opiniões dos Ex-alunos</h1>
           <p className='text-center text-hightlight mb-10'>O que dizem sobre a MindUp</p>
 
           <div className='h-[400px] flex items-center justify-center '>
@@ -175,7 +174,7 @@ export const Home = () => {
       {/* Faqs */}
       <section>
         <div className='w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8 my-30'>
-          <h1 className='text-primary font-bold text-4xl text-center mb-20'>Perguntas frequentes</h1>
+          <h1 className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'>Perguntas frequentes</h1>
           <Faqs></Faqs>
         </div>
       </section>

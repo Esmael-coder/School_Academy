@@ -3,7 +3,7 @@ import React from 'react'
 export const VantageCard = () => {
     return (
         <div className='flex flex-col lg:flex-row gap-10'>
-            <ul className='flex flex-col gap-4'>
+            <ul className='flex flex-col gap-8'>
                 <li>
                     <h3 className='text-primary font-semibold bg-secondary px-2 py-1 rounded-md mb-2'>
                         Professores especializados

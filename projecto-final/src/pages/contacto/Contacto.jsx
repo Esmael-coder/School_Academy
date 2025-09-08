@@ -23,7 +23,7 @@ export const Contacto = () => {
       <section>
         <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-12'>
           <div className='text-center my-20'>
-            <h1 className='font-bold text-2xl lg:text-4xl text-primary mb-5'>Teremos todo o prazer e falar consigo</h1>
+            <h1 className='font-bold text-2xl lg:text-4xl text-primary mb-5'>Teremos todo o prazer em falar consigo</h1>
             <p>Estamos ansiosos para tirar todas as suas dúvidas</p>
           </div>
 

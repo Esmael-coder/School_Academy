@@ -168,7 +168,7 @@ export const Cursos = () => {
 
         <div className='max-w-7xl w-full min-h-[75vh] mx-auto px-4 lg:px-8 gap-8 m-10'>
           <div>
-            <h1 className='font-bold text-2xl text-center mb-10'>Cursos Certificados</h1>
+            <h1 className='font-bold text-3xl lg:text-4xl text-primary text-center mb-10'>Cursos Certificados</h1>
           </div>
 
 

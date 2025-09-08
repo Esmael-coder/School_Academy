@@ -60,7 +60,7 @@ export const faqs = [
   }
 ]
 
-const [presencial, online, diagnostico, simulacao] = svg
+const [online, presencial, diagnostico, simulacao] = svg
 
 export const method = [
 

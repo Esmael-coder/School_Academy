@@ -83,7 +83,7 @@ export const Home = () => {
 
               {
                 category.map(item => (
-                  <Container key={item.id} icon={item.icon} content={item.name} />
+                  <Container key={item.id} icon={item.icon} content={item.name}/>
                 )
                 )
               }

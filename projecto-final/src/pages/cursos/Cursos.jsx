@@ -6,22 +6,21 @@ import { courses } from '../../const/Constants'
 import { CourseCard } from '../../components/CourseCard'
 import { BoxModal } from '../../components/BoxModal';
 
-const coursesCopy = [...courses]
 
 export const Cursos = () => {
 
-  const [allCourses, setAllCourses] = useState(coursesCopy)
+  const [allCourses, setAllCourses] = useState(courses)
 
   // função para filtrar cursos por categoria
   const handleFilter = (categoryValue) => {
 
     if (categoryValue !== "todos") {
 
-      setAllCourses(coursesCopy.filter(course => course.category == categoryValue))
+      setAllCourses(allCourses.filter(course => course.category == categoryValue))
 
     } else {
 
-      setAllCourses(coursesCopy)
+      setAllCourses(courses)
     }
   }
 

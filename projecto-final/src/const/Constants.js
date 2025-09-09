@@ -21,10 +21,10 @@ export const links = [
 ]
 
 export const category = [
-  { id: 1, icon: BiMedal, name: "Concursos Publicos" },
-  { id: 2, icon: BiBullseye, name: "Preparação para Exames" },
-  { id: 3, icon: BiWorld, name: "Línguas Estrangeiras" },
-  { id: 4, icon: BiCheckCircle, name: "Formação Profissional" },
+  { id: 1, icon: BiMedal, name: "concurso público" },
+  { id: 2, icon: BiBullseye, name: "segurança pública" },
+  { id: 3, icon: BiWorld, name: "informática" },
+  { id: 4, icon: BiCheckCircle, name: "saúde" },
 ]
 
 export const faqs = [

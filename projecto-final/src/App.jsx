@@ -10,6 +10,7 @@ import { Exame } from './pages/exame/exame.jsx'
 import { Contacto } from './pages/contacto/Contacto'
 import { Routes, Route } from 'react-router-dom'
 import { Footer } from './components/Footer'
+import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade/PoliticaPrivacidade.jsx'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/exame' element={<Exame />} />
             <Route path='/sobre' element={<Sobre />} />
             <Route path='/contacto' element={<Contacto />} />
+            <Route path='/politica-privacidade' element={<PoliticaPrivacidade />} />
           </Routes>
       </main>
       <Footer/>

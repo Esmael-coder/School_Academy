@@ -59,7 +59,7 @@ export const Footer = () => {
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Links Úteis</h3>
                         <ul className='text-cinza'>
-                            <li><Link>Políticas de privacidade</Link></li>
+                            <li><Link className='hover:underline' to={"politica-privacidade"}>Políticas de privacidade</Link></li>
                             <li><Link>Informações de cookies</Link></li>
                             <li><Link>Livro de reclamação</Link></li>
                         </ul>

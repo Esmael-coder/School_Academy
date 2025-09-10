@@ -16,7 +16,7 @@ export const Cursos = () => {
 
     if (categoryValue !== "todos") {
 
-      setAllCourses(allCourses.filter(course => course.category == categoryValue))
+      setAllCourses(courses.filter(course => course.category == categoryValue))
 
     } else {
 

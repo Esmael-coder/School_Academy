@@ -66,15 +66,9 @@ export const Footer = () => {
                     </div>
 
                 </div>
-                <div className='w-full flex justify-between border-t-1 border-cinza text-cinza py-4'>
-                    <div>
-                        <p>&copy; {year} MindUp. Todos os direitos reservados.</p>
-                        <p>Desenvolvido por Esmael Monteiro.</p>
-                    </div>
-                    <div className='flex gap-5'>
-                        <Link className='hover:underline' to={"/politica-de-privacidade"}>Política de privacidade</Link>
-                        <Link className='hover:underline' to={"/politica-de-privacidade"}>Termos de uso</Link>
-                    </div>
+                <div className='w-full text-center border-t-1 border-cinza text-cinza py-4'>
+                    <p>&copy; {year} MindUp. Todos os direitos reservados.</p>
+                    <p>Desenvolvido por Esmael Monteiro.</p>
                 </div>
             </div>
         </footer>

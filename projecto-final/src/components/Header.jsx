@@ -52,10 +52,6 @@ export const Header = () => {
                             }
 
                         </nav>
-                        <div className='self-center flex gap-2 items-center justify-center p-2 w-24 rounded-md bg-primary text-white'>
-                            <BiLogIn />
-                            <a href="Login">Portal</a>
-                        </div>
                     </div>
 
 
@@ -74,10 +70,6 @@ export const Header = () => {
                                 ))
                             }
                         </nav>
-                    </div>
-                    <div className='self-center items-center gap-2 rounded-md w-20 p-1 bg-primary text-white hidden md:flex'>
-                        <BiLogIn />
-                        <a href="Login">Portal</a>
                     </div>
                 </div>
             </div>

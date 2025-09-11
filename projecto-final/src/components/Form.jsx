@@ -11,14 +11,16 @@ export const Form = () => {
         if (name.trim() == "") {
             
             setNomeMessage("preencha este campo.")
+            return false
 
         } else if (!isNaN(name) || name.length < 2) {
 
             setNomeMessage("Introduza um nome válido.")
+            return false
 
         } else {
             setNomeMessage("")
-            return name
+            return true
         }
     }
 
@@ -29,15 +31,40 @@ export const Form = () => {
         if (email.trim() === "") {
             
             setEmailMessage("preencha este campo.")
+            return false
 
         } else if (!regex.test(email)) {
 
             setEmailMessage("Introduza um email válido.")
+            return false
 
         } else {
             setEmailMessage("")
-            return email
+            return true
         }
+    }
+
+    const [phoneMessage, setPhoneMessage] = useState()
+    const validatePhone = (phone) => {
+        if (phone.trim() == "") {
+            
+            setPhoneMessage("preencha este campo.")
+            return false
+
+        } else if (!/^\d{9}$/.test(phone)) {
+
+            setPhoneMessage("Introduza um número de telefone válido.")
+            return false
+
+        } else {
+            setPhoneMessage("")
+            return true
+        }
+    }
+
+    const handleSubmit = (event)=>{
+        event.preventDefault()
+    
     }
 
     return (
@@ -51,7 +78,7 @@ export const Form = () => {
                     Preencha o formulário abaixo e responderemos o mais rapidamente possível.
                 </p>
 
-                <form className='flex flex-col gap-4'>
+                <form className='flex flex-col gap-4' onSubmit={(event)=>handleSubmit(event)}>
 
                     {/* div para nome, tel, assunto, email */}
                     <div className='flex flex-col gap-4'>
@@ -62,17 +89,18 @@ export const Form = () => {
                                 <label htmlFor="nome">Nome completo</label>
                                 <input
                                     className='bg-sombra pl-2 p-1.5 rounded-lg'
-                                    onChange={(event) => validateName(event.target.value)}
+                                    onBlur={(event) => validateName(event.target.value)}
                                     type="text" name='nome'
                                     id='nome'
                                     placeholder='Seu nome completo' />
                                 <span className='text-red-500 pl-3'>{nomeMessage}</span>
                             </div>
+
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="email"> Email</label>
                                 <input 
                                 className='bg-sombra pl-2 p-1.5 rounded-lg'
-                                onChange={(event) => validateEmail(event.target.value)} 
+                                onBlur={(event) => validateEmail(event.target.value)} 
                                 type='email' 
                                 name='email' 
                                 id='email' 
@@ -85,7 +113,14 @@ export const Form = () => {
                         <div className='flex flex-col gap-4 md:grid md:grid-cols-2'>
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="telefone">Telefone</label>
-                                <input className='bg-sombra pl-2 p-1.5 rounded-lg' type="text" name='telefone' id='telefone' placeholder='+351 9xx xxx xxx' />
+                                <input 
+                                className='bg-sombra pl-2 p-1.5 rounded-lg'
+                                onBlur={(event)=>validatePhone(event.target.value)}
+                                type="text" 
+                                name='telefone' 
+                                id='telefone' 
+                                placeholder='+351 9xx xxx xxx' />
+                                <span className='text-red-500 pl-3'>{phoneMessage}</span>
                             </div>
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="assunto">Assunto</label>

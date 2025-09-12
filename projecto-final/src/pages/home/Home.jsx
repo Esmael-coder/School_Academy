@@ -45,21 +45,21 @@ export const Home = () => {
                   <p className='text-cinza'>Faltam 519 dias - GNR </p>
                 </div>
 
-                <Link className='py-[5px] px-2 bg-white text-primary rounded-md' to="/"> Ver todos os exames</Link>
+                <Link className='py-[5px] px-2 bg-white hover:bg-[#B3B3B3] text-primary rounded-md' to="/exame"> Ver todos os exames</Link>
               </div>
 
               <div className='flex flex-col md:flex-row text-center gap-4'>
 
                 <Link
-                  className='py-2.5 px-2 bg-orange text-white shadow-md rounded-md w-full md:w-auto'
+                  className='py-2.5 px-2 bg-orange hover:bg-hover text-white shadow-md rounded-md w-full md:w-auto'
                   to="/cursos"> Ver cursos disponíveis
                   <BiRightArrowAlt size={24} className='inline-block' />
                 </Link>
 
                 <Link
-                  className='py-2.5 px-2 bg-white text-primary shadow-md rounded-md w-full md:w-auto'
-                  to="/" > Receber orientação
-                  <BiConversation size={24} className='inline-block' />
+                  className='py-2.5 px-2 bg-white hover:bg-[#B3B3B3] text-primary shadow-md rounded-md w-full md:w-auto'
+                  to="/contacto" > Receber orientação
+                  <BiConversation size={24} className='inline-block ml-2' />
                 </Link>
               </div>
             </div>
@@ -88,7 +88,7 @@ export const Home = () => {
                 )
               }
 
-              <div className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange text-white rounded-xl coursor-pointer hover:shadow-lg'>
+              <div className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange hover:bg-hover text-white rounded-md coursor-pointer transition-all duration-300 ease-in-out'>
                 <Link to={"/"}>Receber orientação</Link>
                 <BiPhoneCall size={20} />
               </div>
@@ -105,13 +105,13 @@ export const Home = () => {
       <section>
         <div className='px-4 pt-10 md:pt-20 md:px-6 mb-16 lg:px-8 max-w-7xl mx-auto flex flex-col gap-9'>
           <div className='text-center'>
-            <h1 className='font-semibold text-3xl md:font-bold md:text-4xl'>A Nossa metodologia</h1>
+            <h1 className='font-semibold text-3xl md:font-bold md:text-4xl text-primary'>A Nossa metodologia</h1>
             <p className='mt-4 text-cinza'>Aprendizado flexível que une teoria, prática e inovação</p>
           </div>
 
           < MethodCard />
 
-          <div className='flex items-center justify-center md:w-fit md:mx-auto gap-2 p-3 bg-orange text-white rounded-xl cursor-pointer hover:shadow-lg'>
+          <div className='flex items-center justify-center md:w-fit md:mx-auto gap-2 p-3 bg-orange text-white rounded-md cursor-pointer hover:shadow-lg'>
             <Link to={"/metodologia"}>Veja como funciona</Link>
             <MdAutoGraph size={20} />
           </div>
@@ -163,6 +163,7 @@ export const Home = () => {
             <BoxModal title="Pronto para começar?"
               text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
               link1={"/cursos"}
+              link2={"/contacto"}
               link1Content="Ver cursos"
               link2Content="Falar connosco"
             />

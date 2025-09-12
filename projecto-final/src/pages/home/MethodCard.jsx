@@ -45,7 +45,7 @@ export const MethodCard = () => {
                     method.slice(0, 3).map(element => (
 
 
-                        <div key={element.id} className='w-[200px] lg:w-[300px] p-4 hover:shadow-xl rounded-xl transition-all duration-300 ease-in'>
+                        <div key={element.id} className='w-[200px] lg:w-[300px] flex flex-col justify-between p-4 hover:shadow-xl rounded-xl transition-all duration-300 ease-in'>
                             <img src={element.img} alt="ilustração" />
 
                             <div className='text-center'>

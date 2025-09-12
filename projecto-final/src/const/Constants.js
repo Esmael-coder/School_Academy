@@ -1,5 +1,5 @@
 
-import { BiHome, BiInfoCircle, BiPhone, BiMedal, BiBullseye, BiWorld, BiCheckCircle } from 'react-icons/bi'
+import { BiHome, BiPhone, BiMedal, BiBullseye, BiWorld, BiCheckCircle } from 'react-icons/bi'
 import { MdOutlineSchool, MdAutoGraph } from 'react-icons/md'
 import { courseImg } from '../assets/img/course/index'
 import { svg } from '../assets/img/method/index'
@@ -16,7 +16,6 @@ export const links = [
   { icon: MdOutlineSchool, name: "Cursos", path: "/cursos" },
   { icon: MdAutoGraph, name: "Metodologia", path: "/metodologia" },
   { icon: MdAutoGraph, name: "Exame", path: "/exame" },
-  { icon: BiInfoCircle, name: "Sobre", path: "/sobre" },
   { icon: BiPhone, name: "Contacto", path: "/contacto" }
 ]
 

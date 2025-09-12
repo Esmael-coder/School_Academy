@@ -11,11 +11,11 @@ export const Metodologia = () => {
 
     <>
       {/* hero section */}
-      <section>
-        <div className='w-full py-40 mx-auto px-4 md:px-6 lg:px-8 bg-secondary'>
-          <h1 className='text-5xl font-bold text-primary text-center'>Metodologia</h1>
-        </div>
-      </section>
+      <section className='bg-secondary h-80'>
+                <div className='max-w-7xl w-full h-full mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-center'>
+                    <h1 className='font-bold text-primary text-4xl lg:text-6xl'>Metodologia</h1>
+                </div>
+            </section>
 
       <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16'>
 

@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { TbMessageCircle } from "react-icons/tb";
 import { courses } from '../const/Constants';
 import { FiSend } from "react-icons/fi";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
 
 const courseCopy = [...courses]
 export const Form = () => {
 
-    const [nomeMessage, setNomeMessage] = useState()
+    const [nomeMessage, setNomeMessage] = useState(null)
     const validateName = (name) => {
         if (name.trim() == "") {
 
@@ -19,12 +20,12 @@ export const Form = () => {
             return false
 
         } else {
-            setNomeMessage("")
+            setNomeMessage(null)
             return true
         }
     }
 
-    const [emailMessage, setEmailMessage] = useState()
+    const [emailMessage, setEmailMessage] = useState(null)
     const validateEmail = (email) => {
 
         const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -39,12 +40,12 @@ export const Form = () => {
             return false
 
         } else {
-            setEmailMessage("")
+            setEmailMessage(null)
             return true
         }
     }
 
-    const [assuntoMessage, setAssuntolMessage] = useState()
+    const [assuntoMessage, setAssuntolMessage] = useState(null)
     const validateAssunto = (assunto) => {
 
         if (assunto == "empty") {
@@ -53,12 +54,12 @@ export const Form = () => {
             return false
 
         } else {
-
+            setAssuntolMessage(null)
             return true
         }
     }
 
-    const [phoneMessage, setPhoneMessage] = useState()
+    const [phoneMessage, setPhoneMessage] = useState(null)
     const validatePhone = (phone) => {
         if (phone.trim() == "") {
 
@@ -71,25 +72,25 @@ export const Form = () => {
             return false
 
         } else {
-            setPhoneMessage("")
+            setPhoneMessage(null)
             return true
         }
     }
 
-    const [message, setMessage] = useState()
+    const [message, setMessage] = useState(null)
     const validateMessage = (message) => {
         if (message.trim() == "") {
 
             setMessage("preencha este campo")
             return false
 
-        } else if (message.length < 8 ) {
+        } else if (message.length < 8) {
             setMessage("minimo 8 caracteres")
 
             return false
 
         } else {
-
+            setMessage(null)
             return true
         }
 
@@ -126,7 +127,10 @@ export const Form = () => {
                                     type="text" name='nome'
                                     id='nome'
                                     placeholder='Seu nome completo' />
-                                <span className='text-red-500 pl-3'>{nomeMessage}</span>
+                                <span className='text-red-500 text-sm pl-3 flex items-center gap-2'>
+                                    {nomeMessage !== null && <AiOutlineExclamationCircle />}
+                                    {nomeMessage}
+                                </span>
                             </div>
 
                             <div className='flex flex-col gap-1'>
@@ -138,7 +142,10 @@ export const Form = () => {
                                     name='email'
                                     id='email'
                                     placeholder='exemplo@gmail.com' />
-                                <span className='text-red-500 pl-3'>{emailMessage}</span>
+                                <span className='text-red-500 text-sm pl-3 flex items-center gap-2'>
+                                    {emailMessage !== null && <AiOutlineExclamationCircle />}
+                                    {emailMessage}
+                                </span>
                             </div>
                         </div>
 
@@ -152,8 +159,11 @@ export const Form = () => {
                                     type="text"
                                     name='telefone'
                                     id='telefone'
-                                    placeholder='+351 9xx xxx xxx' />
-                                <span className='text-red-500 pl-3'>{phoneMessage}</span>
+                                    placeholder='9xx xxx xxx' />
+                                <span className='text-red-500 text-sm pl-3 flex items-center gap-2'>
+                                    {phoneMessage !== null && <AiOutlineExclamationCircle />}
+                                    {phoneMessage}
+                                </span>
                             </div>
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="assunto">Assunto</label>
@@ -162,12 +172,15 @@ export const Form = () => {
                                     onBlur={(event) => validateAssunto(event.target.value)}
                                     name="assunto"
                                     id="assunto">
-                                    <option value="empty">Selecione o assunto</option>
+                                    <option className='text-cinza' value="empty">Selecione o assunto</option>
                                     <option value="inscrição">Inscrição em curso</option>
                                     <option value="visita">Visita às instalações</option>
                                     <option value="inscrição">Outro assunto</option>
                                 </select>
-                                <span className='text-red-500 pl-3'>{assuntoMessage}</span>
+                                <span className='text-red-500 text-sm pl-3 flex items-center gap-2'>
+                                    {assuntoMessage !== null && <AiOutlineExclamationCircle />}
+                                    {assuntoMessage}
+                                </span>
                             </div>
                         </div>
 
@@ -180,7 +193,7 @@ export const Form = () => {
                             className='bg-sombra pl-2 p-1.5 rounded-lg'
                             name="cursoInteresse"
                             id="cursoInteresse">
-                            <option value="empty">Selecione o curso</option>
+                            <option className='text-cinza' value="empty">Selecione o curso</option>
                             {
                                 courseCopy.map(course => (
                                     <option key={course.id} value={course.name}>{course.name}</option>
@@ -191,14 +204,16 @@ export const Form = () => {
 
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="mensagem">Mensagem</label>
-                        <textarea 
-                        className='bg-sombra pl-2 p-1.5 rounded-lg'
-                        onBlur={(event)=>validateMessage(event.target.value)} 
-                        name="mensagem" id="mensagem" 
-                        rows={6} cols={30} 
-                        placeholder='Escreva aqui a sua mensagem, dúvidas ou pedido de informações...'>    
+                        <textarea
+                            className='bg-sombra pl-2 p-1.5 rounded-lg'
+                            onBlur={(event) => validateMessage(event.target.value)}
+                            name="mensagem" id="mensagem"
+                            rows={6} cols={30}
+                            placeholder='Escreva aqui a sua mensagem, dúvidas ou pedido de informações...'>
                         </textarea>
-                        <span className='text-red-500 pl-3'>{message}</span>
+                        <span className='text-red-500 pl-3 flex items-center gap-2'>
+                            {message}
+                        </span>
                     </div>
 
                     <button

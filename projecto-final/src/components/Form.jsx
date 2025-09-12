@@ -9,7 +9,7 @@ export const Form = () => {
     const [nomeMessage, setNomeMessage] = useState()
     const validateName = (name) => {
         if (name.trim() == "") {
-            
+
             setNomeMessage("preencha este campo.")
             return false
 
@@ -29,7 +29,7 @@ export const Form = () => {
 
         const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
         if (email.trim() === "") {
-            
+
             setEmailMessage("preencha este campo.")
             return false
 
@@ -44,10 +44,24 @@ export const Form = () => {
         }
     }
 
+    const [assuntoMessage, setAssuntolMessage] = useState()
+    const validateAssunto = (assunto) => {
+
+        if (assunto == "empty") {
+
+            setAssuntolMessage("selecione um assunto")
+            return false
+
+        } else {
+
+            return true
+        }
+    }
+
     const [phoneMessage, setPhoneMessage] = useState()
     const validatePhone = (phone) => {
         if (phone.trim() == "") {
-            
+
             setPhoneMessage("preencha este campo.")
             return false
 
@@ -62,9 +76,28 @@ export const Form = () => {
         }
     }
 
-    const handleSubmit = (event)=>{
+    const [message, setMessage] = useState()
+    const validateMessage = (message) => {
+        if (message.trim() == "") {
+
+            setMessage("preencha este campo")
+            return false
+
+        } else if (message.length < 8 ) {
+            setMessage("minimo 8 caracteres")
+
+            return false
+
+        } else {
+
+            return true
+        }
+
+    }
+
+    const handleSubmit = (event) => {
         event.preventDefault()
-    
+
     }
 
     return (
@@ -78,7 +111,7 @@ export const Form = () => {
                     Preencha o formulário abaixo e responderemos o mais rapidamente possível.
                 </p>
 
-                <form className='flex flex-col gap-4' onSubmit={(event)=>handleSubmit(event)}>
+                <form className='flex flex-col gap-4' onSubmit={(event) => handleSubmit(event)}>
 
                     {/* div para nome, tel, assunto, email */}
                     <div className='flex flex-col gap-4'>
@@ -98,13 +131,13 @@ export const Form = () => {
 
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="email"> Email</label>
-                                <input 
-                                className='bg-sombra pl-2 p-1.5 rounded-lg'
-                                onBlur={(event) => validateEmail(event.target.value)} 
-                                type='email' 
-                                name='email' 
-                                id='email' 
-                                placeholder='exemplo@gmail.com' />
+                                <input
+                                    className='bg-sombra pl-2 p-1.5 rounded-lg'
+                                    onBlur={(event) => validateEmail(event.target.value)}
+                                    type='email'
+                                    name='email'
+                                    id='email'
+                                    placeholder='exemplo@gmail.com' />
                                 <span className='text-red-500 pl-3'>{emailMessage}</span>
                             </div>
                         </div>
@@ -113,22 +146,28 @@ export const Form = () => {
                         <div className='flex flex-col gap-4 md:grid md:grid-cols-2'>
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="telefone">Telefone</label>
-                                <input 
-                                className='bg-sombra pl-2 p-1.5 rounded-lg'
-                                onBlur={(event)=>validatePhone(event.target.value)}
-                                type="text" 
-                                name='telefone' 
-                                id='telefone' 
-                                placeholder='+351 9xx xxx xxx' />
+                                <input
+                                    className='bg-sombra pl-2 p-1.5 rounded-lg'
+                                    onBlur={(event) => validatePhone(event.target.value)}
+                                    type="text"
+                                    name='telefone'
+                                    id='telefone'
+                                    placeholder='+351 9xx xxx xxx' />
                                 <span className='text-red-500 pl-3'>{phoneMessage}</span>
                             </div>
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="assunto">Assunto</label>
-                                <select className='bg-sombra pl-2 p-1.5 rounded-lg' name="assunto" id="assunto">
+                                <select
+                                    className='bg-sombra pl-2 p-1.5 rounded-lg'
+                                    onBlur={(event) => validateAssunto(event.target.value)}
+                                    name="assunto"
+                                    id="assunto">
+                                    <option value="empty">Selecione o assunto</option>
                                     <option value="inscrição">Inscrição em curso</option>
                                     <option value="visita">Visita às instalações</option>
                                     <option value="inscrição">Outro assunto</option>
                                 </select>
+                                <span className='text-red-500 pl-3'>{assuntoMessage}</span>
                             </div>
                         </div>
 
@@ -137,7 +176,11 @@ export const Form = () => {
                     {/* outros inputs */}
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="cursoInteresse">Curso de Interesse</label>
-                        <select className='bg-sombra pl-2 p-1.5 rounded-lg' name="cursoInteresse" id="cursoInteresse">
+                        <select
+                            className='bg-sombra pl-2 p-1.5 rounded-lg'
+                            name="cursoInteresse"
+                            id="cursoInteresse">
+                            <option value="empty">Selecione o curso</option>
                             {
                                 courseCopy.map(course => (
                                     <option key={course.id} value={course.name}>{course.name}</option>
@@ -148,7 +191,14 @@ export const Form = () => {
 
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="mensagem">Mensagem</label>
-                        <textarea className='bg-sombra pl-2 p-1.5 rounded-lg' name="mensagem" id="mensagem" rows={6} cols={30} placeholder='Escreva aqui a sua mensagem, dúvidas ou pedido de informações...'></textarea>
+                        <textarea 
+                        className='bg-sombra pl-2 p-1.5 rounded-lg'
+                        onBlur={(event)=>validateMessage(event.target.value)} 
+                        name="mensagem" id="mensagem" 
+                        rows={6} cols={30} 
+                        placeholder='Escreva aqui a sua mensagem, dúvidas ou pedido de informações...'>    
+                        </textarea>
+                        <span className='text-red-500 pl-3'>{message}</span>
                     </div>
 
                     <button

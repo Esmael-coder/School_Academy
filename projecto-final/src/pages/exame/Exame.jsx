@@ -5,7 +5,7 @@ import { concurse } from '../../const/Constants'
 import { BoxModal } from '../../components/BoxModal'
 import { Faqs } from '../../components/Faqs.jsx'
 const concurseCopy = [...concurse]
-export const Exame = () => {
+export const Exame = ({ handleFilter }) => {
 
     return (
         <>
@@ -20,7 +20,7 @@ export const Exame = () => {
             <section>
                 <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
 
-                    <h1 className='mt-10 mb-3 text-primary font-bold text-3xl lg:text-4xl text-center'>Cursos preparatórios</h1>
+                    <h1 className='mt-10 mb-3 text-primary font-bold text-3xl lg:text-4xl text-center'>Exames marcados</h1>
                     <p className='text-cinza text-center'>95% taxa de aprovação com a nossa preparação</p>
 
                     <div className='grid gap-5 md:grid-cols-2 lg:grid-cols-3 my-20'>
@@ -48,10 +48,11 @@ export const Exame = () => {
                     </div>
 
                     <BoxModal
+                        funcao={() => handleFilter("concurso público")}
                         title={"Pronto para começar a sua preparação?"}
                         text={"Não perca tempo! Quanto mais cedo começar a preparar-se, maiores serão as suas chances de sucesso. Entre em contacto connosco e saiba como podemos ajudá-lo a alcançar os seus objetivos."}
                         link1={"/cursos#start"}
-                        link1Content={"Ver cursos"}
+                        link1Content={"Ver cursos preparatórios"}
                         link2={"/cursos#start"}
                         link2Content={"Contactar-nos agora"}
                     />

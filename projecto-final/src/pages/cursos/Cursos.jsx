@@ -5,22 +5,7 @@ import { CourseCard } from '../../components/CourseCard'
 import { BoxModal } from '../../components/BoxModal';
 
 
-export const Cursos = () => {
-
-  const [allCourses, setAllCourses] = useState(courses)
-
-  // função para filtrar cursos por categoria
-  const handleFilter = (categoryValue) => {
-
-    if (categoryValue !== "todos") {
-
-      setAllCourses(courses.filter(course => course.category == categoryValue))
-
-    } else {
-
-      setAllCourses(courses)
-    }
-  }
+export const Cursos = ({ allCourses, handleFilter }) => {
 
   const [isActive, setIsActive] = useState("todos")
 
@@ -56,7 +41,7 @@ export const Cursos = () => {
       <section className='bg-black relative'>
         <div className='absolute w-full h-full bg-[url("images/fundo-cursos.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-          <HeroDiv imagem={'images/destaque-cursos.jpg'} percentage={"15+"} text={"Cursos disponíveis"}/>
+          <HeroDiv imagem={'images/destaque-cursos.jpg'} percentage={"15+"} text={"Cursos disponíveis"} />
         </div>
       </section>
 
@@ -85,7 +70,7 @@ export const Cursos = () => {
                 style={isActive == "todos" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    changeActive(event.target.id)
+                  changeActive(event.target.id)
                 }}>
                 Todos os cursos
               </li>
@@ -95,7 +80,7 @@ export const Cursos = () => {
                 style={isActive == "concurso público" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    changeActive(event.target.id)
+                  changeActive(event.target.id)
                 }}>
                 Concursos
               </li>
@@ -105,7 +90,7 @@ export const Cursos = () => {
                 style={isActive == "segurança pública" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    setIsActive(event.target.id)
+                  setIsActive(event.target.id)
                 }}>
                 Segurança Pública
               </li>
@@ -115,7 +100,7 @@ export const Cursos = () => {
                 style={isActive == "saúde" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    changeActive(event.target.id)
+                  changeActive(event.target.id)
                 }}>
                 Saúde
               </li>
@@ -125,7 +110,7 @@ export const Cursos = () => {
                 style={isActive == "gestão" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                    changeActive(event.target.id)
+                  changeActive(event.target.id)
                 }}>
                 Gestão
               </li>

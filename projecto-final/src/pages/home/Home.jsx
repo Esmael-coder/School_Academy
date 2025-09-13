@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 import { category, testimoniolsData } from '../../const/Constants';
 import { BoxModal } from '../../components/BoxModal'
 
-export const Home = () => {
+export const Home = ({ handleFilter }) => {
 
   const [Container, MethodCard, Footer, Testimoniols] = homeComponents
 
@@ -24,7 +24,7 @@ export const Home = () => {
 
     <>
       <section className='relative bg-black'>
-      <div className='absolute w-full h-full bg-[url("images/fundo-home.jpg")] bg-cover bg-center opacity-55'></div>
+        <div className='absolute w-full h-full bg-[url("images/fundo-home.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='flex flex-col md:flex-row max-w-7xl mx-auto px-4 lg:px-8 gap-8 lg:min-h-[80vh] pt-10 md:pt-0 py-16 '>
 
           {/* todo o conteúdo da hero section (já mexi tanto que ficou com muitas classes redundantes. refatorar depois)*/}
@@ -84,7 +84,7 @@ export const Home = () => {
 
               {
                 category.map(item => (
-                  <Container key={item.id} icon={item.icon} content={item.name} />
+                  <Container onClick={() => handleFilter(item.name)} key={item.id} icon={item.icon} content={item.name} />
                 )
                 )
               }
@@ -124,7 +124,7 @@ export const Home = () => {
 
       {/* section de testemunhas */}
       <section className='bg-ice'>
-        <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8'>
+        <div className='max-w-7xl mx-auto px-4 mt-10 sm:p-6 md:p-8'>
           <h1 className='text-center font-bold text-3xl lg:text-4xl text-primary'>Opiniões dos Ex-alunos</h1>
           <p className='text-center text-hightlight mb-10'>O que dizem sobre a MindUp</p>
 
@@ -161,25 +161,23 @@ export const Home = () => {
               }
             </Swiper>
           </div>
-
-          <footer>
-            <BoxModal title="Pronto para começar?"
-              text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
-              link1={"/cursos"}
-              link2={"/contacto"}
-              link1Content="Ver cursos"
-              link2Content="Falar connosco"
-            />
-          </footer>
-
         </div>
       </section>
 
       {/* Faqs */}
       <section>
-        <div className='w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8 my-30'>
+        <div className='w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8 mt-10 mb-20'>
           <h1 className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'>Perguntas frequentes</h1>
-          <Faqs></Faqs>
+          <div className='mb-20'>
+            <Faqs></Faqs>
+          </div>
+          <BoxModal title="Pronto para começar?"
+            text="Junta-te a milhares de alunos que já alcançaram os seus objetivos connosco."
+            link1={"/cursos"}
+            link2={"/contacto"}
+            link1Content="Ver cursos"
+            link2Content="Falar connosco"
+          />
         </div>
       </section>
     </>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { HeroDiv } from '../../components/HeroDiv'
-import Imagem1 from '../../assets/imagem1.jpg'
 import { Form } from '../../components/Form'
 import { Map } from '../../components/Map'
 import { InfoCard } from './InfoCard'

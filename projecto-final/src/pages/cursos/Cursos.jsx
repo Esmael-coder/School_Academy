@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { CiFilter } from "react-icons/ci";
 import { HeroDiv } from '../../components/HeroDiv'
-import imagem1 from '../../assets/imagem1.jpg'
 import { courses } from '../../const/Constants'
 import { CourseCard } from '../../components/CourseCard'
 import { BoxModal } from '../../components/BoxModal';

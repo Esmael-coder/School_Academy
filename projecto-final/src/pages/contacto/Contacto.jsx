@@ -13,10 +13,11 @@ export const Contacto = () => {
   return (
     <>
       {/* hero section */}
-      <section className='bg-secondary'>
+      <section className='bg-black relative'>
+        <div className='absolute w-full h-full bg-[url("images/fundo-contacto.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8 flex flex-col md:flex-row gap-4 justify-between'>
           <div>
-            <HeroDiv imagem={Imagem1} percentage={"95%"} text={"Taxa de sucesso"} />
+            <HeroDiv imagem={'images/destaque-contacto.jpg'} percentage={"95%"} text={"Taxa de sucesso"} />
           </div>
         </div>
       </section>
@@ -25,7 +26,7 @@ export const Contacto = () => {
       <section>
         <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-12'>
           <div className='text-center my-20'>
-            <h1 className='font-bold text-2xl lg:text-4xl text-primary mb-5'>Teremos todo o prazer em falar consigo</h1>
+            <h1 id='start' className='font-bold text-2xl lg:text-4xl text-primary mb-5'>Teremos todo o prazer em falar consigo</h1>
             <p>Estamos ansiosos para tirar todas as suas dúvidas</p>
           </div>
 

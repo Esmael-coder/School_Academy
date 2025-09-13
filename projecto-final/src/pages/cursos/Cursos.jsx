@@ -63,7 +63,7 @@ export const Cursos = () => {
       </section>
 
       {/* Cursos */}
-      <section>
+      <section id='start'>
         <header className='w-full py-5 shadow-lg'>
           <div className='max-w-7xl w-full mx-auto px-4 md:px-6 lg:px-8'>
 
@@ -193,8 +193,10 @@ export const Cursos = () => {
             <BoxModal
               title={"Comece hoje a construir o seu futuro"}
               text={"Não deixe para amanhã o que pode começar hoje."}
-              link1Content={"Ligar"}
-              link2Content={"Enviar mensagem"}
+              link1={"/contacto#start"}
+              link1Content={"Contacta-nos"}
+              link2={"/cursos/start"}
+              link2Content={"Ver cursos"}
             />
           </div>
         </footer>

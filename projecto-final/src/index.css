@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body{
+  font-family: "Inter";
+}
+
 @theme{
 
   --color-primary: #001542;

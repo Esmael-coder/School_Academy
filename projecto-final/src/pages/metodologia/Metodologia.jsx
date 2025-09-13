@@ -4,6 +4,7 @@ import { MethodComponent } from './MethodComponent'
 import { method } from '../../const/Constants'
 import { VantageCard } from './VantageCard'
 import { Table } from './Table'
+import { BoxModal } from '../../components/BoxModal'
 
 export const Metodologia = () => {
 
@@ -74,7 +75,7 @@ export const Metodologia = () => {
 
         {/* nossos diferenciais */}
         <section>
-          <div className='pt-20'>
+          <div className='py-20'>
             <div className='text-center mb-10'>
               <span className='py-1 px-2 rounded-md bg-secondary text-hightlight text-[13px]'>Vantagens únicas</span>
               <h1 className='text-primary font-bold text-2xl lg:text-4xl mb-5 mt-2'>O que nos diferencia?</h1>
@@ -85,6 +86,15 @@ export const Metodologia = () => {
             </div>
           </div>
         </section>
+
+        <BoxModal
+        title={"Pronto para começar a sua jornada?"}
+        text={"unte-se aos centenas de alunos que já conquistaram os seus objetivos com a nossa metodologia. O seu futuro profissional está ao seu alcance."}
+        link1={"/cursos#start"}
+        link1Content={"Explorar cursos"}
+        link2={"/contacto#start"}
+        link2Content={"Contactar-nos"}
+        />
 
       </div>
     </>

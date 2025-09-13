@@ -5,10 +5,10 @@ import { BiTimeFive } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 
 export const CourseCard = (props) => {
-  const { id, image, name, example, description, duration } = props
+  const { id, image, name, example, description, duration, modality } = props
   return (
 
-    <div className='rounded-lg shadow-[var(--boxShadow)] text-cinza max-w-[450px] md:w-full'>
+    <div className='rounded-lg shadow-[var(--boxShadow2)] text-cinza max-w-[450px] md:w-full'>
       <div className='p-5'>
         <img className='rounded-tl-lg rounded-tr-lg object-cover w-full' src={image} alt="imagem do curso" />
       </div>
@@ -20,9 +20,14 @@ export const CourseCard = (props) => {
         </div>
 
         <p className='text-gray-700'>{description}</p>
-        <div className='flex items-center gap-1 my-3'>
-          <BiTimeFive />
-          <p>{duration}</p>
+
+        <div className='flex items-center text-hightlight gap-5'>
+          <div className='flex items-center gap-1 my-3'>
+            <BiTimeFive />
+            <span>{duration}</span>
+          </div>
+
+          <span>{modality}</span>
         </div>
 
 

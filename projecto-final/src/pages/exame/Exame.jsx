@@ -1,8 +1,6 @@
 import React from 'react'
-import Imagem1 from '../../assets/imagem1.jpg'
 import { HeroDiv } from '../../components/HeroDiv'
 import { ExameCard } from '../../components/ExameCard'
-import { useState } from 'react'
 import { concurse } from '../../const/Constants'
 
 const concurseCopy = [...concurse]
@@ -11,9 +9,10 @@ export const Exame = () => {
     return (
         <>
             {/* hero section */}
-            <section className='bg-secondary'>
+            <section className='bg-black relative'>
+                 <div className='absolute w-full h-full bg-[url("images/fundo-exame.jpg")] bg-cover bg-top opacity-55'></div>
                 <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-                    <HeroDiv imagem={Imagem1} percentage={"50%"} text={"Taxa de sucesso"} className='bg-secondary' />
+                    <HeroDiv imagem={'images/destaque-exame.jpg'} percentage={"95%"} text={"Taxa de aprovação"}/>
                 </div>
             </section>
 

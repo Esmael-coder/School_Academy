@@ -23,14 +23,15 @@ export const Home = () => {
   return (
 
     <>
-      <section>
-        <div className='flex flex-col md:flex-row max-w-7xl mx-auto px-4 lg:px-8 gap-8 md:min-h-[75vh] pt-10 md:pt-0'>
+      <section className='relative bg-black'>
+      <div className='absolute w-full h-full bg-[url("images/fundo-home.jpg")] bg-cover bg-center opacity-55'></div>
+        <div className='flex flex-col md:flex-row max-w-7xl mx-auto px-4 lg:px-8 gap-8 lg:min-h-[80vh] pt-10 md:pt-0 py-16 '>
 
           {/* todo o conteúdo da hero section (já mexi tanto que ficou com muitas classes redundantes. refatorar depois)*/}
-          <div className='flex flex-col md:flex-row gap-8 items-center'>
+          <div className='flex flex-col md:flex-row gap-8 items-center z-10'>
             <div className='flex flex-col md:order-1 lg:gap-7 gap-5'>
-              <h1 className='text-primary font-bold text-3xl lg:text-4xl '>Aqui começa uma nova fase.</h1>
-              <p className='text-cinza'>
+              <h1 className='font-bold text-white text-4xl lg:text-6xl'>Aqui começa uma nova fase.</h1>
+              <p className='text-white'>
                 Na MindUp ajudamos-te a ganhar confiança, melhorar as tuas competências e enfrentar qualquer desafio com segurança.
               </p>
 
@@ -41,8 +42,8 @@ export const Home = () => {
                 </div>
 
                 <div>
-                  <h2 className='font-semibold text-xl'>15 de março de 2026</h2>
-                  <p className='text-cinza'>Faltam 519 dias - GNR </p>
+                  <h2 className='font-semibold text-xl'>8 de Dezembro de 2026</h2>
+                  <p className='text-cinza'>Marinha</p>
                 </div>
 
                 <Link className='py-[5px] px-2 bg-white hover:bg-[#B3B3B3] text-primary rounded-md' to="/exame"> Ver todos os exames</Link>
@@ -63,7 +64,7 @@ export const Home = () => {
                 </Link>
               </div>
             </div>
-            <HeroDiv imagem={Imagem1} percentage="95%" text="Taxa de aprovação" />
+            <HeroDiv imagem={Imagem1} percentage="10K+" text="Alunos de aprovados" />
           </div>
         </div>
       </section>
@@ -83,18 +84,20 @@ export const Home = () => {
 
               {
                 category.map(item => (
-                  <Container key={item.id} icon={item.icon} content={item.name}/>
+                  <Container key={item.id} icon={item.icon} content={item.name} />
                 )
                 )
               }
 
-              <div className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange hover:bg-hover text-white rounded-md coursor-pointer transition-all duration-300 ease-in-out'>
-                <Link to={"/"}>Receber orientação</Link>
+
+              <Link to={"/"} className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange hover:bg-hover text-white rounded-md coursor-pointer transition-all duration-300 ease-in-out'>
+                Receber orientação
                 <BiPhoneCall size={20} />
-              </div>
+              </Link>
+
             </div>
 
-            <div className='self-center w-[250px] sm:w-[400px] md:w-[600px] md:self-end'>
+            <div className='self-center w-[250px] sm:w-[400px] md:w-[800px] md:self-end'>
               <img src='images/student.png' />
             </div>
           </div>

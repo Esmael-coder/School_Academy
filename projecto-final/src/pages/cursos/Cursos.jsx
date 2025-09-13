@@ -55,9 +55,10 @@ export const Cursos = () => {
   return (
     <>
       {/* hero section */}
-      <section className='bg-secondary'>
+      <section className='bg-black relative'>
+        <div className='absolute w-full h-full bg-[url("images/fundo-cursos.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-          <HeroDiv imagem={imagem1} percentage={"50%"} text={"Taxa de sucesso"} className='bg-secondary' />
+          <HeroDiv imagem={'images/destaque-cursos.jpg'} percentage={"15+"} text={"Cursos disponíveis"}/>
         </div>
       </section>
 
@@ -181,6 +182,7 @@ export const Cursos = () => {
                   name={course.name}
                   example={course.example}
                   duration={course.duration}
+                  modality={course.method}
                   description={course.description} />
               ))
             }

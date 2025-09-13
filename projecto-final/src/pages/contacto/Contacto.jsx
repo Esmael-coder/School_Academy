@@ -14,8 +14,10 @@ export const Contacto = () => {
     <>
       {/* hero section */}
       <section className='bg-secondary'>
-        <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-          <HeroDiv imagem={Imagem1} percentage={"50%"} text={"Taxa de sucesso"} className='bg-secondary' />
+        <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8 flex flex-col md:flex-row gap-4 justify-between'>
+          <div>
+            <HeroDiv imagem={Imagem1} percentage={"95%"} text={"Taxa de sucesso"} />
+          </div>
         </div>
       </section>
 
@@ -28,7 +30,7 @@ export const Contacto = () => {
           </div>
 
           {/* grid container */}
-          <div  className='md:grid md:grid-cols-3 gap-5'>
+          <div className='md:grid md:grid-cols-3 gap-5'>
 
             {/* div do form e mapa */}
             <div className='grid md:col-span-2 gap-5'>

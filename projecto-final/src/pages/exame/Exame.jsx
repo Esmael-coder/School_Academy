@@ -2,7 +2,8 @@ import React from 'react'
 import { HeroDiv } from '../../components/HeroDiv'
 import { ExameCard } from '../../components/ExameCard'
 import { concurse } from '../../const/Constants'
-
+import { BoxModal } from '../../components/BoxModal'
+import { Faqs } from '../../components/Faqs.jsx'
 const concurseCopy = [...concurse]
 export const Exame = () => {
 
@@ -18,7 +19,11 @@ export const Exame = () => {
 
             <section>
                 <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-                    <div className='grid gap-5 md:grid-cols-2 lg:grid-cols-3'>
+
+                    <h1 className='mt-10 mb-3 text-primary font-bold text-3xl lg:text-4xl text-center'>Cursos preparatórios</h1>
+                    <p className='text-cinza text-center'>95% taxa de aprovação com a nossa preparação</p>
+
+                    <div className='grid gap-5 md:grid-cols-2 lg:grid-cols-3 my-20'>
                         {concurseCopy.map(copy => (
 
                             <ExameCard
@@ -37,13 +42,18 @@ export const Exame = () => {
                         ))}
                     </div>
 
+                    <div className='my-30'>
+                        <h1 className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'>Perguntas Frequentes</h1>
+                        <Faqs />
+                    </div>
+
                     <BoxModal
-                        title={"Comece hoje a construir o seu futuro"}
-                        text={"Não deixe para amanhã o que pode começar hoje."}
-                        link1={"/contacto#start"}
-                        link1Content={"Contacta-nos"}
-                        link2={"/cursos/start"}
-                        link2Content={"Ver cursos"}
+                        title={"Pronto para começar a sua preparação?"}
+                        text={"Não perca tempo! Quanto mais cedo começar a preparar-se, maiores serão as suas chances de sucesso. Entre em contacto connosco e saiba como podemos ajudá-lo a alcançar os seus objetivos."}
+                        link1={"/cursos#start"}
+                        link1Content={"Ver cursos"}
+                        link2={"/cursos#start"}
+                        link2Content={"Contactar-nos agora"}
                     />
                 </div>
             </section>

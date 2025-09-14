@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { HeroDiv } from '../../components/HeroDiv'
-import { courses } from '../../const/Constants'
 import { CourseCard } from '../../components/CourseCard'
 import { BoxModal } from '../../components/BoxModal';
+import { motion } from 'motion/react';
 
 
 export const Cursos = ({ allCourses, handleFilter }) => {
@@ -70,7 +70,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
                 style={isActive == "todos" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                  changeActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Todos os cursos
               </li>
@@ -80,7 +80,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
                 style={isActive == "concurso público" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                  changeActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Concursos
               </li>
@@ -90,7 +90,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
                 style={isActive == "segurança pública" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                  setIsActive(event.target.id)
+                    setIsActive(event.target.id)
                 }}>
                 Segurança Pública
               </li>
@@ -100,7 +100,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
                 style={isActive == "saúde" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                  changeActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Saúde
               </li>
@@ -110,7 +110,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
                 style={isActive == "gestão" ? activeLink : link}
                 onClick={(event) => {
                   handleFilter(event.target.id),
-                  changeActive(event.target.id)
+                    changeActive(event.target.id)
                 }}>
                 Gestão
               </li>
@@ -150,23 +150,30 @@ export const Cursos = ({ allCourses, handleFilter }) => {
         </header>
 
         <div className='max-w-7xl w-full min-h-[75vh] mx-auto px-4 lg:px-8 gap-8 m-10'>
-          <div>
-            <h1 className='font-bold text-3xl lg:text-4xl text-primary text-center mb-10'>Cursos Certificados</h1>
+          <div className='text-center my-20'>
+            <h1 className='font-bold text-3xl lg:text-4xl text-primary mb-5'>Cursos Certificados</h1>
+            <p>Escolha entre diferentes áreas de formação, todas com certificação e apoio especializado.</p>
           </div>
 
 
           <div className='flex flex-col items-center gap-5 md:grid sm:grid-cols-2 lg:grid-cols-3'>
             {
               allCourses.map(course => (
-                <CourseCard
-                  key={course.id}
-                  id={course.id}
-                  image={course.image}
-                  name={course.name}
-                  example={course.example}
-                  duration={course.duration}
-                  modality={course.method}
-                  description={course.description} />
+                <motion.div key={course.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{once: true, amount: 0.3}}
+                >
+                  <CourseCard
+                    id={course.id}
+                    image={course.image}
+                    name={course.name}
+                    example={course.example}
+                    duration={course.duration}
+                    modality={course.method}
+                    description={course.description} />
+                </motion.div>
               ))
             }
           </div>

@@ -15,6 +15,7 @@ import { MdAutoGraph } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { category, testimoniolsData } from '../../const/Constants';
 import { BoxModal } from '../../components/BoxModal'
+import { motion } from 'motion/react'
 
 export const Home = ({ handleFilter }) => {
 
@@ -84,16 +85,22 @@ export const Home = ({ handleFilter }) => {
 
               {
                 category.map(item => (
-                  <Container onClick={() => handleFilter(item.name)} key={item.id} icon={item.icon} content={item.name} />
+                  <motion.div key={item.id}
+                  initial={{opacity: 0, y: 60, scale: 0.8}}
+                  whileInView={{opacity: 1, y: 0, scale: 1}}
+                  transition={{duration: 0.6, delay: item.id * 0.2, ease: "easeInOut"}}
+                  viewport={{once: true}}>
+                    <Container onClick={() => handleFilter(item.name)} icon={item.icon} content={item.name} />
+                  </motion.div>
                 )
                 )
               }
 
 
-              <Link to={"/"} className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange hover:bg-hover text-white rounded-md coursor-pointer transition-all duration-300 ease-in-out'>
+              <a href="email"  className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange hover:bg-hover text-white rounded-md coursor-pointer transition-all duration-300 ease-in-out'>
                 Receber orientação
                 <BiPhoneCall size={20} />
-              </Link>
+              </a>
 
             </div>
 

@@ -4,6 +4,7 @@ import { ExameCard } from '../../components/ExameCard'
 import { concurse } from '../../const/Constants'
 import { BoxModal } from '../../components/BoxModal'
 import { Faqs } from '../../components/Faqs.jsx'
+import { motion } from 'motion/react'
 const concurseCopy = [...concurse]
 export const Exame = ({ handleFilter }) => {
 
@@ -19,31 +20,49 @@ export const Exame = ({ handleFilter }) => {
 
             <section>
                 <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-
-                    <h1 className='mt-10 mb-3 text-primary font-bold text-3xl lg:text-4xl text-center'>Exames marcados</h1>
+                    <motion.h1
+                        className='mt-10 mb-3 text-primary font-bold text-3xl lg:text-4xl text-center'
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        viewport={{ amount: 1, once: true }}>
+                        Exames marcados
+                    </motion.h1>
                     <p className='text-cinza text-center'>95% taxa de aprovação com a nossa preparação</p>
 
                     <div className='grid gap-5 md:grid-cols-2 lg:grid-cols-3 my-20'>
                         {concurseCopy.map(copy => (
 
-                            <ExameCard
+                            <motion.div
                                 key={copy.id}
-                                course={copy.course}
-                                categoria={copy.category}
-                                inicio={copy.start}
-                                fim={copy.end}
-                                exame={copy.exame}
-                                vagas={copy.avaliableSpace}
-                                etapas={copy.etap}
-                                isOpen={copy.isOpen}
-                            >
-
-                            </ExameCard>
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1, delay: copy.id * 0.2 }}
+                                viewport={{ amount: 0.3, once: true }}>
+                                <ExameCard
+                                    course={copy.course}
+                                    categoria={copy.category}
+                                    inicio={copy.start}
+                                    fim={copy.end}
+                                    exame={copy.exame}
+                                    vagas={copy.avaliableSpace}
+                                    etapas={copy.etap}
+                                    isOpen={copy.isOpen}
+                                >
+                                </ExameCard>
+                            </motion.div>
                         ))}
                     </div>
 
                     <div className='my-30'>
-                        <h1 className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'>Perguntas Frequentes</h1>
+                        <motion.h1
+                            className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.2 }}
+                            viewport={{ amount: 1, once: true }}>
+                            Perguntas Frequentes
+                        </motion.h1>
                         <Faqs />
                     </div>
 

@@ -10,7 +10,7 @@ export const Container = ({ content, icon, onClick}) => {
 
 
   return (
-    <Link onClick={onClick} to={"/cursos"} className='bg-white p-4 shadow-sm hover:shadow-lg cursor-pointer rounded-lg flex items-center gap-2 relative transition-all duration-300 ease-in'>
+    <Link onClick={onClick} to={"/cursos"} className='bg-white p-4 shadow-sm hover:shadow-lg cursor-pointer rounded-lg flex items-center gap-2 relative transition-shadow duration-300 ease-in'>
       
         <p className='flex items-center gap-2'>
           <Icon className="text-orange" size={20} />

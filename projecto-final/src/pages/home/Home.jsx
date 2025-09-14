@@ -99,10 +99,10 @@ export const Home = ({ handleFilter }) => {
               {
                 category.map(item => (
                   <motion.div key={item.id}
-                    initial={{ opacity: 0, y: 60, scale: 0.8 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ duration: 0.6, delay: item.id * 0.2, ease: "easeInOut" }}
-                    viewport={{ once: true, }}>
+                    initial={{ opacity: 0, y: 30, scale: 0.9}}
+                    whileInView={{ opacity: 1, y: 0, scale: 1}}
+                    transition={{ duration: 1, delay: item.id * 0.1 }}
+                    viewport={{ amount: 0.3, once: true }}>
                     <Container onClick={() => handleFilter(item.name)} icon={item.icon} content={item.name} />
                   </motion.div>
                 )
@@ -122,7 +122,7 @@ export const Home = ({ handleFilter }) => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 3, ease: "ease" }}
-              viewport={{ amount: 0.3 }}>
+              viewport={{ amount: 0.3, once: true }}>
               <img src='images/student.png' />
             </motion.div>
           </div>

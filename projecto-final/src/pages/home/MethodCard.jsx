@@ -45,16 +45,12 @@ export const MethodCard = () => {
                 {method.slice(0, 3).map(element => (
                     <motion.div
                         key={element.id}
-                        className='w-[200px] lg:w-[300px] flex flex-col justify-between p-4 hover:shadow-xl rounded-xl transition-all duration-300 ease-in'
-                        initial={{ opacity: 0, scale: 0.6 }} // começa mais baixo e menor
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{
-                            duration: 0.3,         
-                            delay: element.id * 0.3,  
-                            ease: "easeInOut", 
-                        }}
-                        viewport={{ amount: 0.3, once: true }}
-                    >
+                        className='w-[200px] lg:w-[300px] flex flex-col justify-between p-4 hover:shadow-xl rounded-xl transition-shadow duration-300 ease-in'
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: element.id * 0.2 }}
+                        viewport={{ amount: 0.3, once: true }}>
+
                         <img src={element.img} alt="ilustração" />
                         <div className='text-center'>
                             <h2 className='font-semibold text-xl mb-2'>{element.title}</h2>
@@ -63,8 +59,6 @@ export const MethodCard = () => {
                     </motion.div>
                 ))}
             </div>
-
-
         </div>
 
 

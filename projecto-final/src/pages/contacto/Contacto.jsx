@@ -7,6 +7,7 @@ import { GrLocation } from 'react-icons/gr'
 import { BiPhone } from 'react-icons/bi'
 import { HiOutlineMail } from "react-icons/hi";
 import { MdAccessTime } from "react-icons/md";
+import { motion } from 'motion/react'
 
 export const Contacto = () => {
   return (
@@ -25,7 +26,13 @@ export const Contacto = () => {
       <section>
         <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-12'>
           <div className='text-center my-20'>
-            <h1 id='start' className='font-bold text-2xl lg:text-4xl text-primary mb-5'>Teremos todo o prazer em falar consigo</h1>
+            <motion.h1 id='start' className='font-bold text-2xl lg:text-4xl text-primary mb-5'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              viewport={{ amount: 1, once: true }}>
+              Teremos todo o prazer em falar consigo
+            </motion.h1>
             <p>Estamos ansiosos para tirar todas as suas dúvidas</p>
           </div>
 

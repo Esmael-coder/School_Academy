@@ -31,7 +31,14 @@ export const Home = ({ handleFilter }) => {
           {/* todo o conteúdo da hero section (já mexi tanto que ficou com muitas classes redundantes. refatorar depois)*/}
           <div className='flex flex-col md:flex-row gap-8 items-center z-10'>
             <div className='flex flex-col md:order-1 lg:gap-7 gap-5'>
-              <h1 className='font-bold text-white text-4xl lg:text-6xl'>Aqui começa uma nova fase.</h1>
+              <motion.h1
+                className='font-bold text-white text-4xl lg:text-6xl'
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                viewport={{ amount: 1, once: true }}>
+                Aqui começa uma nova fase.
+              </motion.h1>
               <p className='text-white'>
                 Na MindUp ajudamos-te a ganhar confiança, melhorar as tuas competências e enfrentar qualquer desafio com segurança.
               </p>
@@ -79,17 +86,23 @@ export const Home = ({ handleFilter }) => {
           <div className='flex flex-col gap-9 md:flex-row md:items-center md:gap-24'>
             <div className='flex flex-col gap-4 md:order-1 w-full'>
               <div className='text-center md:text-left'>
-                <h1 className='font-semibold text-3xl md:font-bold md:text-4xl'>Já sabes qual a tua vocação?</h1>
+                <motion.h1 className='font-semibold text-3xl md:font-bold md:text-4xl text-primary'
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  viewport={{ amount: 1, once: true }}>
+                  Já sabes qual a tua vocação?
+                </motion.h1>
                 <p className='mt-4 mb-5 text-cinza'>Escolhe a área de estudos que mais se adequa aos teus objetivos profissionais.</p>
               </div>
 
               {
                 category.map(item => (
                   <motion.div key={item.id}
-                  initial={{opacity: 0, y: 60, scale: 0.8}}
-                  whileInView={{opacity: 1, y: 0, scale: 1}}
-                  transition={{duration: 0.6, delay: item.id * 0.2, ease: "easeInOut"}}
-                  viewport={{once: true}}>
+                    initial={{ opacity: 0, y: 60, scale: 0.8 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.6, delay: item.id * 0.2, ease: "easeInOut" }}
+                    viewport={{ once: true, }}>
                     <Container onClick={() => handleFilter(item.name)} icon={item.icon} content={item.name} />
                   </motion.div>
                 )
@@ -97,16 +110,21 @@ export const Home = ({ handleFilter }) => {
               }
 
 
-              <a href="email"  className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange hover:bg-hover text-white rounded-md coursor-pointer transition-all duration-300 ease-in-out'>
+              <a href="tel:+351 21 573 496" className='flex items-center justify-center md:self-center gap-2 p-3 my-5 bg-orange hover:bg-hover text-white rounded-md coursor-pointer transition-all duration-300 ease-in-out'>
                 Receber orientação
                 <BiPhoneCall size={20} />
               </a>
 
             </div>
 
-            <div className='self-center w-[250px] sm:w-[400px] md:w-[800px] md:self-end'>
+            <motion.div
+              className='self-center w-[250px] sm:w-[400px] md:w-[800px] md:self-end'
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 3, ease: "ease" }}
+              viewport={{ amount: 0.3 }}>
               <img src='images/student.png' />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -115,8 +133,14 @@ export const Home = ({ handleFilter }) => {
       <section>
         <div className='px-4 pt-10 md:pt-20 md:px-6 mb-16 lg:px-8 max-w-7xl mx-auto flex flex-col gap-9'>
           <div className='text-center'>
-            <h1 className='font-semibold text-3xl md:font-bold md:text-4xl text-primary'>A Nossa metodologia</h1>
-            <p className='mt-4 text-cinza'>Aprendizado flexível que une teoria, prática e inovação</p>
+            <motion.h1 className='font-semibold text-3xl md:font-bold md:text-4xl mb-4 text-primary'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              viewport={{ amount: 1, once: true }}>
+              A Nossa metodologia
+            </motion.h1>
+            <p className='text-cinza'>Aprendizado flexível que une teoria, prática e inovação</p>
           </div>
 
           < MethodCard />
@@ -132,7 +156,13 @@ export const Home = ({ handleFilter }) => {
       {/* section de testemunhas */}
       <section className='bg-ice'>
         <div className='max-w-7xl mx-auto px-4 mt-10 sm:p-6 md:p-8'>
-          <h1 className='text-center font-bold text-3xl lg:text-4xl text-primary'>Opiniões dos Ex-alunos</h1>
+          <motion.h1 className='text-center font-bold text-3xl lg:text-4xl mb-4 text-primary'
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            viewport={{ amount: 1, once: true }}>
+            Opiniões dos Ex-alunos
+          </motion.h1>
           <p className='text-center text-hightlight mb-10'>O que dizem sobre a MindUp</p>
 
           <div className='h-[400px] flex items-center justify-center '>
@@ -174,7 +204,14 @@ export const Home = ({ handleFilter }) => {
       {/* Faqs */}
       <section>
         <div className='w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8 mt-10 mb-20'>
-          <h1 className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'>Perguntas frequentes</h1>
+          <motion.h1
+            className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            viewport={{ amount: 1, once: true }}>
+            Perguntas frequentes
+          </motion.h1>
           <div className='mb-20'>
             <Faqs></Faqs>
           </div>

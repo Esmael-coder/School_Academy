@@ -27,9 +27,9 @@ export const Metodologia = () => {
           <div className='text-cinza flex gap-10 flex-col lg:flex-row'>
             <article>
               <motion.h1 className='text-2xl lg:text-4xl font-bold text-primary mb-5'
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 0.7 }}
                 viewport={{ amount: 1, once: true }}>
                 Quem somos?
               </motion.h1>
@@ -61,9 +61,9 @@ export const Metodologia = () => {
             <div className='text-center text-cinza mb-10'>
               <span className='py-1 px-2 rounded-md bg-secondary text-hightlight text-[13px]'>Como funciona</span>
               <motion.h1 className='text-primary text-2xl lg:text-4xl font-bold mt-2 mb-5'
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 0.7 }}
                 viewport={{ amount: 1, once: true }}>
                 A nossa metodologia
               </motion.h1>
@@ -92,7 +92,7 @@ export const Metodologia = () => {
             </div>
 
             <div className='flex justify-center'>
-              <div className='overflow-x-auto w-full'>
+              <div className='overflow-x-auto md:shadow-[var(--boxShadow2)]'>
                 <Table />
               </div>
             </div>
@@ -106,9 +106,9 @@ export const Metodologia = () => {
             <div className='text-center mb-10'>
               <span className='py-1 px-2 rounded-md bg-secondary text-hightlight text-[13px]'>Vantagens únicas</span>
               <motion.h1 className='text-primary font-bold text-2xl lg:text-4xl mb-5 mt-2'
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 0.7 }}
                 viewport={{ amount: 1, once: true }}>
                 O que nos diferencia?
               </motion.h1>

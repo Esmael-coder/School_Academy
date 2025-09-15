@@ -41,7 +41,14 @@ export const Cursos = ({ allCourses, handleFilter }) => {
       <section className='bg-black relative'>
         <div className='absolute w-full h-full bg-[url("images/fundo-cursos.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
-          <HeroDiv imagem={'images/destaque-cursos.jpg'} percentage={"15+"} text={"Cursos disponíveis"} />
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeIn" }}
+            viewport={{ once: true }}
+          >
+            <HeroDiv imagem={'images/destaque-cursos.jpg'} percentage={"15+"} text={"Cursos disponíveis"} />
+          </motion.div>
         </div>
       </section>
 

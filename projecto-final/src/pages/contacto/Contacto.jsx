@@ -16,9 +16,14 @@ export const Contacto = () => {
       <section className='bg-black relative'>
         <div className='absolute w-full h-full bg-[url("images/fundo-contacto.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8 flex flex-col md:flex-row gap-4 justify-between'>
-          <div>
+          <motion.div 
+            initial={{opacity: 0, x: -20}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 0.6, ease: "easeIn"}}
+            viewport={{once: true}}
+          >
             <HeroDiv imagem={'images/destaque-contacto.jpg'} percentage={"95%"} text={"Taxa de sucesso"} />
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -27,9 +32,9 @@ export const Contacto = () => {
         <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-12'>
           <div className='text-center my-20'>
             <motion.h1 id='start' className='font-bold text-2xl lg:text-4xl text-primary mb-5'
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.7 }}
               viewport={{ amount: 1, once: true }}>
               Teremos todo o prazer em falar consigo
             </motion.h1>

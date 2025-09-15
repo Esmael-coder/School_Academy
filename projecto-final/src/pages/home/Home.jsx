@@ -72,7 +72,14 @@ export const Home = ({ handleFilter }) => {
                 </Link>
               </div>
             </div>
-            <HeroDiv imagem={Imagem1} percentage="10K+" text="Alunos de aprovados" />
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeIn" }}
+              viewport={{ once: true }}
+            >
+              <HeroDiv imagem={Imagem1} percentage="10K+" text="Alunos de aprovados" />
+            </motion.div>
           </div>
         </div>
       </section>
@@ -99,8 +106,8 @@ export const Home = ({ handleFilter }) => {
               {
                 category.map(item => (
                   <motion.div key={item.id}
-                    initial={{ opacity: 0, y: 30, scale: 0.9}}
-                    whileInView={{ opacity: 1, y: 0, scale: 1}}
+                    initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 1, delay: item.id * 0.1 }}
                     viewport={{ amount: 0.3, once: true }}>
                     <Container onClick={() => handleFilter(item.name)} icon={item.icon} content={item.name} />

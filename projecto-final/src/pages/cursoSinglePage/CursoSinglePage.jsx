@@ -15,6 +15,8 @@ import { FiCalendar } from "react-icons/fi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { Faqs } from '../../components/Faqs'
+import { easeIn } from 'motion';
+import { motion } from 'motion/react';
 
 
 export const CursoSinglePage = () => {
@@ -40,10 +42,12 @@ export const CursoSinglePage = () => {
               className='flex items-center gap-1'
               to={"/"}>
               <BiHome />
-              Home /
+              <span className='hover:underline underline-offset-2'>Home</span> /
             </Link>
 
-            <Link to={"/cursos"}>Cursos /</Link>
+            <Link to={"/cursos"} c>
+              <span className='hover:underline underline-offset-2'>Cursos</span> /
+            </Link>
             {selectedCourse.name}
           </div>
 
@@ -51,7 +55,7 @@ export const CursoSinglePage = () => {
             className='flex items-center gap-2'
             to={"/cursos"}>
             <MdOutlineKeyboardBackspace />
-            Voltar aos cursos
+            <span className='hover:underline underline-offset-2'>Voltar aos cursos</span>
           </Link>
         </nav>
       </header>
@@ -89,7 +93,7 @@ export const CursoSinglePage = () => {
                     selectedCourse.program.map((prog, index) => (
                       <li
                         key={index}
-                        className='flex items-center gap-2 p-4 bg-secondary rounded-md'>
+                        className='flex items-center gap-2 p-4 bg-secondary rounded-md border border-realce'>
                         <span className='w-5 h-5 rounded-full bg-orange text-white flex items-center justify-center'>
                           {index + 1}
                         </span>
@@ -119,8 +123,13 @@ export const CursoSinglePage = () => {
 
           </section>
 
-
-          <aside className='md:max-w-[350px] sticky top-24 mb-10 h-fit'>
+          {/* aside começa aqui */}
+          <motion.aside className='md:max-w-[350px] sticky top-24 mb-10 h-fit'
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, easeIn }}
+            viewport={{ once: true }}
+          >
             <div className='p-4 rounded-lg shadow-[var(--boxShadow2)]'>
               <div className='mb-5'>
                 <h3 className='flex items-center gap-2 text-primary'>
@@ -160,17 +169,17 @@ export const CursoSinglePage = () => {
                 <ul>
                   {contentIncluded.map((content, index) => (
                     <li key={index} className='flex items-center gap-2'>
-                      <BsCheck2Circle />
+                      <BsCheck2Circle className='text-green-600' />
                       {content}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className='mt-5 p-2 border border-zinc-300 rounded-md bg-secondary'>
+              <div className='mt-5 p-2 border border-realce rounded-md bg-secondary'>
                 <h3 className='text-primary mb-2 font-semibold'>Material informativo</h3>
                 <a
-                  className='flex items-center gap-1 bg-white p-1 rounded-sm border border-zinc-300 hover:text-hightlight transition-all duration-100 ease-in '
+                  className='flex items-center gap-1 bg-white p-1 rounded-sm border border-realce hover:text-hightlight transition-all duration-100 ease-in '
                   href={selectedCourse.image}
                   download={selectedCourse.image}>
                   <MdOutlineFileDownload size={20} />
@@ -178,16 +187,16 @@ export const CursoSinglePage = () => {
                 </a>
               </div>
             </div>
-          </aside>
+          </motion.aside>
         </div>
 
         <section>
-          <div className='w-full bg-secondary flex flex-col items-center p-5 rounded-lg'>
+          <div className='w-full bg-secondary flex flex-col items-center p-5 rounded-lg border border-realce'>
             <GrCertificate size={60} className='text-orange mb-2' />
             <h2 className='font-bold text-primary text-2xl mb-5'>Certificação profissional</h2>
             {selectedCourse.category == "concurso público" ?
-              <p className='text-center'>Ao concluir o curso com sucesso, receberá o <strong>{selectedCourse.certificate}</strong>, e que valida as suas competências.</p>
-              : <p className='text-center'>Ao concluir o curso com sucesso, receberá o <strong>{selectedCourse.certificate}</strong>, reconhecido pela indústria e que valida as suas competências.</p>}
+              <p className='text-center'>Ao concluir o curso com sucesso, receberá  <strong>{selectedCourse.certificate}</strong>, e que valida as suas competências.</p>
+              : <p className='text-center'>Ao concluir o curso com sucesso, receberá  <strong>{selectedCourse.certificate}</strong>, reconhecido pela indústria e que valida as suas competências.</p>}
           </div>
         </section>
 

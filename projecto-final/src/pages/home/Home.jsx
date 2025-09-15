@@ -33,9 +33,9 @@ export const Home = ({ handleFilter }) => {
             <div className='flex flex-col md:order-1 lg:gap-7 gap-5'>
               <motion.h1
                 className='font-bold text-white text-4xl lg:text-6xl'
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 0.7 }}
                 viewport={{ amount: 1, once: true }}>
                 Aqui começa uma nova fase.
               </motion.h1>
@@ -94,9 +94,9 @@ export const Home = ({ handleFilter }) => {
             <div className='flex flex-col gap-4 md:order-1 w-full'>
               <div className='text-center md:text-left'>
                 <motion.h1 className='font-semibold text-3xl md:font-bold md:text-4xl text-primary'
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.2 }}
+                  transition={{ duration: 0.7 }}
                   viewport={{ amount: 1, once: true }}>
                   Já sabes qual a tua vocação?
                 </motion.h1>
@@ -108,7 +108,7 @@ export const Home = ({ handleFilter }) => {
                   <motion.div key={item.id}
                     initial={{ opacity: 0, y: 30, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ duration: 1, delay: item.id * 0.1 }}
+                    transition={{ duration: 0.7, delay: item.id * 0.1 }}
                     viewport={{ amount: 0.3, once: true }}>
                     <Container onClick={() => handleFilter(item.name)} icon={item.icon} content={item.name} />
                   </motion.div>
@@ -141,9 +141,9 @@ export const Home = ({ handleFilter }) => {
         <div className='px-4 pt-10 md:pt-20 md:px-6 mb-16 lg:px-8 max-w-7xl mx-auto flex flex-col gap-9'>
           <div className='text-center'>
             <motion.h1 className='font-semibold text-3xl md:font-bold md:text-4xl mb-4 text-primary'
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.7 }}
               viewport={{ amount: 1, once: true }}>
               A Nossa metodologia
             </motion.h1>
@@ -164,9 +164,9 @@ export const Home = ({ handleFilter }) => {
       <section className='bg-ice'>
         <div className='max-w-7xl mx-auto px-4 mt-10 sm:p-6 md:p-8'>
           <motion.h1 className='text-center font-bold text-3xl lg:text-4xl mb-4 text-primary'
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.7 }}
             viewport={{ amount: 1, once: true }}>
             Opiniões dos Ex-alunos
           </motion.h1>
@@ -213,9 +213,9 @@ export const Home = ({ handleFilter }) => {
         <div className='w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8 mt-10 mb-20'>
           <motion.h1
             className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.7 }}
             viewport={{ amount: 1, once: true }}>
             Perguntas frequentes
           </motion.h1>

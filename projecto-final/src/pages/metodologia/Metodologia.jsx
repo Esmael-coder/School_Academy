@@ -45,10 +45,10 @@ export const Metodologia = () => {
               </p>
             </article>
             <motion.div className='self-center'
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              viewport={{ amount: 0.3, once: true }}>
+              transition={{ duration: 0.7 }}
+              viewport={{ amount: 1, once: true }}>
               <img className='rounded-lg w-full max-w-[500px] min-w-[450px]' src="images/sobre-nos.jpg" alt="imagem de uma professora" />
             </motion.div>
           </div>

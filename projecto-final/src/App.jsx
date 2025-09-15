@@ -12,13 +12,17 @@ import { Footer } from './components/Footer'
 import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade/PoliticaPrivacidade.jsx'
 import { courses } from './const/Constants.js'
 import { Page404 } from './pages/404/Page404.jsx'
+import { PoliticaCookie } from './pages/politicaCookie/PoliticaCookie.jsx'
+import { AvisoLegal } from './pages/avisoLegal/AvisoLegal.jsx'
+import { ScrollToTop } from './components/scrollToTop.jsx'
 
 
 function App() {
 
   const [allCourses, setAllCourses] = useState(courses)
 
-    // função para filtrar cursos por categoria
+    // Função para filtrar cursos por categoria
+    // Está sendo usada na pagina home, cursos e exames
   const handleFilter = (categoryValue) => {
 
     if (categoryValue !== "todos") {
@@ -35,6 +39,7 @@ function App() {
     <>
       <Header />
       <main className='mt-16 min-h-[100vh]'>
+        <ScrollToTop/>
           <Routes>
             <Route path='/' element={<Home setAllCourses={setAllCourses} handleFilter={handleFilter}/>} />
             <Route path='/cursos' element={<Cursos allCourses={allCourses} handleFilter={handleFilter}/>} />
@@ -43,6 +48,8 @@ function App() {
             <Route path='/exame' element={<Exame handleFilter={handleFilter}/>} />
             <Route path='/contacto' element={<Contacto />} />
             <Route path='/politica-privacidade' element={<PoliticaPrivacidade />} />
+            <Route path='/politica-cookie' element={<PoliticaCookie />} />
+            <Route path='/aviso-legal' element={<AvisoLegal />} />
             <Route path='*' element={<Page404 />} />
           </Routes>
       </main>

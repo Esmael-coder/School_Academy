@@ -35,7 +35,8 @@ export const Contacto = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ amount: 1, once: true }}>
+              viewport={{ amount: 1, once: true }}
+              >
               Teremos todo o prazer em falar consigo
             </motion.h1>
             <p>Estamos ansiosos para tirar todas as suas dúvidas</p>

@@ -95,8 +95,9 @@ export const Exame = ({ handleFilter }) => {
                         ))}
                     </div>
 
-                    <div className='my-30'>
+                    <div className='max-w-5xl mx-auto my-30'>
                         <motion.h1
+                            className='text-primary font-bold text-3xl lg:text-4xl text-center mb-20'
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}

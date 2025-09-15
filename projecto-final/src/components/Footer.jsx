@@ -60,6 +60,8 @@ export const Footer = () => {
                         <h3 className='font-semibold mb-3'>Links Úteis</h3>
                         <ul className='text-cinza'>
                             <li><Link className='hover:underline' to={"politica-privacidade"}>Políticas de privacidade</Link></li>
+                            <li><Link className='hover:underline' to={"politica-cookie"}>Políticas de cookie</Link></li>
+                            <li><Link className='hover:underline' to={"aviso-legal"}>Aviso legal</Link></li>
                             <li><a className='hover:underline' target='_blank' href='https://www.livroreclamacoes.pt/inicio/'>Livro de reclamação</a></li>
                         </ul>
                     </div>

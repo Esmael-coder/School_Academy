@@ -113,7 +113,7 @@ export const Exame = ({ handleFilter }) => {
                         text={"Não perca tempo! Quanto mais cedo começar a preparar-se, maiores serão as suas chances de sucesso. Entre em contacto connosco e saiba como podemos ajudá-lo a alcançar os seus objetivos."}
                         link1={"/cursos#start"}
                         link1Content={"Ver cursos preparatórios"}
-                        link2={"/cursos#start"}
+                        link2={"/contacto"}
                         link2Content={"Contactar-nos agora"}
                     />
                 </div>

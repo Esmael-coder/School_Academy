@@ -15,7 +15,7 @@ export const PoliticaPrivacidade = () => {
             </section>
 
             <section>
-                <div className='max-w-7xl w-full mx-auto px-4 md:px-6 lg:px-8 py-20 flex flex-col gap-10'>
+                <div className='max-w-7xl w-full mx-auto px-4 md:px-6 lg:px-8 my-20 flex flex-col gap-7'>
                     <InfoContainer icon={<GoDatabase size={26} />} title={"Recolha de dados"}>
                         <h3 className='text-primary font-semibold mb-6'>Informações que nos fornece diretamente:</h3>
                         <ul className='list-inside list-disc text-cinza flex flex-col gap-3'>

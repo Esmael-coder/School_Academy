@@ -33,13 +33,17 @@ export const Footer = () => {
                                 <IoLocationOutline className='text-orange' size={18} />
                                 Rua do alecrim, 75, Lisboa
                             </li>
-                            <li className='flex items-center gap-2'>
-                                <BiPhone className='text-orange' size={18} />
-                                +351 21 573 496
+                            <li>
+                                <a className='flex items-center gap-2' href="tel:+351 21 573 496">
+                                    <BiPhone className='text-orange' size={18} />
+                                    <span className='hover:underline underline-offset-2'>+351 21 573 496</span>
+                                </a>
                             </li>
-                            <li className='flex items-center gap-2'>
-                                <GoMail className='text-orange' size={18} />
-                                info@mindup.pt
+                            <li>
+                                <a className='flex items-center gap-2' href="mailto:info@mindup.pt">
+                                    <GoMail className='text-orange' size={18} />
+                                    <span className='hover:underline underline-offset-2'>info@mindup.pt</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -59,10 +63,10 @@ export const Footer = () => {
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Links Úteis</h3>
                         <ul className='text-cinza'>
-                            <li><Link className='hover:underline' to={"politica-privacidade"}>Políticas de privacidade</Link></li>
-                            <li><Link className='hover:underline' to={"politica-cookie"}>Políticas de cookie</Link></li>
-                            <li><Link className='hover:underline' to={"aviso-legal"}>Aviso legal</Link></li>
-                            <li><a className='hover:underline' target='_blank' href='https://www.livroreclamacoes.pt/inicio/'>Livro de reclamação</a></li>
+                            <li><Link className='hover:underline underline-offset-2' to={"politica-privacidade"}>Políticas de privacidade</Link></li>
+                            <li><Link className='hover:underline underline-offset-2' to={"politica-cookie"}>Políticas de cookie</Link></li>
+                            <li><Link className='hover:underline underline-offset-2' to={"aviso-legal"}>Aviso legal</Link></li>
+                            <li><a className='hover:underline underline-offset-2' target='_blank' href='https://www.livroreclamacoes.pt/inicio/'>Livro de reclamação</a></li>
                         </ul>
                     </div>
 

@@ -15,6 +15,7 @@ import { Page404 } from './pages/404/Page404.jsx'
 import { PoliticaCookie } from './pages/politicaCookie/PoliticaCookie.jsx'
 import { AvisoLegal } from './pages/avisoLegal/AvisoLegal.jsx'
 import { ScrollToTop } from './components/scrollToTop.jsx'
+import { Cadastro } from './pages/cadastro/Cadastro.jsx'
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
             <Route path='/politica-privacidade' element={<PoliticaPrivacidade />} />
             <Route path='/politica-cookie' element={<PoliticaCookie />} />
             <Route path='/aviso-legal' element={<AvisoLegal />} />
+            <Route path='/cadastro' element={<Cadastro />} />
             <Route path='*' element={<Page404 />} />
           </Routes>
       </main>

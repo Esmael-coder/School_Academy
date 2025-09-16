@@ -53,6 +53,15 @@ export const PoliticaPrivacidade = () => {
                             <li>Eliminação segura de dados quando não são mais necessários</li>
                         </ul>
                     </InfoContainer>
+
+                    <footer className='max-w-5xl mx-auto bg-secondary text-center text-hightlight p-5 rounded-lg border border-realce my-5'>
+                        <h3 className='font-semibold mb-3'>
+                            Tem questões sobre sua privacidade?
+                        </h3>
+                        <p>
+                            A nossa equipa está disponível para esclarecer qualquer dúvida sobre como tratamos os seus dados pessoais. Contacte-nos pelo email <a className='underline underline-offset-2 font-semibold' href="mailto:info@mindup.pt">info@mindup.pt</a>
+                        </p>
+                    </footer>
                 </div>
             </section>
         </>

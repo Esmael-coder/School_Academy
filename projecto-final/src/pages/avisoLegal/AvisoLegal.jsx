@@ -132,7 +132,7 @@ export const AvisoLegal = () => {
                         />
                     </motion.div>
 
-                    <footer className='bg-secondary text-center text-hightlight p-5 rounded-lg border border-realce my-5'>
+                    <footer className='max-w-5xl mx-auto bg-secondary text-center text-hightlight p-5 rounded-lg border border-realce my-5'>
                         <p>Para esclarecimentos adicionais sobre este aviso legal, entre em contacto através do email</p>
                         <a className='underline underline-offset-2 font-semibold' href="mailto:info@mindup.pt">info@mindup.pt</a>
                     </footer>

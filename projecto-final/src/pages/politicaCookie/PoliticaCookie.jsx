@@ -109,11 +109,12 @@ export const PoliticaCookie = () => {
 
           <footer className='max-w-5xl mx-auto bg-secondary text-center text-hightlight p-5 rounded-lg border border-realce my-5'>
             <h3 className='flex items-center gap-2 justify-center mb-2'>
-              {<LuCookie size={20}/>}
+              {<LuCookie size={20} />}
               <span className='font-semibold'>Gestão de Cookies</span>
             </h3>
-            <p>Para esclarecimentos adicionais sobre este aviso legal, entre em contacto através do email</p>
-            <a className='underline underline-offset-2 font-semibold' href="mailto:info@mindup.pt">info@mindup.pt</a>
+            <p>
+              Para mais informações sobre como gerir os seus cookies ou para esclarecimentos sobre esta política, contacte-nos através do email <a className='underline underline-offset-2 font-semibold' href="mailto:info@mindup.pt">info@mindup.pt</a>
+            </p>
           </footer>
         </section>
       </div>

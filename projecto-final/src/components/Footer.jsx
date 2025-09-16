@@ -3,7 +3,10 @@ import { BiBrain, BiPhone } from 'react-icons/bi'
 import { IoLocationOutline, } from "react-icons/io5";
 import { IoMdTime } from "react-icons/io";
 import { GoMail } from "react-icons/go";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaYoutube, FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 
 
 export const Footer = () => {
@@ -18,10 +21,33 @@ export const Footer = () => {
         <footer className=' bg-primary'>
 
             <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8 '>
+                <div className='flex flex-col mb-8 gap-4'>
+                    <div className='flex items-center gap-1 text-white'>
+                        <BiBrain size={35} />
+                        <h1 className='font-bold text-2xl'>MindUp</h1>
+                    </div>
+                    <motion.ul className='flex gap-3 text-white'
+                    initial={{opacity: 0, y: 20}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{amount: 1}}
+                    transition={{duration: 0.5}}
+                    >
+                        <li>
+                            <a target='_blank' href="https://www.instagram.com/">{<FaInstagram size={20}/>}</a>
+                        </li>
+                        <li>
+                            <a target='_blank' href="https://www.youtube.com/">{<FaYoutube size={20}/>}</a>
+                        </li>
+                        <li>
+                            <a target='_blank' href="https://x.com/">{<FaXTwitter size={20}/>}</a>
+                        </li>
+                        <li>
+                            <a target='_blank' href="https://github.com/">{<FaGithub size={20}/>}</a>
+                        </li>
+                    </motion.ul>
+                    <div>
 
-                <div className='flex items-center gap-1 text-white mb-10'>
-                    <BiBrain size={35} />
-                    <h1 className='font-bold text-2xl'>MindUp</h1>
+                    </div>
                 </div>
 
                 <div className='w-full text-white grid gap-6 md:grid-cols-3 text-[15px] mb-10'>

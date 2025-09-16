@@ -22,12 +22,12 @@ export const CourseCard = (props) => {
         <p className='text-gray-700'>{description}</p>
 
         <div className='flex items-center text-hightlight gap-5'>
-          <div className='flex items-center gap-1 my-3'>
+          <div className='flex items-center gap-1 my-3 bg-secondary border border-realce rounded p-1'>
             <BiTimeFive />
             <span>{duration}</span>
           </div>
 
-          <span>{modality}</span>
+          <span className='bg-secondary border border-realce rounded p-1'>{modality}</span>
         </div>
 
 

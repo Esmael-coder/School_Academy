@@ -4,7 +4,7 @@ import { HashLink } from 'react-router-hash-link'
 
 export const BoxModal = ({ title, text, link1, link2, link1Content, link2Content, funcao }) => {
   return (
-    <div className='w-full min-h-54 flex flex-col gap-3 items-center justify-between p-8 rounded-2xl text-white bg-primary text-center'>
+    <div className='w-full min-h-54 flex flex-col gap-3 items-center justify-between p-8 rounded-lg text-white bg-primary text-center'>
       <h1 className='font-semibold text-2xl'>{title}</h1>
       <p className='text-gray-600'>{text}</p>
 

@@ -16,17 +16,17 @@ export const Cursos = ({ allCourses, handleFilter }) => {
 
   // css inline para os links ativos e não ativos
   const activeLink = {
-    borderRadius: "10px",
+    borderRadius: "4px",
     color: "#0047fc",
     backgroundColor: "#e6f0f9",
     padding: "8px 12px 8px 12px",
-    border: "1px solid #0047fc",
+    border: "1px solid #bfdbff",
     cursor: "pointer",
     whiteSpace: "nowrap"
   }
 
   const link = {
-    borderRadius: "10px",
+    borderRadius: "4px",
     padding: "8px 12px 8px 12px",
     border: "1px solid #e6f0f9",
     backgroundColor: "#e6f0f9",
@@ -159,10 +159,11 @@ export const Cursos = ({ allCourses, handleFilter }) => {
         <div className='max-w-7xl w-full min-h-[75vh] mx-auto px-4 lg:px-8 gap-8 m-10'>
           <div className='text-center text-gray-600 my-20'>
             <motion.h1 className='font-bold text-3xl lg:text-4xl text-primary mb-5'
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              viewport={{ amount: 1, once: true }}>
+              transition={{ duration: 0.7 }}
+              viewport={{ amount: 1, once: true }}
+            >
               Cursos Certificados
             </motion.h1>
             <p>Escolha entre diferentes áreas de formação, todas com certificação e apoio especializado.</p>

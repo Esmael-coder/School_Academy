@@ -31,7 +31,7 @@ export const MethodCard = () => {
 
                                 <div key={element.id} className='px-10 text-center'>
                                     <h2 className='font-semibold text-xl mb-2'>{element.title}</h2>
-                                    <p className='text-cinza'>{element.text}</p>
+                                    <p className='text-gray-600'>{element.text}</p>
                                 </div>
 
                             </SwiperSlide>
@@ -54,7 +54,7 @@ export const MethodCard = () => {
                         <img src={element.img} alt="ilustração" />
                         <div className='text-center'>
                             <h2 className='font-semibold text-xl mb-2'>{element.title}</h2>
-                            <p className='text-cinza'>{element.text}</p>
+                            <p className='text-gray-600'>{element.text}</p>
                         </div>
                     </motion.div>
                 ))}

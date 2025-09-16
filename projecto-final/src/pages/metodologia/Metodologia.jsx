@@ -24,7 +24,7 @@ export const Metodologia = () => {
 
         {/* sobre nos */}
         <section>
-          <div className='text-cinza flex gap-10 flex-col lg:flex-row'>
+          <div className='text-gray-600 flex gap-10 flex-col lg:flex-row'>
             <article>
               <motion.h1 className='text-2xl lg:text-4xl font-bold text-primary mb-5'
                 initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ export const Metodologia = () => {
         <section>
           <div className='pt-20'>
 
-            <div className='text-center text-cinza mb-10'>
+            <div className='text-center text-gray-600 mb-10'>
               <span className='py-1 px-2 rounded-md bg-secondary text-hightlight text-[13px]'>Como funciona</span>
               <motion.h1 className='text-primary text-2xl lg:text-4xl font-bold mt-2 mb-5'
                 initial={{ opacity: 0, y: 20 }}

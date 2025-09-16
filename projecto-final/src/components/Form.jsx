@@ -108,7 +108,7 @@ export const Form = () => {
                     <TbMessageCircle className='text-orange' size={24} />
                     <h3 className='text-lg'>Envie-nos uma mensagem</h3>
                 </div>
-                <p className='text-cinza mb-3'>
+                <p className='text-gray-600 mb-3'>
                     Preencha o formulário abaixo e responderemos o mais rapidamente possível.
                 </p>
 
@@ -172,7 +172,7 @@ export const Form = () => {
                                     onBlur={(event) => validateAssunto(event.target.value)}
                                     name="assunto"
                                     id="assunto">
-                                    <option className='text-cinza' value="empty">Selecione o assunto</option>
+                                    <option className='text-gray-600' value="empty">Selecione o assunto</option>
                                     <option value="inscrição">Inscrição em curso</option>
                                     <option value="visita">Visita às instalações</option>
                                     <option value="inscrição">Outro assunto</option>
@@ -193,7 +193,7 @@ export const Form = () => {
                             className='bg-sombra pl-2 p-1.5 rounded-lg'
                             name="cursoInteresse"
                             id="cursoInteresse">
-                            <option className='text-cinza' value="empty">Selecione o curso</option>
+                            <option className='text-gray-600' value="empty">Selecione o curso</option>
                             {
                                 courseCopy.map(course => (
                                     <option key={course.id} value={course.name}>{course.name}</option>

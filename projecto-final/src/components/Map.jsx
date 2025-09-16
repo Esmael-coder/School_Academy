@@ -19,7 +19,7 @@ export const Map = () => {
             </div>
 
             <div className='bg-sombra p-4 rounded-lg'>
-                <p className='text-cinza'>
+                <p className='text-gray-600'>
                     <span className='font-semibold'>Como chegar: </span>
                     Próximo ao Metro Marquês de Pombal. Várias linhas de autocarro param na proximidade. Estacionamento público disponível na zona.
                 </p>

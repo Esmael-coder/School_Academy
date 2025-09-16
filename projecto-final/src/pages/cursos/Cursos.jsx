@@ -59,7 +59,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
 
             <div className='flex gap-4 items-center md:hidden'>
               <label className='text-[19px] font-semibold' htmlFor="filter">Filtrar</label>
-              <select className='border border-cinza rounded-sm' name="filter" id="filter" onChange={(event) => handleFilter(event.target.value)}>
+              <select className='border border-gray-600 rounded-sm' name="filter" id="filter" onChange={(event) => handleFilter(event.target.value)}>
                 <option defaultValue={true} value="todos">Todos os cursos</option>
                 <option value="concurso público">Concursos</option>
                 <option value="segurança pública">Segurança Pública</option>
@@ -157,7 +157,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
         </header>
 
         <div className='max-w-7xl w-full min-h-[75vh] mx-auto px-4 lg:px-8 gap-8 m-10'>
-          <div className='text-center my-20'>
+          <div className='text-center text-gray-600 my-20'>
             <motion.h1 className='font-bold text-3xl lg:text-4xl text-primary mb-5'
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

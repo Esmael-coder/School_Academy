@@ -8,7 +8,7 @@ export const HeroDiv = (props) => {
         <img className='object-cover w-full rounded-xl' src={imagem}/>
 
         <div className='absolute left-[70%] bottom-[-10%] -translate-x-1/2 text-center bg-white py-2 px-4 rounded-lg shadow-lg whitespace-nowrap'>
-            <p className='text-cinza'><span className='text-primary font-bold text-[27px] '>{percentage}</span><br/>{text}</p>
+            <p className='text-gray-600'><span className='text-primary font-bold text-[27px] '>{percentage}</span><br/>{text}</p>
         </div>
     </div>
   )

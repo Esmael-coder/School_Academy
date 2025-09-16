@@ -67,7 +67,7 @@ export const CursoSinglePage = () => {
           <section className='col-span-2'>
             <div className='mb-10'>
               <h1 className='text-primary font-bold text-3xl lg:text-4xl  mb-5'>{selectedCourse.name}</h1>
-              <p className='text-cinza text-xl mb-5'>{selectedCourse.description}</p>
+              <p className='text-gray-600 text-xl mb-5'>{selectedCourse.description}</p>
               <p className='mb-6'>{selectedCourse.descriptionLong}</p>
               <img className='w-full rounded-xl max-w-[650px]' src={selectedCourse.image} alt={selectedCourse.name} />
             </div>
@@ -136,7 +136,7 @@ export const CursoSinglePage = () => {
                   <MdAccessTime className='text-orange' />
                   Duração
                 </h3>
-                <span className='text-cinza pl-6'>{selectedCourse.duration}</span>
+                <span className='text-gray-600 pl-6'>{selectedCourse.duration}</span>
               </div>
 
               <div className='mb-5'>
@@ -144,7 +144,7 @@ export const CursoSinglePage = () => {
                   <VscSymbolMethod className='text-orange' />
                   Modalidade
                 </h3>
-                <span className='text-cinza pl-6'>{selectedCourse.method}</span>
+                <span className='text-gray-600 pl-6'>{selectedCourse.method}</span>
               </div>
 
               <div className='mb-5'>
@@ -152,7 +152,7 @@ export const CursoSinglePage = () => {
                   <FiCalendar className='text-orange' />
                   Início
                 </h3>
-                <span className='text-cinza pl-6'>Imediato</span>
+                <span className='text-gray-600 pl-6'>Imediato</span>
               </div>
 
               <HashLink smooth to={"/contacto#nome"} className='flex items-center justify-center gap-3 bg-orange hover:bg-hover text-white p-1.5 rounded-md mb-3 transition-all duration-300 ease-in-out '>

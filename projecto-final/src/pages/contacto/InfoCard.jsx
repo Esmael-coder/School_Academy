@@ -12,7 +12,7 @@ export const InfoCard = ({ icon: Icon, title, children }) => {
                 </h2>
             </div>
 
-            <div className='text-cinza'>
+            <div className='text-gray-600'>
                 {children}
             </div>
         </div>

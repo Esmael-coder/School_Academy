@@ -44,14 +44,14 @@ export const Home = ({ handleFilter }) => {
               </p>
 
               <div className='bg-primary flex flex-col items-start gap-4 shadow-md text-white rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 break-words'>
-                <div className='flex items-center gap-1 text-cinza'>
+                <div className='flex items-center gap-1 text-gray-600'>
                   <BiCalendarCheck />
                   <p>Proximo exame</p>
                 </div>
 
                 <div>
                   <h2 className='font-semibold text-xl'>8 de Dezembro de 2026</h2>
-                  <p className='text-cinza'>Marinha</p>
+                  <p className='text-gray-600'>Marinha</p>
                 </div>
 
                 <Link className='py-[5px] px-2 bg-white hover:bg-[#B3B3B3] text-primary rounded-md' to="/exame"> Ver todos os exames</Link>
@@ -100,7 +100,7 @@ export const Home = ({ handleFilter }) => {
                   viewport={{ amount: 1, once: true }}>
                   Já sabes qual a tua vocação?
                 </motion.h1>
-                <p className='mt-4 mb-5 text-cinza'>Escolhe a área de estudos que mais se adequa aos teus objetivos profissionais.</p>
+                <p className='mt-4 mb-5 text-gray-600'>Escolhe a área de estudos que mais se adequa aos teus objetivos profissionais.</p>
               </div>
 
               {
@@ -147,7 +147,7 @@ export const Home = ({ handleFilter }) => {
               viewport={{ amount: 1, once: true }}>
               A Nossa metodologia
             </motion.h1>
-            <p className='text-cinza'>Aprendizado flexível que une teoria, prática e inovação</p>
+            <p className='text-gray-600'>Aprendizado flexível que une teoria, prática e inovação</p>
           </div>
 
           < MethodCard />

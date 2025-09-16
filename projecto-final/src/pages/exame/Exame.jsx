@@ -40,7 +40,7 @@ export const Exame = ({ handleFilter }) => {
                         viewport={{ amount: 1, once: true }}>
                         Preparação especializada para exames
                     </motion.h1>
-                    <p className='text-cinza text-center'>95% taxa de aprovação com a nossa preparação</p>
+                    <p className='text-gray-600 text-center'>95% taxa de aprovação com a nossa preparação</p>
 
                     <div className='grid md:grid-cols-3 gap-10 my-20 justify-center p-2'>
                         <Box

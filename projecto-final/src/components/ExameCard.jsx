@@ -61,7 +61,7 @@ export const ExameCard = ({ course, categoria, inicio, fim, exame, vagas, etapas
                 <div className='flex justify-between'>
                     <div>
                         <h2 className='font-bold'>{course}</h2>
-                        <span className='text-cinza'>{categoria}</span>
+                        <span className='text-gray-600'>{categoria}</span>
                     </div>
                     <div className='flex flex-col gap-1'>
                         <span className='font-semibold'>Candidaturas</span>
@@ -72,7 +72,7 @@ export const ExameCard = ({ course, categoria, inicio, fim, exame, vagas, etapas
                     </div>
                 </div>
 
-                <div className='flex flex-col gap-4 text-cinza'>
+                <div className='flex flex-col gap-4 text-gray-600'>
 
                     <div className='flex justify-between'>
                         <div>

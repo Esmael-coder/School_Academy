@@ -6,7 +6,7 @@ export const BoxModal = ({ title, text, link1, link2, link1Content, link2Content
   return (
     <div className='w-full min-h-54 flex flex-col gap-3 items-center justify-between p-8 rounded-2xl text-white bg-primary text-center'>
       <h1 className='font-semibold text-2xl'>{title}</h1>
-      <p className='text-cinza'>{text}</p>
+      <p className='text-gray-600'>{text}</p>
 
       <div className='w-full md:w-[400px] grid grid-cols-1 md:grid-cols-2 gap-4'>
         <HashLink

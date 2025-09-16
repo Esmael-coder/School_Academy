@@ -25,13 +25,13 @@ export const Faqs = () => {
         <div>
             <ul>
                 {faqs.map(faq => (
-                    <li key={faq.id} className='mb-8 pb-4 border-b border-cinza cursor-pointer transition duration-300 ease-in-out' onClick={() => handleClick(faq.id)}>
+                    <li key={faq.id} className='mb-8 pb-4 border-b border-gray-600 cursor-pointer transition duration-300 ease-in-out' onClick={() => handleClick(faq.id)}>
                         <h2 className='flex items-center justify-between text-primary text-lg mb-3'>
                             {faq.question}
                             {idArray.includes(faq.id) ? <FaChevronUp className='text-orange' /> : <FaChevronDown className='text-orange' />}
                         </h2>
                         <div className={idArray.includes(faq.id) ? "block" : "hidden"}>
-                            <p className='text-cinza'>{faq.answer}</p>
+                            <p className='text-gray-600'>{faq.answer}</p>
                         </div>
                     </li>
                 ))}

@@ -9,7 +9,7 @@ export const Page404 = () => {
                 <div className='flex items-center flex-col text-center'>
                     <h1 className='font-extrabold text-primary text-8xl md:text-9xl mb-2'>404</h1>
                     <h2 className='text-orange text-2xl mb-2'>Página não encontrada!</h2>
-                    <p className='mb-4 text-cinza text-xl'>Ops! Parece que você se perdeu nos seus estudos. A página que procura não existe ou foi movida.</p>
+                    <p className='mb-4 text-gray-600 text-xl'>Ops! Parece que você se perdeu nos seus estudos. A página que procura não existe ou foi movida.</p>
                     <Link to={"/"} className='bg-orange hover:bg-hover py-2 px-3 rounded text-white flex items-center gap-2 justify-center'>
                         <MdOutlineKeyboardBackspace />
                         Voltar ao Inicio

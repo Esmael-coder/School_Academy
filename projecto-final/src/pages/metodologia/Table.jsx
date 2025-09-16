@@ -46,7 +46,7 @@ export const Table = () => {
 
             <tfoot>
                 <tr>
-                    <td colSpan={3} className='px-2 py-3 bg-secondary text-cinza'>
+                    <td colSpan={3} className='px-2 py-3 bg-secondary text-gray-600'>
                         <strong>Nota:</strong> Os horários podem sofrer pequenos ajustes conforme necessidades pedagógicas.
                         Todas as alterações serão comunicadas com antecedência mínima de uma semana.
                     </td>

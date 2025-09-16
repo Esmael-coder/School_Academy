@@ -56,7 +56,7 @@ export const Header = () => {
 
 
                     {/*navbar para desktop e tablets maiores*/}
-                    <div className='hidden md:block text-cinza'>
+                    <div className='hidden md:block text-gray-600'>
                         <nav className='flex gap-3'>
                             {
                                 links.map(link => (

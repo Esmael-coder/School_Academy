@@ -28,7 +28,7 @@ export const Footer = () => {
 
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Contacto</h3>
-                        <ul className='flex flex-col gap-1 text-cinza'>
+                        <ul className='flex flex-col gap-1 text-gray-600'>
                             <li className='flex items-center gap-2'>
                                 <IoLocationOutline className='text-orange' size={18} />
                                 Rua do alecrim, 75, Lisboa
@@ -50,7 +50,7 @@ export const Footer = () => {
 
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Horário de funcionamento</h3>
-                        <ul className='text-cinza flex items-center gap-2'>
+                        <ul className='text-gray-600 flex items-center gap-2'>
                             <IoMdTime className='text-orange' size={18} />
                             <div>
                                 <li>Segunda a sexta: 9h - 20h</li>
@@ -62,7 +62,7 @@ export const Footer = () => {
 
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Links Úteis</h3>
-                        <ul className='text-cinza'>
+                        <ul className='text-gray-600'>
                             <li><Link className='hover:underline underline-offset-2' to={"politica-privacidade"}>Políticas de privacidade</Link></li>
                             <li><Link className='hover:underline underline-offset-2' to={"politica-cookie"}>Políticas de cookie</Link></li>
                             <li><Link className='hover:underline underline-offset-2' to={"aviso-legal"}>Aviso legal</Link></li>
@@ -71,7 +71,7 @@ export const Footer = () => {
                     </div>
 
                 </div>
-                <div className='w-full text-center border-t-1 border-cinza text-cinza py-4'>
+                <div className='w-full text-center border-t-1 border-gray-600 text-gray-600 py-4'>
                     <p>&copy; {year} MindUp. Todos os direitos reservados.</p>
                     <p>Desenvolvido por Esmael Monteiro.</p>
                 </div>

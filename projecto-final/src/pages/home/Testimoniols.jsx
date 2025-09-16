@@ -9,7 +9,7 @@ export const Testimoniols = ({ name, course, testimony }) => {
             </div>
             <div className='mb-4'>
                 <p className='font-semibold'>{name}</p>
-                <p className='text-cinza'>{course}</p>
+                <p className='text-gray-600'>{course}</p>
             </div>
 
             <p className='italic'>{testimony}</p>

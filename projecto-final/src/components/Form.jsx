@@ -211,7 +211,8 @@ export const Form = () => {
                             rows={6} cols={30}
                             placeholder='Escreva aqui a sua mensagem, dúvidas ou pedido de informações...'>
                         </textarea>
-                        <span className='text-red-500 pl-3 flex items-center gap-2'>
+                        <span className='text-red-500 text-sm pl-3 flex items-center gap-2'>
+                            {message !== null && <AiOutlineExclamationCircle />}
                             {message}
                         </span>
                     </div>

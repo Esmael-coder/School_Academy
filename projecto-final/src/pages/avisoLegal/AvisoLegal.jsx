@@ -1,6 +1,11 @@
 
 import React from 'react'
 import { InfoContainer } from './InfoContainer'
+import { LuBuilding, LuFileCheck, LuExternalLink, LuDatabase } from "react-icons/lu";
+import { FiTarget } from "react-icons/fi";
+import { MdOutlineShield } from "react-icons/md";
+import { FaRegCopyright } from "react-icons/fa6";
+import { PiWarning } from "react-icons/pi";
 import { motion } from 'motion/react'
 
 export const AvisoLegal = () => {
@@ -14,7 +19,7 @@ export const AvisoLegal = () => {
 
             <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 my-20'>
 
-                <section className='flex flex-col gap-7'>
+                <section className='flex flex-col gap-8'>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +27,8 @@ export const AvisoLegal = () => {
                         viewport={{ once: true, amount: 0.5 }}
                     >
                         <InfoContainer
-                            title={"1. Identificação da Escola"}
+                            icon ={<LuBuilding size={26}/>}
+                            title={"Identificação da Escola"}
                             text={"A MindUp, NIPC 123456789, com sede em Lisboa, Portugal, é a entidade responsável pelo presente website."}
                             children={<p className='text-gray-600'><span className='font-semibold text-primary'>Contacto: </span>info@mindup.pt</p>}
                         />
@@ -36,7 +42,8 @@ export const AvisoLegal = () => {
                     >
 
                         <InfoContainer
-                            title={"2. Objeto do site"}
+                        icon={<FiTarget size={26}/>}
+                            title={"Objeto do site"}
                             text={"Este website tem como finalidade fornecer informações sobre cursos de formação profissional, inscrições e atividades organizadas pela MindUp."}
                         />
                     </motion.div>
@@ -49,6 +56,7 @@ export const AvisoLegal = () => {
                     >
 
                         <InfoContainer
+                        icon={<LuFileCheck size={26}/>}
                             title={"3. Condições de utilização"}
                             text={"O acesso e utilização do site implicam a aceitação das presentes condições. O utilizador compromete-se a não realizar qualquer uso ilícito dos conteúdos disponíveis."}
                         />
@@ -62,6 +70,7 @@ export const AvisoLegal = () => {
                     >
 
                         <InfoContainer
+                        icon={<MdOutlineShield size={26}/>}
                             title={"4. Responsabilidade pelos conteúdos"}
                             text={"A MindUp reserva-se o direito de atualizar ou modificar os conteúdos sem aviso prévio. Não nos responsabilizamos por erros, omissões ou pelo uso indevido das informações apresentadas."}
                         />
@@ -75,6 +84,7 @@ export const AvisoLegal = () => {
                     >
 
                         <InfoContainer
+                        icon={<FaRegCopyright size={26}/>}
                             title={"5. Propriedade intelectual"}
                             text={"Todos os conteúdos, incluindo textos, imagens, logótipos e design, são propriedade da MindUp ou de terceiros autorizados. É proibida a reprodução sem consentimento prévio."}
                         />
@@ -88,6 +98,7 @@ export const AvisoLegal = () => {
                     >
 
                         <InfoContainer
+                        icon={<LuExternalLink size={26}/>}
                             title={"6. Links externos"}
                             text={"Este site pode conter links para páginas de terceiros. A MindUp não se responsabiliza pelos conteúdos ou práticas de privacidade desses websites."}
                         />
@@ -101,6 +112,7 @@ export const AvisoLegal = () => {
                     >
 
                         <InfoContainer
+                        icon={<PiWarning size={26}/>}
                             title={"7. Limitação de responsabilidade"}
                             text={"Não nos responsabilizamos por falhas técnicas, vírus ou quaisquer danos resultantes do uso do site."}
                         />
@@ -114,6 +126,7 @@ export const AvisoLegal = () => {
                     >
 
                         <InfoContainer
+                        icon={<LuDatabase size={26}/>}
                             title={"8. Proteção de dados"}
                             text={"A recolha e tratamento de dados pessoais cumprem o Regulamento Geral de Proteção de Dados (RGPD). Consulte a Política de Privacidade e a Política de Cookies para mais informações."}
                         />

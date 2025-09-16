@@ -50,9 +50,15 @@ export const Cadastro = () => {
     const validatePassword = (password) => {
 
         const regex = /^(?! )[ -~]{6,12}(?<! )$/
-        if (!regex.test(password)) {
 
-            setpasswordMessage("Não pode conter espaço no inicio e no fim. mínimo 6 caracter e máximo 12.")
+        if(password === ""){
+
+            setpasswordMessage("preencha este campo.")
+            return false
+
+        } else if (!regex.test(password)) {
+
+            setpasswordMessage("sem espaço no inicio e fim. min 8 e max 12 caracteres")
             return false
 
 
@@ -68,9 +74,14 @@ export const Cadastro = () => {
 
     const validatePasswordConfirm = (passwordConfirmation) => {
 
-        if (passworConfirmMessage !== password) {
+        if(passwordConfirmation === ""){
 
-            setpasswordConfirmMessage("Introduza a mesma palavra passe")
+            setpasswordConfirmMessage("preencha este campo.")
+            return false
+
+        } else if (passwordConfirmation !== password) {
+
+            setpasswordConfirmMessage("Introduza a mesma palavra-passe.")
             return false
 
 
@@ -87,15 +98,12 @@ export const Cadastro = () => {
 
     }
 
-
-
-
     return (
         <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
 
             <div className='max-w-[400px] p-4 shadow-[var(--boxShadow2)] mx-auto mt-40 rounded-md'>
                 <h1 className='text-center text-primary font-bold text-2xl mb-5'>Criar conta</h1>
-                <form className='flex flex-col gap-5'>
+                <form className='flex flex-col gap-5' onClick={(event)=>handleSubmit(event)}>
 
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="nome">Nome</label>

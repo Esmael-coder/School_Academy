@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { InfoContainer } from './InfoContainer'
+import { InfoContainer } from '../../components/InfoContainer'
 import { LuBuilding, LuFileCheck, LuExternalLink, LuDatabase } from "react-icons/lu";
 import { FiTarget } from "react-icons/fi";
 import { MdOutlineShield } from "react-icons/md";

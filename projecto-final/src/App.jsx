@@ -17,6 +17,8 @@ import { AvisoLegal } from './pages/avisoLegal/AvisoLegal.jsx'
 import { ScrollToTop } from './components/scrollToTop.jsx'
 import { Cadastro } from './pages/cadastro/Cadastro.jsx'
 import { Login } from './pages/login/Login.jsx'
+import { PortalAluno } from './pages/PortalAluno/PortalAluno.jsx'
+import { PrivateRoute } from './components/PrivateRoute.jsx'
 
 
 function App() {
@@ -54,6 +56,8 @@ function App() {
             <Route path='/aviso-legal' element={<AvisoLegal />} />
             <Route path='/cadastro' element={<Cadastro />} />
             <Route path='/login' element={<Login />} />
+            {/* enviando essa pagina como children para ser renderizada se existir token */}
+            <Route path='/portal-aluno' element={<PrivateRoute><PortalAluno/></PrivateRoute>}/> 
             <Route path='*' element={<Page404 />} />
           </Routes>
       </main>

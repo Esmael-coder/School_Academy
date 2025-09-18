@@ -2,6 +2,18 @@ import React from 'react'
 
 export const Login = () => {
 
+      const finUser = async (data) => {
+
+            const response = await fetch("http://localhost:3000/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+
+            });
+        }
+
     const handleSubmit = (event) => {
         event.preventDefault()
 
@@ -10,14 +22,8 @@ export const Login = () => {
             password: event.target.password.value
         }
 
-        const finUser = async (data) => {
+        finUser(formData)
 
-            const response = await fetch("http://localhost:3000/login", {
-                method: "GET",
-                body: JSON.stringify(data),
-            
-            })
-        }
     }
 
 

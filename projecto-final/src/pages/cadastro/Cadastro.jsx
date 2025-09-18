@@ -1,5 +1,5 @@
-import { section } from 'motion/react-client'
-import React, { useState } from 'react'
+
+import React, { useState, useEffect } from 'react'
 import { AiOutlineExclamationCircle } from 'react-icons/ai'
 
 
@@ -45,8 +45,8 @@ export const Cadastro = () => {
     }
 
 
-    const [passworMessage, setpasswordMessage] = useState(null)
-    let userPassword
+    const [passworMessage, setPasswordMessage] = useState(null)
+    const [userPassword, setUserPassword] = useState(null)
 
     const validatePassword = (password) => {
 
@@ -54,50 +54,102 @@ export const Cadastro = () => {
 
         if (password === "") {
 
-            setpasswordMessage("preencha este campo.")
+            setPasswordMessage("preencha este campo.")
             return false
 
         } else if (!regex.test(password)) {
 
-            setpasswordMessage("sem espaço no inicio e fim. min 8 e max 12 caracteres")
+            setPasswordMessage("sem espaço no inicio e fim. min 6 e max 12 caracteres")
             return false
 
 
         } else {
-            userPassword = password
-            setpasswordMessage(null)
+            setUserPassword(password)
+            setPasswordMessage(null)
             return true
         }
     }
 
 
-    const [passworConfirmMessage, setpasswordConfirmMessage] = useState(null)
+    const [passworConfirmMessage, setPasswordConfirmMessage] = useState(null)
 
     const validatePasswordConfirm = (passwordConfirmation) => {
 
-        if (passwordConfirmation === "") {
+        if (passwordConfirmation.trim() === "") {
 
-            setpasswordConfirmMessage("preencha este campo.")
+            setPasswordConfirmMessage("preencha este campo.")
             return false
 
-        } else if (passwordConfirmation !== password) {
+        } else if (passwordConfirmation !== userPassword) {
 
-            setpasswordConfirmMessage("Introduza a mesma palavra-passe.")
+            setPasswordConfirmMessage("Introduza a mesma palavra-passe.")
             return false
 
 
         } else {
 
-            setpasswordConfirmMessage(null)
+            setPasswordConfirmMessage(null)
             return true
         }
     }
 
+    const checkAllValidations = (data) => {
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
+        if (validateName(data.nome) &&
+            validateEmail(data.email) &&
+            validatePassword(data.password) &&
+            validatePasswordConfirm(data.passwordConfirmation)) {
+            return true
+        }
+
+        return false
+    }
+
+    const createUser = async (data) => {
+
+        try {
+
+            const response = await fetch("http://localhost:3000/cadastro", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+
+            });
+
+            console.log(response.status)
+
+        } catch (error) {
+
+        }
 
     }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const values = {
+            nome: event.target.nome.value,
+            email: event.target.email.value,
+            password: event.target.password.value,
+            passwordConfirmation: event.target.passwordConfirmation.value,
+        }
+
+        if (checkAllValidations(values)) {
+
+            const dataForm = {
+                nome: event.target.nome.value,
+                email: event.target.email.value,
+                password: event.target.password.value
+
+            }
+
+            createUser(dataForm)
+
+        }
+    }
+
 
     return (
         <section>
@@ -105,7 +157,7 @@ export const Cadastro = () => {
 
                 <div className='max-w-[400px] p-4 shadow-[var(--boxShadow2)] mx-auto mt-40 rounded-md'>
                     <h1 className='text-center text-primary font-bold text-2xl mb-5'>Criar conta</h1>
-                    <form className='flex flex-col gap-5' onClick={(event) => handleSubmit(event)}>
+                    <form className='flex flex-col gap-5' onSubmit={(event) => handleSubmit(event)}>
 
                         <div className='flex flex-col gap-1'>
                             <label htmlFor="nome">Nome</label>
@@ -176,7 +228,7 @@ export const Cadastro = () => {
 
                         <button
                             type='submit'
-                            className='bg-primary text-white p-2 rounded-md mt-4'>Criar conta</button>
+                            className='bg-primary text-white p-2 rounded-md mt-4 cursor-pointer hover:bg-hightlight'>Criar conta</button>
                     </form>
                 </div>
             </div>

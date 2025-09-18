@@ -197,10 +197,10 @@ export const Cursos = ({ allCourses, handleFilter }) => {
             <BoxModal
               title={"Comece hoje a construir o seu futuro"}
               text={"Não deixe para amanhã o que pode começar hoje."}
-              link1={"/contacto#start"}
-              link1Content={"Contacta-nos"}
-              link2={"/cursos/start"}
-              link2Content={"Ver cursos"}
+              link1={"/contacto#nome"}
+              link1Content={"Enviar mensagem"}
+              link2={"/cursos#start"}
+              link2Content={"Ligar"}
             />
           </div>
         </footer>

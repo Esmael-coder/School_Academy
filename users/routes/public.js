@@ -4,7 +4,10 @@ const router = express.Router()
 
 /* rota post para cadastrar */
 router.post('/cadastro', (req, res)=>{
-    res.send("ola")
+
+    const users = req.body
+    
+    res.status(201).json(users)
 })
 
 export default router

@@ -57,7 +57,7 @@ function App() {
             <Route path='/cadastro' element={<Cadastro />} />
             <Route path='/login' element={<Login />} />
             {/* enviando essa pagina como children para ser renderizada se existir token */}
-            <Route path='/portal-aluno' element={<PrivateRoute><PortalAluno/></PrivateRoute>}/> 
+            <Route path='/portal-aluno' element={<PortalAluno/>}/> 
             <Route path='*' element={<Page404 />} />
           </Routes>
       </main>

@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { BiBrain, BiLogIn, BiMenu, } from "react-icons/bi";
 import { MdOutlineSchool, MdClose } from "react-icons/md";
 import { Link, NavLink } from 'react-router-dom';
+import { FaRegUser } from "react-icons/fa6";
+
 import { links } from '../const/Constants'; //lembrar de fechar os icones como tag quando usar
 
 export const Header = () => {
@@ -40,6 +42,7 @@ export const Header = () => {
 
                                     return (
 
+
                                         <div key={link.name} className='flex items-center gap-2 border-b py-5'>
                                             <Icon />
                                             <NavLink
@@ -47,16 +50,22 @@ export const Header = () => {
                                                 to={link.path}>{link.name}
                                             </NavLink>
                                         </div>
+
                                     )
                                 })
                             }
+
+                            <Link to={"/portal-aluno"} className='self-center flex gap-2 mt-20 underline underline-offset-3 text-primary hover:text-hightlight'>
+                                <FaRegUser size={20} />
+                                <span>Campus virtual</span>
+                            </Link>
 
                         </nav>
                     </div>
 
 
                     {/*navbar para desktop e tablets maiores*/}
-                    <div className='hidden md:block text-gray-600'>
+                    <div className='hidden md:flex md:gap-4 text-gray-600'>
                         <nav className='flex gap-3'>
                             {
                                 links.map(link => (
@@ -64,12 +73,16 @@ export const Header = () => {
                                     <NavLink
                                         key={link.name}
                                         to={link.path}
-                                        className={({isActive})=> (isActive ? "p-2 rounded-sm bg-secondary text-primary": "p-2 rounded-sm hover:bg-secondary hover:text-primary")} 
+                                        className={({ isActive }) => (isActive ? "p-2 rounded-sm bg-secondary text-primary" : "p-2 rounded-sm hover:bg-secondary hover:text-primary")}
                                         onClick={() => changeActive(link.name)}>{link.name}
                                     </NavLink>
                                 ))
                             }
                         </nav>
+                        <Link to={"/portal-aluno"} className='self-center flex items-center gap-2 underline underline-offset-3 text-primary hover:text-hightlight'>
+                            <FaRegUser size={16} />
+                            <span>Campus virtual</span>
+                        </Link>
                     </div>
                 </div>
             </div>

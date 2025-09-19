@@ -79,8 +79,7 @@ export const Header = () => {
                                 ))
                             }
                         </nav>
-                        <Link to={"/portal-aluno"} className='self-center flex items-center gap-2 underline underline-offset-3 text-primary hover:text-hightlight'>
-                            <FaRegUser size={16} />
+                        <Link to={"/portal-aluno"} className='self-center underline underline-offset-3 text-primary hover:text-hightlight'>
                             <span>Campus virtual</span>
                         </Link>
                     </div>

@@ -1,5 +1,9 @@
-import { LuNotebookText } from "react-icons/lu";
-import { AiTwotoneFilePdf } from "react-icons/ai";
+import { LuNotebookText, LuCircleCheckBig } from "react-icons/lu";
+import { FaRegFilePdf } from "react-icons/fa";
+import { GoFileZip } from "react-icons/go";
+import { MdOutlineFileDownload, MdAccessTime } from "react-icons/md";
+import { IoMdBook } from "react-icons/io";
+import { Profile } from "./Profile";
 import React from 'react'
 
 export const PortalAluno = () => {
@@ -11,66 +15,121 @@ export const PortalAluno = () => {
         <p>Continue sua jornada de aprendizado.</p>
       </section>
 
-      <section className='mt-20'>
-        <h2 className='text-primary text-2xl lg:text-3xl font-bold mb-4'>Meus cursos</h2>
-        <div className='flex flex-col gap-5'>
-          <div className='p-10 w-full rounded-md shadow-[var(--boxShadow2)]'>
-            <h3>Indisponível</h3>
-          </div>
-          <div className='p-10 w-full rounded-md shadow-[var(--boxShadow2)]'>
-            <h3>Indisponível</h3>
-          </div>
-          <div className='p-10 w-full rounded-md shadow-[var(--boxShadow2)]'>
-            <h3>Indisponível</h3>
-          </div>
-          <div className='p-10 w-full rounded-md shadow-[var(--boxShadow2)]'>
-            <h3>Indisponível</h3>
-          </div>
-        </div>
-      </section>
+      <div className="grid md:grid-cols-3 md:gap-10 my-10">
 
-      <section className='mt-10 p-4 shadow-[var(--boxShadow2)] rounded-md'>
-        <h3 className='flex items-center gap-2 mb-4'>
-          <LuNotebookText className="text-hightlight" size={20} />
-          Materiais de apoio
-        </h3>
+    {/* primeira section do grid */}
+        <section className="col-span-2">
+          <section>
+            <h2 className='text-primary text-2xl lg:text-3xl font-bold mb-4'>Meus cursos</h2>
+            <div className='flex flex-col gap-5'>
+              <div className='p-10 w-full rounded-md shadow-[var(--boxShadow2)]'>
+                <h3>Indisponível</h3>
+              </div>
+              <div className='p-10 w-full rounded-md shadow-[var(--boxShadow2)]'>
+                <h3>Indisponível</h3>
+              </div>
+              <div className='p-10 w-full rounded-md shadow-[var(--boxShadow2)]'>
+                <h3>Indisponível</h3>
+              </div>
+              <div className='p-10 w-full rounded-md shadow-[var(--boxShadow2)]'>
+                <h3>Indisponível</h3>
+              </div>
+            </div>
+          </section>
 
-        <div>
+          <section className='mt-10 p-4 shadow-[var(--boxShadow2)] rounded-md'>
+            <h3 className='flex items-center gap-2 mb-4'>
+              <LuNotebookText className="text-hightlight" size={20} />
+              Materiais de apoio
+            </h3>
 
+            <div className="flex flex-col gap-5">
+              <div className="p-4 rounded-md bg-sombra flex justify-between items-center">
+                <div className='flex flex-col'>
+                  <h2 className="flex items-center gap-2">
+                    <FaRegFilePdf className="text-red-600" size={20} />
+                    Livro do curso
+                  </h2>
+                  <span className="text-gray-600 text-sm pl-6">0 MB</span>
+                </div>
+                <MdOutlineFileDownload className="hover:text-hightlight cursor-pointer" size={25} />
+              </div>
 
-          <div className='flex flex-col p-4 rounded-md bg-sombra'>
-            <h2 className="flex items-center gap-2">
-              <AiTwotoneFilePdf className="text-red-600" size={20} />
-              Livro do curso
-            </h2>
-            <span className="text-gray-600 text-sm pl-6">0 MB</span>
+              <div className="p-4 rounded-md bg-sombra flex justify-between items-center">
+                <div className='flex flex-col'>
+                  <h2 className="flex items-center gap-2">
+                    <GoFileZip className="text-hightlight" size={20} />
+                    Livro do curso
+                  </h2>
+                  <span className="text-gray-600 text-sm pl-6">0 MB</span>
+                </div>
+                <MdOutlineFileDownload className="hover:text-hightlight cursor-pointer" size={25} />
+              </div>
+
+              <div className="p-4 rounded-md bg-sombra flex justify-between items-center">
+                <div className='flex flex-col'>
+                  <h2 className="flex items-center gap-2">
+                    <FaRegFilePdf className="text-red-600" size={20} />
+                    Livro do curso
+                  </h2>
+                  <span className="text-gray-600 text-sm pl-6">0 MB</span>
+                </div>
+                <MdOutlineFileDownload className="hover:text-hightlight cursor-pointer" size={25} />
+              </div>
+
+              <div className="p-4 rounded-md bg-sombra flex justify-between items-center">
+                <div className='flex flex-col'>
+                  <h2 className="flex items-center gap-2">
+                    <GoFileZip className="text-hightlight" size={20} />
+                    Livro do curso
+                  </h2>
+                  <span className="text-gray-600 text-sm pl-6">0 MB</span>
+                </div>
+                <MdOutlineFileDownload className="hover:text-hightlight cursor-pointer" size={25} />
+              </div>
+            </div>
+          </section>
+        </section>
+        
+        {/* segunda section do grid */}
+        <section className="p-4 flex flex-col gap-4 rounded-md shadow-[var(--boxShadow2)] max-h-[550px]">
+          <Profile />
+
+          <div className="px-4 py-8 rounded-md border border-gray-300">
+            <div className="mb-5">
+              <h2>Estatísticas</h2>
+            </div>
+
+            <div className="flex flex-col gap-5">
+
+              <div className="flex justify-between">
+                <p className="flex items-center gap-2 text-gray-600">
+                  <IoMdBook className="text-hightlight" size={20} />
+                  cursos ativos
+                </p>
+                <span className="font-semibold">0</span>
+              </div>
+
+              <div className="flex justify-between">
+                <p className="flex items-center gap-2 text-gray-600">
+                  <LuCircleCheckBig className="text-green-600" size={20} />
+                  Concluidos
+                </p>
+                <span className="font-semibold">0</span>
+              </div>
+
+              <div className="flex justify-between">
+                <p className="flex items-center gap-2 text-gray-600">
+                  <MdAccessTime className="text-hightlight" size={20} />
+                  Horas estudadas
+                </p>
+                <span className="font-semibold">0h</span>
+              </div>
+
+            </div>
           </div>
-
-          <div className='flex flex-col p-4 rounded-md bg-sombra'>
-            <h2 className="flex items-center gap-2">
-              <AiTwotoneFilePdf className="text-red-600" size={20} />
-              Livro do curso
-            </h2>
-            <span className="text-gray-600 text-sm pl-6">0 MB</span>
-          </div>
-
-          <div className='flex flex-col p-4 rounded-md bg-sombra'>
-            <h2 className="flex items-center gap-2">
-              <AiTwotoneFilePdf className="text-red-600" size={20} />
-              Livro do curso
-            </h2>
-            <span className="text-gray-600 text-sm pl-6">0 MB</span>
-          </div>
-
-          <div className='flex flex-col p-4 rounded-md bg-sombra'>
-            <h2 className="flex items-center gap-2">
-              <AiTwotoneFilePdf className="text-red-600" size={20} />
-              Livro do curso
-            </h2>
-            <span className="text-gray-600 text-sm pl-6">0 MB</span>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   )
 }

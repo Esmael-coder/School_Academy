@@ -6,8 +6,6 @@ import jwt from 'jsonwebtoken'
 const router = express.Router()
 const prisma = new PrismaClient()
 
-const JWT_SECRET = process.env.JWT_SECRET
-
 /* rota post para cadastrar */
 router.post('/cadastro', async (req, res) => {
 
@@ -38,6 +36,8 @@ router.post('/cadastro', async (req, res) => {
 
 /* rota para iniciar sessão */
 
+const JWT_SECRET = process.env.JWT_SECRET
+
 router.post('/login', async (req, res) => {
 
     const userInfo = req.body
@@ -53,14 +53,15 @@ router.post('/login', async (req, res) => {
             }
         })
 
+        
+        if (!singleUser) {
+            
+            res.status(404).json({ message: "Dados de acesso inválidos." })
+            
+        }
+        
         /* compara a senha do userPassword do db com o password do request */
         const isMatch = await bcrypt.compare(userInfo.password, singleUser.password)
-
-        if (!singleUser) {
-
-            res.status(404).json({ message: "Dados de acesso inválidos." })
-
-        }
 
         if (!isMatch) {
 
@@ -69,7 +70,7 @@ router.post('/login', async (req, res) => {
         } 
 
         /* Gerar token */
-        const token = jwt.sign({id: singleUser.id}, JWT_SECRET, {expiresIn: "1d"})
+        const token = jwt.sign({id: singleUser.id}, JWT_SECRET, {expiresIn: "10s"})
 
 
 

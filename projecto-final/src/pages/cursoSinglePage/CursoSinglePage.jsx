@@ -45,7 +45,7 @@ export const CursoSinglePage = () => {
               <span className='hover:underline underline-offset-2'>Home</span> /
             </Link>
 
-            <Link to={"/cursos"} c>
+            <Link to={"/cursos"}>
               <span className='hover:underline underline-offset-2'>Cursos</span> /
             </Link>
             {selectedCourse.name}

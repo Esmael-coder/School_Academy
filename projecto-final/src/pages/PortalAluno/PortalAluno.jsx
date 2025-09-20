@@ -4,14 +4,18 @@ import { GoFileZip } from "react-icons/go";
 import { MdOutlineFileDownload, MdAccessTime } from "react-icons/md";
 import { IoMdBook } from "react-icons/io";
 import { Profile } from "./Profile";
-import React from 'react'
+import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
 
 export const PortalAluno = () => {
+
+
+
   return (
     <div className='w-full max-w-7xl mx-auto py-6 px-4 md:px-6 lg:px-8'>
 
       <section className='w-full p-10 bg-hightlight text-white rounded-md'>
-        <h1 className='font-semibold text-3xl lg:text-4xl mb-2'>Olá, Maria!</h1>
+        <h1 className='font-semibold text-3xl lg:text-4xl mb-2'>Olá, {/* {user.name} */} !</h1>
         <p>Continue sua jornada de aprendizado.</p>
       </section>
 
@@ -92,7 +96,7 @@ export const PortalAluno = () => {
         </section>
         
         {/* segunda section do grid */}
-        <section className="p-4 flex flex-col gap-4 rounded-md shadow-[var(--boxShadow2)] max-h-[550px]">
+        <section className="p-4 flex flex-col gap-4 rounded-md shadow-[var(--boxShadow2)] md:max-h-[550px]">
           <Profile />
 
           <div className="px-4 py-8 rounded-md border border-gray-300">

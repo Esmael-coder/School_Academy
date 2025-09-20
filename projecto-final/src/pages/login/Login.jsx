@@ -1,5 +1,6 @@
 
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
@@ -20,13 +21,13 @@ export const Login = () => {
 
             });
 
-            if(!response.ok){
+            if (!response.ok) {
 
                 const res = await response.json()
-            
+
                 setMessage(res.message)
             }
-            
+
             const res = await response.json()
             localStorage.setItem('token', res)
             navigate("/portal-aluno")
@@ -34,7 +35,7 @@ export const Login = () => {
 
         } catch (error) {
 
-        
+
 
         }
 
@@ -87,6 +88,9 @@ export const Login = () => {
                             type='submit'
                             className='bg-primary text-white p-2 rounded-md mt-4 cursor-pointer hover:bg-hightlight'>Entrar</button>
                     </form>
+                    <div className='text-gray-600 mt-4'>
+                        <p>Não tem uma conta? <Link className='text-primary underline underline-offset-2' to={'/cadastro'}>Criar conta</Link></p>
+                    </div>
                 </div>
             </div>
         </section>

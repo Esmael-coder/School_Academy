@@ -4,25 +4,80 @@ import { GoFileZip } from "react-icons/go";
 import { MdOutlineFileDownload, MdAccessTime } from "react-icons/md";
 import { IoMdBook } from "react-icons/io";
 import { Profile } from "./Profile";
-import { useNavigate } from "react-router-dom";
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { ClipLoader } from 'react-spinners';
+import { useNavigate } from "react-router-dom";
+
 
 export const PortalAluno = () => {
 
+  const [user, setUser] = useState({})
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
+  const token = localStorage.getItem('token')
+
+  useEffect(() => {
+    const getUser = async () => {
+
+      setLoading(true)
+
+      try {
+        const res = await axios.get('http://localhost:3000/portal-aluno', {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        
+        
+        setUser(res.data)
+
+      } catch (error) {
+
+        if (axios.isAxiosError(error)) {
+
+          alert(error.response.data.message)
+          navigate('/login')
+        }
+
+        console.log(error)
+
+      } finally {
+
+        setLoading(false)
+      }
+    }
+
+    getUser()
+  }, [])
+
+
+  if (loading) {
+
+    return (
+
+      <div className="flex justify-center items-center h-screen">
+        <ClipLoader color='#001542' size={50} />
+      </div>
+    )
+
+  }
 
   return (
+
+
     <div className='w-full max-w-7xl mx-auto py-6 px-4 md:px-6 lg:px-8'>
 
       <section className='w-full p-10 bg-hightlight text-white rounded-md'>
-        <h1 className='font-semibold text-3xl lg:text-4xl mb-2'>Olá, {/* {user.name} */} !</h1>
+        <h1 className='font-semibold text-3xl lg:text-4xl mb-2'>Olá, {user?.name}!</h1>
         <p>Continue sua jornada de aprendizado.</p>
       </section>
 
-      <div className="grid md:grid-cols-3 md:gap-10 my-10">
+      <div className="grid md:grid-cols-3 gap-y-10 md:gap-x-10 my-10">
 
-    {/* primeira section do grid */}
-        <section className="col-span-2">
+        {/* primeira section do grid */}
+        <section className="md:col-span-2">
           <section>
             <h2 className='text-primary text-2xl lg:text-3xl font-bold mb-4'>Meus cursos</h2>
             <div className='flex flex-col gap-5'>
@@ -94,10 +149,10 @@ export const PortalAluno = () => {
             </div>
           </section>
         </section>
-        
+
         {/* segunda section do grid */}
         <section className="p-4 flex flex-col gap-4 rounded-md shadow-[var(--boxShadow2)] md:max-h-[550px]">
-          <Profile />
+           <Profile data={user} />
 
           <div className="px-4 py-8 rounded-md border border-gray-300">
             <div className="mb-5">

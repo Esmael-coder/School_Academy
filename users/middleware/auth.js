@@ -23,8 +23,7 @@ const auth = (req, res, next) => {
 
     } catch (error) {
 
-        console.log(error)
-        res.status(401).json({message: 'Token invalido.'})
+        res.status(401).json({message: 'Token invalido ou expirado. Faça login novamente.'})
 
     }
 

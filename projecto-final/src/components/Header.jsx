@@ -79,10 +79,10 @@ export const Header = () => {
                                 ))
                             }
                         </nav>
-                        <Link to={"/portal-aluno"} className='self-center underline underline-offset-3 text-primary hover:text-hightlight'>
-                            <span>Campus virtual</span>
-                        </Link>
                     </div>
+                    <Link to={"/portal-aluno"} className='hidden md:flex self-center underline underline-offset-3 text-primary hover:text-hightlight'>
+                        <span>Campus virtual</span>
+                    </Link>
                 </div>
             </div>
         </header>

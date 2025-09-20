@@ -1,9 +1,14 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { AiOutlineExclamationCircle } from 'react-icons/ai'
 
 
 export const Cadastro = () => {
+
+    const [errorMessage, setErrorMessage] = useState(null)
+    const navigate = useNavigate(null)
 
 
     const [nomeMessage, setNomeMessage] = useState(null)
@@ -116,16 +121,25 @@ export const Cadastro = () => {
                 },
                 body: JSON.stringify(data),
 
-            });
+            })
 
-            console.log(response.status)
+            const res = await response.json()
+
+            if (!response.ok) {
+                
+                setErrorMessage(res.message)
+                return
+            }
+
+            navigate('/login')
+
+            
 
         } catch (error) {
 
         }
 
     }
-
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -165,7 +179,7 @@ export const Cadastro = () => {
                                 type="text"
                                 name='nome'
                                 id='nome'
-                                placeholder='nome de utilizador'
+                                placeholder='primeiro nome'
                                 onBlur={(event) => validateName(event.target.value)} />
 
                             <span className='text-red-500 text-sm pl-3 flex items-center gap-2'>
@@ -180,7 +194,7 @@ export const Cadastro = () => {
                                 type="email"
                                 name='email'
                                 id='email'
-                                placeholder='seu email'
+                                placeholder='exemplo@gmail.com'
                                 onBlur={(event) => validateEmail(event.target.value)}
 
                             />
@@ -230,6 +244,10 @@ export const Cadastro = () => {
                             type='submit'
                             className='bg-primary text-white p-2 rounded-md mt-4 cursor-pointer hover:bg-hightlight'>Criar conta</button>
                     </form>
+                    {errorMessage && <p className='mx-auto text-center mt-4 bg-red-100 border border-red-400 text-red-500 p-4 rounded-md w-80'>{errorMessage}</p>}
+                    <div className='text-gray-600 mt-4'>
+                        <p>Tem uma conta? <Link className='text-primary underline underline-offset-2' to={'/login'}>Login</Link></p>
+                    </div>
                 </div>
             </div>
         </section>

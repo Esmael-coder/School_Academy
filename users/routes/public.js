@@ -13,10 +13,23 @@ router.post('/cadastro', async (req, res) => {
 
         const user = req.body
 
+        
+        const userDB = await prisma.user.findUnique({
+            where: {
+                email: user.email
+            }
+        })
+
+        if (userDB) {
+
+            res.status(400).json({message: 'Já existe uma conta com esse email!'})
+            
+        }
+
         const salt = await bcrypt.genSalt(10)
         const hashPassword = await bcrypt.hash(user.password, salt)
-
-        const userDB = await prisma.user.create({
+        
+        const NewUserDB = await prisma.user.create({
             data: {
                 name: user.nome,
                 email: user.email,
@@ -70,7 +83,7 @@ router.post('/login', async (req, res) => {
         } 
 
         /* Gerar token */
-        const token = jwt.sign({id: singleUser.id}, JWT_SECRET, {expiresIn: "10s"})
+        const token = jwt.sign({id: singleUser.id}, JWT_SECRET, {expiresIn: "1m"})
 
 
 

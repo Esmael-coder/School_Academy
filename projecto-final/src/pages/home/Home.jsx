@@ -6,24 +6,27 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import "swiper/css/effect-coverflow";
 import { Navigation, EffectCoverflow, Pagination } from 'swiper/modules'
-import { HeroDiv } from '../../components/HeroDiv'
 import { homeComponents } from './index';
-import { Faqs } from '../../components/Faqs'
 import Imagem1 from '../../assets/imagem1.jpg'
 import { BiCalendarCheck, BiRightArrowAlt, BiConversation, BiPhoneCall } from "react-icons/bi";
 import { MdAutoGraph } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { category, testimoniolsData } from '../../const/Constants';
-import { BoxModal } from '../../components/BoxModal'
+import { CookieModal } from '../../components/CookieModal'
 import { motion } from 'motion/react'
 
 export const Home = ({ handleFilter }) => {
 
-  const [Container, MethodCard, Footer, Testimoniols] = homeComponents
+  const [Container, MethodCard, Footer, Testimoniols, Faqs, HeroDiv, BoxModal] = homeComponents
 
   return (
 
     <>
+
+   
+    <CookieModal/>
+    
+
       <section className='relative bg-black'>
         <div className='absolute w-full h-full bg-[url("images/fundo-home.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='flex flex-col md:flex-row max-w-7xl mx-auto px-4 lg:px-8 gap-8 lg:min-h-[80vh] pt-10 md:pt-0 py-16 '>

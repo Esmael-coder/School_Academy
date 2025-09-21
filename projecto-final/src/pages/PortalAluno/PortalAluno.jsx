@@ -74,10 +74,10 @@ export const PortalAluno = () => {
         <p>Continue sua jornada de aprendizado.</p>
       </section>
 
-      <div className="grid md:grid-cols-3 gap-y-10 md:gap-x-10 my-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 my-10">
 
         {/* primeira section do grid */}
-        <section className="md:col-span-2">
+        <section className="lg:col-span-2">
           <section>
             <h2 className='text-primary text-2xl lg:text-3xl font-bold mb-4'>Meus cursos</h2>
             <div className='flex flex-col gap-5'>
@@ -151,7 +151,7 @@ export const PortalAluno = () => {
         </section>
 
         {/* segunda section do grid */}
-        <section className="p-4 flex flex-col gap-4 rounded-md shadow-[var(--boxShadow2)] md:max-h-[550px]">
+        <section className="p-4 flex flex-col gap-4 rounded-md shadow-[var(--boxShadow2)] min-w-[300px] md:max-h-[550px]">
            <Profile data={user} />
 
           <div className="px-4 py-8 rounded-md border border-gray-300">

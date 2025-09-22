@@ -47,7 +47,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
             transition={{ duration: 0.6, ease: "easeIn" }}
             viewport={{ once: true }}
           >
-            <HeroDiv imagem={'images/destaque-cursos.jpg'} percentage={"15+"} text={"Cursos disponíveis"} />
+            <HeroDiv imagem={'/images/destaque-cursos.jpg'} percentage={"15+"} text={"Cursos disponíveis"} />
           </motion.div>
         </div>
       </section>

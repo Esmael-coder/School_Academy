@@ -25,7 +25,7 @@ export const Exame = ({ handleFilter }) => {
                         transition={{ duration: 0.6, ease: "easeIn" }}
                         viewport={{ once: true }}
                     >
-                        <HeroDiv imagem={'images/destaque-exame.jpg'} percentage={"95%"} text={"Taxa de aprovação"} />
+                        <HeroDiv imagem={'/images/destaque-exame.jpg'} percentage={"95%"} text={"Taxa de aprovação"} />
                     </motion.div>
                 </div>
             </section>

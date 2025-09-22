@@ -22,7 +22,7 @@ export const Contacto = () => {
             transition={{duration: 0.6, ease: "easeIn"}}
             viewport={{once: true}}
           >
-            <HeroDiv imagem={'images/destaque-contacto.jpg'} percentage={"95%"} text={"Taxa de sucesso"} />
+            <HeroDiv imagem={'/images/destaque-contacto.jpg'} percentage={"95%"} text={"Taxa de sucesso"} />
           </motion.div>
         </div>
       </section>

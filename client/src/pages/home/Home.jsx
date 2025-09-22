@@ -25,7 +25,7 @@ export const Home = ({ handleFilter }) => {
     <>
 
       <section className='relative bg-black'>
-        <div className='absolute w-full h-full bg-[url("images/fundo-home.jpg")] bg-cover bg-center opacity-55'></div>
+        <div className='absolute w-full h-full bg-[url("/images/fundo-home.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='flex flex-col md:flex-row max-w-7xl mx-auto px-4 lg:px-8 gap-8 lg:min-h-[80vh] pt-10 md:pt-0 py-16 '>
 
           {/* todo o conteúdo da hero section (já mexi tanto que ficou com muitas classes redundantes. refatorar depois)*/}

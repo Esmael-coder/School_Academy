@@ -12,7 +12,7 @@ export const Login = () => {
 
         try {
 
-            const response = await fetch("https://school-academy-2.onrender.com/login", {
+            const response = await fetch("https://school-academy.onrender.com/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

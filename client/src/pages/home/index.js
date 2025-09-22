@@ -1,5 +1,5 @@
 import { Container } from "./Container";
-import { MethodCard } from "./methodCard";
+import { MethodCard } from "./MethodCard";
 import { Footer } from "./Footer";
 import { Testimoniols } from "./Testimoniols";
 import { HeroDiv } from "../../components/HeroDiv";

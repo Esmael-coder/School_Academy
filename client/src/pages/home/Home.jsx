@@ -14,7 +14,6 @@ import { Link } from 'react-router-dom';
 import { BoxModal } from '../../components/BoxModal'
 import { Faqs } from '../../components/Faqs'
 import { category, testimoniolsData } from '../../const/Constants';
-import { CookieModal } from '../../components/CookieModal'
 import { motion } from 'motion/react'
 
 export const Home = ({ handleFilter }) => {

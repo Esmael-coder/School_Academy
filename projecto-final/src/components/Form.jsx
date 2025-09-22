@@ -48,7 +48,7 @@ export const Form = () => {
     const [assuntoMessage, setAssuntolMessage] = useState(null)
     const validateAssunto = (assunto) => {
 
-        if (assunto == "empty") {
+        if (assunto == "selecione o assunto") {
 
             setAssuntolMessage("selecione um assunto")
             return false
@@ -120,7 +120,10 @@ export const Form = () => {
                         {/* div para nome e email*/}
                         <div className='flex flex-col gap-4 md:grid md:grid-cols-2'>
                             <div className='flex flex-col gap-1'>
-                                <label htmlFor="nome">Nome completo</label>
+                                <label htmlFor="nome">
+                                    Nome completo
+                                    <span className='ml-1 text-red-600'>*</span>
+                                </label>
                                 <input
                                     className='bg-sombra pl-2 p-1.5 rounded-lg'
                                     onBlur={(event) => validateName(event.target.value)}
@@ -134,7 +137,10 @@ export const Form = () => {
                             </div>
 
                             <div className='flex flex-col gap-1'>
-                                <label htmlFor="email"> Email</label>
+                                <label htmlFor="email">
+                                    Email
+                                    <span className='ml-1 text-red-600'>*</span>
+                                </label>
                                 <input
                                     className='bg-sombra pl-2 p-1.5 rounded-lg'
                                     onBlur={(event) => validateEmail(event.target.value)}
@@ -152,7 +158,10 @@ export const Form = () => {
                         {/* div para tel e assunto */}
                         <div className='flex flex-col gap-4 md:grid md:grid-cols-2'>
                             <div className='flex flex-col gap-1'>
-                                <label htmlFor="telefone">Telefone</label>
+                                <label htmlFor="telefone">
+                                    Telefone
+                                    <span className='ml-1 text-red-600'>*</span>
+                                </label>
                                 <input
                                     className='bg-sombra pl-2 p-1.5 rounded-lg'
                                     onBlur={(event) => validatePhone(event.target.value)}
@@ -166,16 +175,19 @@ export const Form = () => {
                                 </span>
                             </div>
                             <div className='flex flex-col gap-1'>
-                                <label htmlFor="assunto">Assunto</label>
+                                <label htmlFor="assunto">
+                                    Assunto
+                                    <span className='ml-1 text-red-600'>*</span>
+                                </label>
                                 <select
                                     className='bg-sombra pl-2 p-1.5 rounded-lg'
                                     onBlur={(event) => validateAssunto(event.target.value)}
                                     name="assunto"
                                     id="assunto">
-                                    <option className='text-gray-600' value="empty">Selecione o assunto</option>
+                                    <option value='selecione o assunto'>Selecione o assunto</option>
                                     <option value="inscrição">Inscrição em curso</option>
                                     <option value="visita">Visita às instalações</option>
-                                    <option value="inscrição">Outro assunto</option>
+                                    <option value="outro assunto">Outro assunto</option>
                                 </select>
                                 <span className='text-red-500 text-sm pl-3 flex items-center gap-2'>
                                     {assuntoMessage !== null && <AiOutlineExclamationCircle />}
@@ -193,7 +205,7 @@ export const Form = () => {
                             className='bg-sombra pl-2 p-1.5 rounded-lg'
                             name="cursoInteresse"
                             id="cursoInteresse">
-                            <option className='text-gray-600' value="empty">Selecione o curso</option>
+                            <option value='selecione o curso'>Selecione o curso</option>
                             {
                                 courseCopy.map(course => (
                                     <option key={course.id} value={course.name}>{course.name}</option>
@@ -203,7 +215,10 @@ export const Form = () => {
                     </div>
 
                     <div className='flex flex-col gap-1'>
-                        <label htmlFor="mensagem">Mensagem</label>
+                        <label htmlFor="mensagem">
+                            Mensagem
+                            <span className='ml-1 text-red-600'>*</span>
+                        </label>
                         <textarea
                             className='bg-sombra pl-2 p-1.5 rounded-lg'
                             onBlur={(event) => validateMessage(event.target.value)}
@@ -217,12 +232,14 @@ export const Form = () => {
                         </span>
                     </div>
 
+
                     <button
                         className='bg-orange cursor-pointer hover:bg-hover text-white p-2 flex items-center justify-center gap-3 rounded-lg transition-color duration-300 ease-in-out'
                         type="submit">
                         <FiSend />
                         Enviar mensagem
                     </button>
+                    <span className='text-sm'>Campos obrigatórios marcados com <span className='text-red-600'>*</span></span>
                 </form>
 
             </div>

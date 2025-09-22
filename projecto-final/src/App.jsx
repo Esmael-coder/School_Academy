@@ -19,6 +19,8 @@ import { Cadastro } from './pages/cadastro/Cadastro.jsx'
 import { Login } from './pages/login/Login.jsx'
 import { PortalAluno } from './pages/PortalAluno/PortalAluno.jsx'
 import { PrivateRoute } from './components/PrivateRoute.jsx'
+import { CookieModal } from './components/cookieModal.jsx'
+import React from 'react'
 
 
 function App() {
@@ -42,6 +44,7 @@ function App() {
   return (
     <>
       <Header />
+      <CookieModal/>
       <main className='mt-16 min-h-[100vh]'>
         <ScrollToTop/>
           <Routes>

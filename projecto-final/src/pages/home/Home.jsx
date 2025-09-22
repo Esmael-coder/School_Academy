@@ -11,21 +11,19 @@ import Imagem1 from '../../assets/imagem1.jpg'
 import { BiCalendarCheck, BiRightArrowAlt, BiConversation, BiPhoneCall } from "react-icons/bi";
 import { MdAutoGraph } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import { BoxModal } from '../../components/BoxModal'
+import { Faqs } from '../../components/Faqs'
 import { category, testimoniolsData } from '../../const/Constants';
 import { CookieModal } from '../../components/CookieModal'
 import { motion } from 'motion/react'
 
 export const Home = ({ handleFilter }) => {
 
-  const [Container, MethodCard, Footer, Testimoniols, Faqs, HeroDiv, BoxModal] = homeComponents
+  const [Container, MethodCard, Footer, Testimoniols, HeroDiv] = homeComponents
 
   return (
 
     <>
-
-   
-    <CookieModal/>
-    
 
       <section className='relative bg-black'>
         <div className='absolute w-full h-full bg-[url("images/fundo-home.jpg")] bg-cover bg-center opacity-55'></div>

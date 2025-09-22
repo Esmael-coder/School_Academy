@@ -2,6 +2,7 @@ import { div } from 'motion/react-client';
 import React, { useEffect, useState } from 'react'
 import { LuCookie } from "react-icons/lu";
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'motion/react';
 
 export const CookieModal = () => {
 
@@ -21,7 +22,6 @@ export const CookieModal = () => {
   useEffect(() => {
 
     const cookie = getCookie('cookie')
-    console.log(cookie)
 
     if (cookie) {
 
@@ -29,7 +29,8 @@ export const CookieModal = () => {
 
     } else {
 
-      setShowModal(true)
+      setTimeout(() => { setShowModal(true) }, 1000)
+
     }
   }, [])
 
@@ -41,23 +42,30 @@ export const CookieModal = () => {
   if (showModal) {
 
     return (
-  
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
 
-          <div className='bg-secondary w-[700px] max-w-7xl px-4 sm:px-6 lg:px-8 py-6 fixed z-999 bottom-40 left-[50%] transform -translate-x-[50%]'>
-            <div className='w-full flex flex-col items-center p-4 gap-2 text-xl'>
+      <div className="fixed inset-0 flex items-end justify-center bg-black/40 z-50">
+
+        <AnimatePresence>
+          <motion.div className='w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-6'
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+    
+          >
+            <div className='w-full bg-white flex flex-col items-center p-4 gap-2 text-lg rounded-md'>
               <LuCookie size={40} className='text-primary' />
-              <h3 className='text-primary font-semibold'>Cookies</h3>
-              <p>Usamos cookies para melhorar sua experiência no site. Para saber mais, consulte a nossa <Link className='text-hightlight underline'>política de Cookies.</Link></p>
-              <div className='flex gap-16 text-xl mt-4 text-hightlight'>
-                <button className='underline underline-offset-3 cursor-pointer hover:text-primary' onClick={handleClick}>Rejeitar</button>
-                <button className='underline underline-offset-3 cursor-pointer hover:text-primary' onClick={handleClick}>Aceitar</button>
+              <h3 className='text-primary text-2xl font-semibold'>Cookies</h3>
+              <p>Usamos cookies para melhorar sua experiência no site. Para saber mais, consulte a nossa <Link to={'/politica-cookie'} className='text-hightlight underline'>política de Cookies.</Link></p>
+              <div className='flex gap-16 mt-4 text-hightlight'>
+                <button className='px-5 py-2 bg-hightlight text-white rounded hover:bg-primary cursor-pointer' onClick={handleClick}>Rejeitar</button>
+                <button className='px-5 py-2 bg-hightlight text-white rounded hover:bg-primary cursor-pointer' onClick={handleClick}>Aceitar</button>
               </div>
             </div>
-          </div>
-
-        </div>
+          </motion.div>
+        </AnimatePresence>
+      </div >
     )
+
   }
 
 }

@@ -60,7 +60,7 @@ export const Login = () => {
         <section>
             <div className='w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
 
-                <div className='max-w-[400px] p-4 shadow-[var(--boxShadow2)] mx-auto mt-40 rounded-md'>
+                <div className='max-w-[400px] p-4 md:shadow-[var(--boxShadow2)] mx-auto mt-40 rounded-md'>
                     <h1 className='text-center text-primary font-bold text-2xl mb-5'>Login</h1>
                     <form className='flex flex-col gap-5' onSubmit={(event) => handleSubmit(event)}>
 

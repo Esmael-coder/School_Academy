@@ -76,12 +76,13 @@ export const Metodologia = () => {
               <div className='grid md:grid-cols-2  lg:grid-cols-4 gap-5'>
                 {method.map(element => (
                   <motion.div
+                    key={element.id}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: element.id * 0.2 }}
                     viewport={{ amount: 0.3, once: true }}>
 
-                    <MethodComponent key={element.id}
+                    <MethodComponent
                       img={element.img}
                       title={element.title}
                       text={element.text}

@@ -31,7 +31,7 @@ export const Header = () => {
                     {burger ? <div className='md:hidden' onClick={openMenu}><BiMenu size={30} /></div> : <div className='md:hidden' onClick={openMenu}><MdClose size={30} /></div>}
 
                     {/* navbar mobile */}
-                    <div className={`flex flex-col absolute z-50 bg-white top-16 w-[80%] h-screen gap-20 p-8 shadow-sm md:hidden ${isOpen ? "right-0" : "right-[-82%]"} transition-all duration-300 ease-in-out`}>
+                    <div className={`flex flex-col absolute z-50 bg-white top-16 w-[100%] h-screen gap-20 p-8 shadow-sm md:hidden ${isOpen ? "right-0" : "right-[-110%]"} transition-all duration-300 ease-in-out`}>
                         <nav className='flex flex-col gap-2 text-primary'>
 
                             {
@@ -55,7 +55,7 @@ export const Header = () => {
                                 })
                             }
 
-                            <Link to={"/portal-aluno"} className='self-center flex gap-2 mt-20 underline underline-offset-3 text-primary hover:text-hightlight'>
+                            <Link to={"/portal-aluno"} onClick={()=>{setIsOpen(!isOpen), setBurger(!burger)}} className='self-center flex gap-2 mt-20 underline underline-offset-3 text-primary hover:text-hightlight'>
                                 <FaRegUser size={20} />
                                 <span>Campus virtual</span>
                             </Link>

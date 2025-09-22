@@ -51,7 +51,7 @@ export const VantageCard = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
                 viewport={{ amount: 0.3, once: true }}>
-                <img className='rounded-lg w-full max-w-[500px] ' src="images/vantagem.jpg" alt="" />
+                <img className='rounded-lg w-full max-w-[500px] ' src="/images/vantagem.jpg" alt="" />
             </motion.div>
         </div>
     )

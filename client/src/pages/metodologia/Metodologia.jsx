@@ -49,7 +49,7 @@ export const Metodologia = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ amount: 1, once: true }}>
-              <img className='rounded-lg w-full max-w-[500px] min-w-[450px]' src="images/sobre-nos.jpg" alt="imagem de uma professora" />
+              <img className='rounded-lg w-full max-w-[500px] md:min-w-[400px]' src="/images/sobre-nos.jpg" alt="imagem de uma professora" />
             </motion.div>
           </div>
         </section>

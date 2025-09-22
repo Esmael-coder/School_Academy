@@ -12,7 +12,7 @@ router.get('/portal-aluno', async (req, res)=>{
         
         const user = await prisma.user.findUnique({
             where:{
-                id: req.id
+                id: req.userId
             },
             // selecionando so os campos que serao retornados
             select :{

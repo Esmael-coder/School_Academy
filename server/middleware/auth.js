@@ -17,7 +17,7 @@ const auth = (req, res, next) => {
 
         const decoded = jwt.verify(token.replace('Bearer ', ''), JWT_SECRET)
 
-        req.id = decoded.id
+        req.userId = decoded.id
 
         next()
 

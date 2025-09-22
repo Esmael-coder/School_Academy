@@ -114,7 +114,7 @@ export const Cadastro = () => {
 
         try {
 
-            const response = await fetch("http://localhost:3000/cadastro", {
+            const response = await fetch("https://school-academy-2.onrender.com/cadastro", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

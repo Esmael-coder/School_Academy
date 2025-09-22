@@ -24,7 +24,7 @@ export const PortalAluno = () => {
       setLoading(true)
 
       try {
-        const res = await axios.get('http://localhost:3000/portal-aluno', {
+        const res = await axios.get('https://school-academy-2.onrender.com/portal-aluno', {
           headers: {
             Authorization: `Bearer ${token}`
           }

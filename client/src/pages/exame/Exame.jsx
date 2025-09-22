@@ -17,7 +17,7 @@ export const Exame = ({ handleFilter }) => {
         <>
             {/* hero section */}
             <section className='bg-black relative'>
-                <div className='absolute w-full h-full bg-[url("images/fundo-exame.jpg")] bg-cover bg-top opacity-55'></div>
+                <div className='absolute w-full h-full bg-[url("/images/fundo-exame.jpg")] bg-cover bg-top opacity-55'></div>
                 <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}

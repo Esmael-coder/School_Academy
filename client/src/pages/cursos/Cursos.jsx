@@ -39,7 +39,7 @@ export const Cursos = ({ allCourses, handleFilter }) => {
     <>
       {/* hero section */}
       <section className='bg-black relative'>
-        <div className='absolute w-full h-full bg-[url("images/fundo-cursos.jpg")] bg-cover bg-center opacity-55'></div>
+        <div className='absolute w-full h-full bg-[url("/images/fundo-cursos.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8'>
           <motion.div
             initial={{ opacity: 0, x: -20 }}

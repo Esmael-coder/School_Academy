@@ -14,7 +14,7 @@ export const Contacto = () => {
     <>
       {/* hero section */}
       <section className='bg-black relative'>
-        <div className='absolute w-full h-full bg-[url("images/fundo-contacto.jpg")] bg-cover bg-center opacity-55'></div>
+        <div className='absolute w-full h-full bg-[url("/images/fundo-contacto.jpg")] bg-cover bg-center opacity-55'></div>
         <div className='max-w-7xl w-full mx-auto px-4 py-16 lg:px-8 flex flex-col md:flex-row gap-4 justify-between'>
           <motion.div 
             initial={{opacity: 0, x: -20}}

@@ -62,13 +62,13 @@ export const Footer = () => {
                             <li>
                                 <a className='flex items-center gap-2' href="tel:+351 21 573 496">
                                     <BiPhone className='text-orange' size={18} />
-                                    <span className='hover:underline underline-offset-2'>+351 21 573 496</span>
+                                    <span className='underline underline-offset-2'>+351 21 573 496</span>
                                 </a>
                             </li>
                             <li>
                                 <a className='flex items-center gap-2' href="mailto:info@mindup.pt">
                                     <GoMail className='text-orange' size={18} />
-                                    <span className='hover:underline underline-offset-2'>info@mindup.pt</span>
+                                    <span className='underline underline-offset-2'>info@mindup.pt</span>
                                 </a>
                             </li>
                         </ul>

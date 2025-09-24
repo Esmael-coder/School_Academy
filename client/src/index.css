@@ -7,7 +7,7 @@ body{
 @theme{
 
   --color-primary: #001542;
-  --color-secondary : #eff6ff;
+  --color-secondary: #eff6ff;
   --color-realce: #bfdbff;
   --color-hightlight: #1447e6;
   --color-orange: #f54900;
@@ -25,6 +25,3 @@ body{
   box-sizing: border-box;
 }
 
-/* background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);  azul gradiente*/ 
-
-/* background: linear-gradient(135deg, #f2f3f7 0%, #e6f7f5 50%, #ffffff 100%); laranja gradiente */

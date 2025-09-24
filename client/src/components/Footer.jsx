@@ -89,10 +89,10 @@ export const Footer = () => {
                     <div className='whitespace-nowrap'>
                         <h3 className='font-semibold mb-3'>Links Úteis</h3>
                         <ul className='text-gray-600'>
-                            <li><Link className='hover:underline underline-offset-2' to={"politica-privacidade"}>Políticas de privacidade</Link></li>
-                            <li><Link className='hover:underline underline-offset-2' to={"politica-cookie"}>Políticas de cookie</Link></li>
-                            <li><Link className='hover:underline underline-offset-2' to={"aviso-legal"}>Aviso legal</Link></li>
-                            <li><a className='hover:underline underline-offset-2' target='_blank' href='https://www.livroreclamacoes.pt/inicio/'>Livro de reclamação</a></li>
+                            <li><Link className='underline underline-offset-2' to={"politica-privacidade"}>Políticas de privacidade</Link></li>
+                            <li><Link className='underline underline-offset-2' to={"politica-cookie"}>Políticas de cookie</Link></li>
+                            <li><Link className='underline underline-offset-2' to={"aviso-legal"}>Aviso legal</Link></li>
+                            <li><a className='underline underline-offset-2' target='_blank' href='https://www.livroreclamacoes.pt/inicio/'>Livro de reclamação</a></li>
                         </ul>
                     </div>
 

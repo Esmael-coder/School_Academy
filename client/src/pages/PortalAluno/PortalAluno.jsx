@@ -37,7 +37,6 @@ export const PortalAluno = () => {
 
         if (axios.isAxiosError(error)) {
 
-          alert(error.response.data.message)
           navigate('/login')
         }
 

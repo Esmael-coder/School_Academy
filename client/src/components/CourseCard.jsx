@@ -33,7 +33,7 @@ export const CourseCard = (props) => {
 
         <Link
           className='bg-orange hover:bg-Sombra p-2 rounded-lg text-white flex justify-center'
-          to={`/cursos/${id}`}>Mais informaçoes
+          to={`/cursos/${id}`}>Mais informações
         </Link>
 
 

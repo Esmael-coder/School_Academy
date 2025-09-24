@@ -43,7 +43,7 @@ export const Contacto = () => {
           </div>
 
           {/* grid container */}
-          <div className='grid md:grid-cols-3 gap-5'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
 
             {/* div do form e mapa */}
             <div className='grid md:col-span-2 gap-5'>

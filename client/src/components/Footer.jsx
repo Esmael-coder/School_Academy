@@ -18,7 +18,7 @@ export const Footer = () => {
     }, [])
 
     return (
-        <footer className=' bg-primary'>
+        <footer className='w-full bg-primary'>
 
             <div className='max-w-7xl mx-auto px-4 py-10 sm:p-6 md:p-8 '>
                 <div className='flex flex-col mb-8 gap-4'>

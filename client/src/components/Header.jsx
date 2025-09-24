@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
-import { BiBrain, BiLogIn, BiMenu, } from "react-icons/bi";
-import { MdOutlineSchool, MdClose } from "react-icons/md";
+import { BiBrain, BiMenu, } from "react-icons/bi";
+import { MdClose } from "react-icons/md";
 import { Link, NavLink } from 'react-router-dom';
 import { FaRegUser } from "react-icons/fa6";
 
@@ -18,7 +18,7 @@ export const Header = () => {
     }
 
     return (
-        <header className='fixed bg-white w-screen shadow-sm top-0 z-50'>
+        <header className='fixed bg-white w-full shadow-sm top-0 z-50'>
             <div className='h-16 max-w-7xl mx-auto px-4 sm:p-6 lg:p-8 flex items-center'>
                 <div className='flex justify-between items-center w-full'>
 

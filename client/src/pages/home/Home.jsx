@@ -43,7 +43,7 @@ export const Home = ({ handleFilter }) => {
                 Na MindUp ajudamos-te a ganhar confiança, melhorar as tuas competências e enfrentar qualquer desafio com segurança.
               </p>
 
-              <div className='bg-primary flex flex-col items-start gap-4 shadow-md text-white rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 break-words'>
+              <div className='bg-primary flex flex-col items-start gap-4 shadow-md text-white rounded-md p-4 sm:p-5 md:p-6 lg:p-8 break-words'>
                 <div className='flex items-center gap-1 text-gray-600'>
                   <BiCalendarCheck />
                   <p>Proximo exame</p>
@@ -78,7 +78,7 @@ export const Home = ({ handleFilter }) => {
               transition={{ duration: 0.6, ease: "easeIn" }}
               viewport={{ once: true }}
             >
-              <HeroDiv imagem={Imagem1} percentage="10K+" text="Alunos de aprovados" />
+              <HeroDiv imagem={Imagem1} percentage="10K+" text="Alunos aprovados" />
             </motion.div>
           </div>
         </div>

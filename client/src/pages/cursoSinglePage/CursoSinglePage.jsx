@@ -24,6 +24,7 @@ export const CursoSinglePage = () => {
 
   const selectedCourse = (courses.find(course => course.id == id))
 
+  
   const contentIncluded = [
     "Acesso durante 1 ano e 6 meses",
     "Mentoria individual",

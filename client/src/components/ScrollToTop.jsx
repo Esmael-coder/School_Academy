@@ -15,3 +15,5 @@ export const ScrollToTop = () => {
 
     return null
 }
+
+// Esta funcao faz a pagina voltar ao topo quando o usuario troca de rota.

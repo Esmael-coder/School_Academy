@@ -16,7 +16,7 @@ export const PortalAluno = () => {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   useEffect(() => {
     const getUser = async () => {

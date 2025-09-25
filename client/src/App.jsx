@@ -26,15 +26,18 @@ import React from 'react'
 function App() {
   
 
+  //funcao para alterar estado das categorias ativas na pagina cursos
+  const [isActive, setIsActive] = useState("todos")
+  
+  // Função para filtrar cursos por categoria
+  // Está sendo usada na pagina home, cursos e exames
   const [allCourses, setAllCourses] = useState(courses)
-
-    // Função para filtrar cursos por categoria
-    // Está sendo usada na pagina home, cursos e exames
   const handleFilter = (categoryValue) => {
 
     if (categoryValue !== "todos") {
 
       setAllCourses(courses.filter(course => course.category == categoryValue))
+      setIsActive(categoryValue)
 
     } else {
 
@@ -49,8 +52,8 @@ function App() {
       <main className='mt-16 min-h-[100vh]'>
         <ScrollToTop/>
           <Routes>
-            <Route path='/' element={<Home setAllCourses={setAllCourses} handleFilter={handleFilter}/>} />
-            <Route path='/cursos' element={<Cursos allCourses={allCourses} handleFilter={handleFilter}/>} />
+            <Route path='/' element={<Home setAllCourses={setAllCourses} handleFilter={handleFilter} setIsActive={setIsActive}/>} />
+            <Route path='/cursos' element={<Cursos allCourses={allCourses} handleFilter={handleFilter} isActive={isActive} setIsActive={setIsActive}/>} />
             <Route path='/cursos/:id' element={<CursoSinglePage />} />
             <Route path='/metodologia' element={<Metodologia />} />
             <Route path='/exame' element={<Exame handleFilter={handleFilter}/>} />

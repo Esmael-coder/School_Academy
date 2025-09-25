@@ -16,7 +16,7 @@ import { Faqs } from '../../components/Faqs'
 import { category, testimoniolsData } from '../../const/Constants';
 import { motion } from 'motion/react'
 
-export const Home = ({ handleFilter }) => {
+export const Home = ({ handleFilter, setIsActive }) => {
 
   const [Container, MethodCard, Footer, Testimoniols, HeroDiv] = homeComponents
 
@@ -110,7 +110,7 @@ export const Home = ({ handleFilter }) => {
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.7, delay: item.id * 0.1 }}
                     viewport={{ amount: 0.3, once: true }}>
-                    <Container onClick={() => handleFilter(item.name)} icon={item.icon} content={item.name} />
+                    <Container onClick={() => {handleFilter(item.name), setIsActive(item.name)}} icon={item.icon} content={item.name} />
                   </motion.div>
                 )
                 )
@@ -128,9 +128,9 @@ export const Home = ({ handleFilter }) => {
               className='self-center w-[250px] sm:w-[400px] md:w-[800px] md:self-end'
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: "ease" }}
+              transition={{ duration: 2, ease: "easeIn" }}
               viewport={{ amount: 0.3, once: true }}>
-              <img src='images/student.png' />
+              <img src='/images/student.png' />
             </motion.div>
           </div>
         </div>

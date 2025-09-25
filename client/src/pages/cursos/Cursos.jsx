@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { HeroDiv } from '../../components/HeroDiv'
 import { CourseCard } from '../../components/CourseCard'
 import { BoxModal } from '../../components/BoxModal';
 import { motion } from 'motion/react';
 
 
-export const Cursos = ({ allCourses, handleFilter }) => {
+export const Cursos = ({ allCourses, handleFilter, isActive, setIsActive }) => {
 
-  const [isActive, setIsActive] = useState("todos")
 
-  // função para alterar estado das categorias ativas
+
+  // função para alterar estado das categorias ativas pelo clique
   const changeActive = (id) => {
     setIsActive(id)
   }
@@ -59,8 +59,8 @@ export const Cursos = ({ allCourses, handleFilter }) => {
 
             <div className='flex gap-4 items-center md:hidden'>
               <label className='text-[19px] font-semibold' htmlFor="filter">Filtrar</label>
-              <select className='border border-gray-600 rounded-sm' name="filter" id="filter" onChange={(event) => handleFilter(event.target.value)}>
-                <option defaultValue={true} value="todos">Todos os cursos</option>
+              <select className='border border-gray-600 rounded-sm' defaultValue={isActive} name="filter" id="filter" onChange={(event) => handleFilter(event.target.value)}>
+                <option value="todos">Todos os cursos</option>
                 <option value="concurso público">Concursos</option>
                 <option value="segurança pública">Segurança Pública</option>
                 <option value="saúde">Saúde</option>

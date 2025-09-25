@@ -29,7 +29,7 @@ export const Login = () => {
             }
 
             const res = await response.json()
-            localStorage.setItem('token', res)
+            sessionStorage.setItem('token', res)
             navigate("/portal-aluno")
             return
 

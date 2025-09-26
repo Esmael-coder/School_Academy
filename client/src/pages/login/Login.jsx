@@ -2,13 +2,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { ClipLoader } from 'react-spinners'
 
 export const Login = () => {
 
     const [message, setMessage] = useState(null)
+    const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate()
 
     const finUser = async (formData) => {
+
+        setIsLoading(true)
 
         try {
 
@@ -35,8 +39,11 @@ export const Login = () => {
 
         } catch (error) {
 
+            setMessage("Erro no login")
 
+        } finally {
 
+            setIsLoading(false)
         }
 
     }
@@ -86,7 +93,9 @@ export const Login = () => {
                         {message && <p className='mx-auto text-center bg-red-100 border border-red-400 text-red-500 p-4 rounded-md w-80'>{message}</p>}
                         <button
                             type='submit'
-                            className='bg-primary text-white p-2 rounded-md mt-4 cursor-pointer hover:bg-hightlight'>Entrar</button>
+                            className='bg-primary text-white p-2 rounded-md mt-4 cursor-pointer hover:bg-hightlight'>
+                                {isLoading ? <ClipLoader color='#ffff' size={24}/> : "Entrar"}
+                            </button>
                     </form>
                     <div className='text-gray-600 mt-4'>
                         <p>Não tem uma conta? <Link className='text-primary underline underline-offset-2' to={'/cadastro'}>Criar conta</Link></p>

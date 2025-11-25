@@ -2,7 +2,7 @@
 
 Uma plataforma educacional moderna desenvolvida com React e Vite, oferecendo cursos profissionalizantes e preparação para exames militares em Portugal.
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 MindUp é uma aplicação web que ajuda estudantes a ganhar confiança, melhorar competências e enfrentar desafios profissionais através de:
 
@@ -12,18 +12,18 @@ MindUp é uma aplicação web que ajuda estudantes a ganhar confiança, melhorar
 - Portal do aluno com área privada
 - Sistema de gestão de cursos por categorias
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- 🎓 **Catálogo de Cursos**: Navegação por cursos organizados por categorias
-- 📝 **Preparação para Exames**: Informações sobre exames militares
-- 📚 **Metodologia**: Apresentação do método de ensino (teoria, prática, simulações)
-- 👤 **Portal do Aluno**: Área privada com autenticação
-- 📞 **Contacto**: Formulário de contacto e informações
-- 🍪 **Gestão de Cookies**: Modal de consentimento de cookies
-- 📱 **Design Responsivo**: Interface adaptada para todos os dispositivos
-- 🎨 **Animações**: Experiência visual melhorada com Motion
+- **Catálogo de Cursos**: Navegação por cursos organizados por categorias
+- **Preparação para Exames**: Informações sobre exames militares
+- **Metodologia**: Apresentação do método de ensino (teoria, prática, simulações)
+- **Portal do Aluno**: Área privada com autenticação
+- **Contacto**: Formulário de contacto e informações
+- **Gestão de Cookies**: Modal de consentimento de cookies
+- **Design Responsivo**: Interface adaptada para todos os dispositivos
+- **Animações**: Experiência visual melhorada com Motion
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **React** 19.1.0 - Biblioteca JavaScript para construção de interfaces
 - **Vite** 7.0.4 - Build tool e dev server rápido
@@ -34,7 +34,7 @@ MindUp é uma aplicação web que ajuda estudantes a ganhar confiança, melhorar
 - **Axios** 1.12.2 - Cliente HTTP para requisições
 - **React Icons** 5.5.0 - Biblioteca de ícones
 
-## 📦 Instalação
+## Instalação
 
 ### Pré-requisitos
 
@@ -65,7 +65,7 @@ pnpm dev
 
 4. Acesse a aplicação em `http://localhost:5173`
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 
 \`\`\`
 client/
@@ -97,14 +97,14 @@ client/
 └── index.html           # Template HTML
 \`\`\`
 
-## 🎯 Scripts Disponíveis
+## Scripts Disponíveis
 
 - `npm run dev` - Inicia o servidor de desenvolvimento
 - `npm run build` - Gera build de produção
 - `npm run preview` - Visualiza o build de produção localmente
 - `npm run lint` - Executa o linter ESLint
 
-## 📄 Páginas
+## Páginas
 
 - `/` - Página inicial
 - `/cursos` - Catálogo de cursos
@@ -119,7 +119,7 @@ client/
 - `/politica-cookie` - Política de cookies
 - `/aviso-legal` - Aviso legal
 
-## 🔒 Autenticação
+## Autenticação
 
 O projeto inclui sistema de autenticação com:
 - Login de usuários
@@ -127,7 +127,7 @@ O projeto inclui sistema de autenticação com:
 - Rotas privadas (PrivateRoute)
 - Portal do aluno protegido
 
-## 🎨 Temas e Estilos
+## Temas e Estilos
 
 - Design moderno com Tailwind CSS 4
 - Paleta de cores personalizada
@@ -135,7 +135,7 @@ O projeto inclui sistema de autenticação com:
 - Animações suaves com Motion
 - Carrossel de testemunhos com Swiper
 
-## 📱 Responsividade
+## Responsividade
 
 A aplicação é totalmente responsiva e otimizada para:
 - Desktop (1920px+)
@@ -143,18 +143,18 @@ A aplicação é totalmente responsiva e otimizada para:
 - Tablet (768px+)
 - Mobile (320px+)
 
-## 🤝 Contribuindo
+## Contribuindo
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
 
-## 📝 Licença
+## Licença
 
 Este projeto é privado. Todos os direitos reservados.
 
-## 📧 Contacto
+## Contacto
 
 Para mais informações, entre em contacto através da página de contacto da aplicação ou ligue para +351 21 573 496.
 
 ---
 
-Desenvolvido com ❤️ pela equipa MindUp
+Desenvolvido por Esmael Moanteiro

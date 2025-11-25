@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState} from 'react'
 import { TbMessageCircle } from "react-icons/tb";
 import { courses } from '../const/Constants';
 import { FiSend } from "react-icons/fi";

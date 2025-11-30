@@ -65,38 +65,6 @@ pnpm dev
 
 4. Acesse a aplicação em `http://localhost:5173`
 
-## Estrutura do Projeto
-
-\`\`\`
-client/
-├── src/
-│   ├── assets/          # Imagens e recursos estáticos
-│   │   └── img/
-│   │       ├── course/  # Imagens dos cursos
-│   │       └── method/  # Ícones da metodologia
-│   ├── components/      # Componentes reutilizáveis
-│   │   ├── Header.jsx
-│   │   ├── Footer.jsx
-│   │   ├── CourseCard.jsx
-│   │   ├── CookieModal.jsx
-│   │   └── ...
-│   ├── pages/           # Páginas da aplicação
-│   │   ├── home/
-│   │   ├── cursos/
-│   │   ├── metodologia/
-│   │   ├── exame/
-│   │   ├── contacto/
-│   │   ├── login/
-│   │   ├── cadastro/
-│   │   └── PortalAluno/
-│   ├── const/           # Constantes e dados
-│   │   └── Constants.js
-│   ├── App.jsx          # Componente principal
-│   └── main.jsx         # Ponto de entrada
-├── public/              # Arquivos públicos
-└── index.html           # Template HTML
-\`\`\`
-
 ## Scripts Disponíveis
 
 - `npm run dev` - Inicia o servidor de desenvolvimento
@@ -150,10 +118,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 ## Licença
 
 Este projeto é privado. Todos os direitos reservados.
-
-## Contacto
-
-Para mais informações, entre em contacto através da página de contacto da aplicação ou ligue para +351 21 573 496.
 
 ---
 
